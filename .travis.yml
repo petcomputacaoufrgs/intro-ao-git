@@ -1,10 +1,11 @@
-language: rust
+language: minimal
 os:
   - linux
 
 script:
-  - cargo install mdbook --no-default-features --features output --vers "^0.1.0" 
-  - mdbook build
+  - curl -L -o mdBook.tar.gz https://github.com/rust-lang/mdBook/releases/download/v0.3.7/mdbook-v0.3.7-x86_64-unknown-linux-gnu.tar.gz
+  - tar -xf mdBook.tar.gz
+  - ./mdbook build
 
 deploy:
   provider: pages
