@@ -3,9 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Uma Introdução Ao Git</title>
-        
-        <meta name="robots" content="noindex" />
+        <title>git init - Uma Introdução Ao Git</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -83,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li class="chapter-item expanded "><a href="2-cli-ou-gui.html"><strong aria-hidden="true">2.</strong> Terminal Ou Interface Gráfica?</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li class="chapter-item expanded "><a href="2-cli-ou-gui.html"><strong aria-hidden="true">2.</strong> Terminal Ou Interface Gráfica?</a></li><li class="chapter-item expanded "><a href="3-git-init.html" class="active"><strong aria-hidden="true">3.</strong> git init</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,38 +147,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#o-que-É-o-git" id="o-que-É-o-git">O Que É O Git?</a></h1>
-<p>Se eu fosse resumir a resposta, ela seria: git é uma ferramenta distribuída de controle de versionamento de software. As alterações de uma versão do software são
-chamadas &quot;<em>commit</em>&quot;. Os arquivos que contêm as versões são chamados
-&quot;repositório&quot;.</p>
-<h1><a class="header" href="#o-que-É-controle-de-versionamento" id="o-que-É-controle-de-versionamento">O Que É Controle De Versionamento?</a></h1>
-<p>Controle de versionamento de um software é o registro das alterações dos
-arquivos de um software ao longo do seu desenvolvimento; é o registro da
-história de um software. No entanto, é bom notar que versionamento normalmente
-não envolve grandes saltos entre versões. Ao invés disso, registram-se novas
-versões em pequenas mudanças, pequenos saltos, como adicionar um arquivo ou
-reescrever uma função.</p>
-<h1><a class="header" href="#o-que-significa-ser-distribuído" id="o-que-significa-ser-distribuído">O Que Significa Ser Distribuído?</a></h1>
-<p>Versionadores costumam trabalhar com o conceito de &quot;repositórios&quot;. Um
-repositório contém o software em questão e sua história. Alguns, como o SVN,
-centralizam um software em um repositório remoto (servidor). Isso significa que
-toda nova versão tem de passar pelo servidor. Este <strong>não</strong> é o caso do Git. O
-Git possibilita repositórios locais. Isto é, você pode ter toda história do
-software na sua máquina, fazer suas próprias mudanças, compartilhar com vários
-repositórios remotos, etc.</p>
-<h1><a class="header" href="#git-vs-github" id="git-vs-github">Git vs. GitHub</a></h1>
-<p>Às vezes a distinção entre Git e GitHub é confusa, mas é a seguinte: Git é o
-programa que faz o versionamento em si e administra repositórios; GitHub é um
-serviço que hospeda repositórios Git em um servidor. Existem outros serviços
-semelhantes, como o GitLab e o BitBucket.</p>
-<h1><a class="header" href="#usar-git-no-terminal-ou-na-interface-gráfica" id="usar-git-no-terminal-ou-na-interface-gráfica">Usar Git No Terminal Ou Na Interface Gráfica?</a></h1>
-<p>A implementação padrão do Git é um programa CLI (Command Line Interface), ou
-seja, é usada no terminal. Se você não se sentir confortável com o terminal,
-você pode usar alguma interface gráfica como GitKraken, Github Desktop ou
-Smart Git.</p>
-<p>Este tutorial focará no programa CLI, uma vez que a interface é mais rápida
-de aprender. No entanto, <strong>os conceitos são os mesmos</strong>.</p>
-<p>O Git gerencia os repositórios no mesmo diretório/pasta da aplicação. Para
+                        <p>O Git gerencia os repositórios no mesmo diretório/pasta da aplicação. Para
 inicializar o repositório, vá até o diretório do projeto e execute <code>git init</code>.</p>
 <pre><code class="language-sh">$ cd meu/projeto
 $ git init
@@ -194,6 +161,10 @@ você.</p>
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="2-cli-ou-gui.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
 
@@ -203,6 +174,10 @@ você.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="2-cli-ou-gui.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
 
                 
@@ -237,14 +212,6 @@ você.</p>
         <!-- Custom JS scripts -->
         
 
-        
-        
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
-        
         
 
     </body>
