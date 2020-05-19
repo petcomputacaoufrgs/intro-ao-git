@@ -1,0 +1,17 @@
+language: rust
+os:
+  - linux
+
+script:
+  - cargo install mdbook --no-default-features --features output --vers "^0.1.0" 
+  - mdbook build
+
+deploy:
+  provider: pages
+  token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: book
+  skip_cleanup: true
+  on:
+    branch: master
+
