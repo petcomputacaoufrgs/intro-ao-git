@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li class="chapter-item expanded "><a href="2-cli-ou-gui.html"><strong aria-hidden="true">2.</strong> Terminal Ou Interface Gráfica?</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="2-instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -180,10 +180,45 @@ você pode usar alguma interface gráfica como GitKraken, Github Desktop ou
 Smart Git.</p>
 <p>Este tutorial focará no programa CLI, uma vez que a interface é mais rápida
 de aprender. No entanto, <strong>os conceitos são os mesmos</strong>.</p>
+<h1><a class="header" href="#instalação-e-configuração" id="instalação-e-configuração">Instalação E Configuração</a></h1>
+<h1><a class="header" href="#windows" id="windows">Windows</a></h1>
+<p>Acesse o link <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>.</p>
+<h1><a class="header" href="#linux" id="linux">Linux</a></h1>
+<p>Você já tenha o Git instalado. Você pode verificar com o seguinte comando:</p>
+<pre><code class="language-sh">git --version
+</code></pre>
+<p>Se o git tiver instalado, o comando te dirá a versão do Git. Se não tiver, o
+recomendado é instalar pelo gerenciador de pacotes do seu sistema.</p>
+<h2><a class="header" href="#arch-linux-manjaro-etc" id="arch-linux-manjaro-etc">Arch Linux, Manjaro, etc</a></h2>
+<pre><code class="language-sh">sudo pacman -S git
+</code></pre>
+<h2><a class="header" href="#debian-ubuntu-etc" id="debian-ubuntu-etc">Debian, Ubuntu, etc</a></h2>
+<pre><code class="language-sh">sudo apt-get install git
+</code></pre>
+<h2><a class="header" href="#fedora-redhat-linux-etc" id="fedora-redhat-linux-etc">Fedora, RedHat Linux, etc</a></h2>
+<pre><code class="language-sh">sudo dnf install git
+</code></pre>
+<p>Etc...</p>
+<h1><a class="header" href="#configuração" id="configuração">Configuração</a></h1>
+<p>A configuração obrigatória do Git é simples: basta dar nome e email.</p>
+<p>Para definir seu nome como &quot;João da Silva&quot;, basta executar:</p>
+<pre><code class="language-sh">git config user.name 'João da Silva'
+</code></pre>
+<p>Para definir seu email como &quot;jdsilva@mail.com&quot;, basta executar:</p>
+<pre><code class="language-sh">git config user.email 'jdsilva@mail.com'
+</code></pre>
+<p>Para verificar o nome definido:</p>
+<pre><code class="language-sh"># Vai escrever na tela 'João da Silva'
+git config user.name
+</code></pre>
+<p>Para verificar o email definido:</p>
+<pre><code class="language-sh"># Vai escrever na tela 'jdsilva@mail.com'
+git config user.email
+</code></pre>
 <p>O Git gerencia os repositórios no mesmo diretório/pasta da aplicação. Para
 inicializar o repositório, vá até o diretório do projeto e execute <code>git init</code>.</p>
-<pre><code class="language-sh">$ cd meu/projeto
-$ git init
+<pre><code class="language-sh">cd meu/projeto
+git init
 </code></pre>
 <p>Você verá que o diretório conterá uma pasta oculta chamada <code>.git</code>.
 <strong>Jamais edite</strong> o conteúdo dessa pasta diretamente. O Git gerencia ela por
