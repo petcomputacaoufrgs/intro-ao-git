@@ -1,0 +1,5 @@
+[book]
+authors = ["brunoczim"]
+multilingual = false
+src = "src"
+title = "Uma Introdução Ao Git"
