@@ -14,6 +14,19 @@ estados. Estes são:
 - Staged
 
 # Estado Não-Modificado
+
+Arquivos neste estado estão na versão (HEAD) e não foram alterados.
+
 # Estado Modificado
+
+Arquivos neste estado estão na versão atual (HEAD), foram alterados, mas não constarão
+na próxima versão.
+
 # Estado Não-Rastreado
+
+Arquivos neste estado não estão presentes na versão atual (HEAD), mas não constarão na
+próxima versão.
+
 # Estado Staged
+
+Arquivos neste estado trazem alguma mudança e constarão na nova versão.
