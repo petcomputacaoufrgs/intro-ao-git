@@ -7,6 +7,6 @@
 - [Staging Area](./4-staging-area.md)
     - [git add](./4-1-git-add.md)
     - [git status](./4-2-git-status.md)
-    - [git rm](./4-3-git-rm.md)
-    - [git commit](./4-4-git-commit.md)
+    - [git commit](./4-3-git-commit.md)
+    - [git rm E git mv](./4-4-git-rm-git-mv.md)
     - [Juntando tudo](./4-5-juntando-tudo.md)
