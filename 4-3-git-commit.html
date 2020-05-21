@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>git rm - Uma Introdução Ao Git</title>
+        <title>git commit - Uma Introdução Ao Git</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="2-instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4-1-git-add.html"><strong aria-hidden="true">4.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="4-2-git-status.html"><strong aria-hidden="true">4.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="4-3-git-rm.html" class="active"><strong aria-hidden="true">4.3.</strong> git rm</a></li><li class="chapter-item expanded "><a href="4-4-git-commit.html"><strong aria-hidden="true">4.4.</strong> git commit</a></li><li class="chapter-item expanded "><a href="4-5-juntando-tudo.html"><strong aria-hidden="true">4.5.</strong> Juntando tudo</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="2-instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4-1-git-add.html"><strong aria-hidden="true">4.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="4-2-git-status.html"><strong aria-hidden="true">4.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="4-3-git-commit.html" class="active"><strong aria-hidden="true">4.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="4-4-git-rm-git-mv.html"><strong aria-hidden="true">4.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="4-5-juntando-tudo.html"><strong aria-hidden="true">4.5.</strong> Juntando tudo</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,7 +147,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#git-rm" id="git-rm">git rm</a></h1>
+                        <h1><a class="header" href="#git-commit" id="git-commit">git commit</a></h1>
+<p>Para registrar uma nova versão, utiliza-se o comando <code>git commit</code>. Somente as
+mudanças com estado &quot;<em>staged</em>&quot; farão parte do <em>commit</em>. Sintaxe do comando:</p>
+<pre><code class="language-sh">git commit -m 'mensagem do commit'
+</code></pre>
+<p>A mensagem do commit deve ser um resumo ou uma identificação das mudanças
+introduzidas. É recomendado que a mensagem do commit não tenha muito mais do que
+50 caracteres. É possível inserir a mensagem usando um editor de texto, basta
+ocultar a opção <code>-m</code> e a mensagem, assim:</p>
+<pre><code class="language-sh">git commit
+</code></pre>
 
                     </main>
 
@@ -160,7 +170,7 @@
                         
 
                         
-                            <a rel="next" href="4-4-git-commit.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="4-4-git-rm-git-mv.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -178,7 +188,7 @@
                 
 
                 
-                    <a rel="next" href="4-4-git-commit.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="4-4-git-rm-git-mv.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
