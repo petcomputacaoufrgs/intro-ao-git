@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Instalação E Configuração - Uma Introdução Ao Git</title>
+        <title>git rm - Uma Introdução Ao Git</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="2-instalacao-config.html" class="active"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4-1-git-add.html"><strong aria-hidden="true">4.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="4-2-git-status.html"><strong aria-hidden="true">4.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="4-3-git-rm.html"><strong aria-hidden="true">4.3.</strong> git rm</a></li><li class="chapter-item expanded "><a href="4-4-git-commit.html"><strong aria-hidden="true">4.4.</strong> git commit</a></li><li class="chapter-item expanded "><a href="4-5-juntando-tudo.html"><strong aria-hidden="true">4.5.</strong> Juntando tudo</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="2-instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4-1-git-add.html"><strong aria-hidden="true">4.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="4-2-git-status.html"><strong aria-hidden="true">4.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="4-3-git-rm.html" class="active"><strong aria-hidden="true">4.3.</strong> git rm</a></li><li class="chapter-item expanded "><a href="4-4-git-commit.html"><strong aria-hidden="true">4.4.</strong> git commit</a></li><li class="chapter-item expanded "><a href="4-5-juntando-tudo.html"><strong aria-hidden="true">4.5.</strong> Juntando tudo</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,54 +147,20 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#instalação-e-configuração" id="instalação-e-configuração">Instalação E Configuração</a></h1>
-<h1><a class="header" href="#windows" id="windows">Windows</a></h1>
-<p>Acesse o link <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>.</p>
-<h1><a class="header" href="#linux" id="linux">Linux</a></h1>
-<p>Você já tenha o Git instalado. Você pode verificar com o seguinte comando:</p>
-<pre><code class="language-sh">git --version
-</code></pre>
-<p>Se o git tiver instalado, o comando te dirá a versão do Git. Se não tiver, o
-recomendado é instalar pelo gerenciador de pacotes do seu sistema.</p>
-<h2><a class="header" href="#arch-linux-manjaro-etc" id="arch-linux-manjaro-etc">Arch Linux, Manjaro, etc</a></h2>
-<pre><code class="language-sh">sudo pacman -S git
-</code></pre>
-<h2><a class="header" href="#debian-ubuntu-etc" id="debian-ubuntu-etc">Debian, Ubuntu, etc</a></h2>
-<pre><code class="language-sh">sudo apt-get install git
-</code></pre>
-<h2><a class="header" href="#fedora-redhat-linux-etc" id="fedora-redhat-linux-etc">Fedora, RedHat Linux, etc</a></h2>
-<pre><code class="language-sh">sudo dnf install git
-</code></pre>
-<p>Etc...</p>
-<h1><a class="header" href="#configuração" id="configuração">Configuração</a></h1>
-<p>A configuração obrigatória do Git é simples: basta dar nome e email.</p>
-<p>Para definir seu nome como &quot;João da Silva&quot;, basta executar:</p>
-<pre><code class="language-sh">git config user.name 'João da Silva'
-</code></pre>
-<p>Para definir seu email como &quot;jdsilva@mail.com&quot;, basta executar:</p>
-<pre><code class="language-sh">git config user.email 'jdsilva@mail.com'
-</code></pre>
-<p>Para verificar o nome definido:</p>
-<pre><code class="language-sh"># Vai escrever na tela 'João da Silva'
-git config user.name
-</code></pre>
-<p>Para verificar o email definido:</p>
-<pre><code class="language-sh"># Vai escrever na tela 'jdsilva@mail.com'
-git config user.email
-</code></pre>
+                        <h1><a class="header" href="#git-rm" id="git-rm">git rm</a></h1>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="1-2-cli-ou-gui.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="4-2-git-status.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="3-git-init.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="4-4-git-commit.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -206,13 +172,13 @@ git config user.email
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="1-2-cli-ou-gui.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="4-2-git-status.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="3-git-init.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="4-4-git-commit.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

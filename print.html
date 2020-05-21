@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="2-instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="2-instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4-1-git-add.html"><strong aria-hidden="true">4.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="4-2-git-status.html"><strong aria-hidden="true">4.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="4-3-git-rm.html"><strong aria-hidden="true">4.3.</strong> git rm</a></li><li class="chapter-item expanded "><a href="4-4-git-commit.html"><strong aria-hidden="true">4.4.</strong> git commit</a></li><li class="chapter-item expanded "><a href="4-5-juntando-tudo.html"><strong aria-hidden="true">4.5.</strong> Juntando tudo</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -215,6 +215,7 @@ git config user.name
 <pre><code class="language-sh"># Vai escrever na tela 'jdsilva@mail.com'
 git config user.email
 </code></pre>
+<h1><a class="header" href="#git-init" id="git-init">git init</a></h1>
 <p>O Git gerencia os repositórios no mesmo diretório/pasta da aplicação. Para
 inicializar o repositório, vá até o diretório do projeto e execute <code>git init</code>.</p>
 <pre><code class="language-sh">cd meu/projeto
@@ -240,13 +241,45 @@ estados. Estes são:</p>
 <h1><a class="header" href="#estado-não-modificado" id="estado-não-modificado">Estado Não-Modificado</a></h1>
 <p>Arquivos neste estado estão na versão (HEAD) e não foram alterados.</p>
 <h1><a class="header" href="#estado-modificado" id="estado-modificado">Estado Modificado</a></h1>
-<p>Arquivos neste estado estão na versão atual (HEAD), foram alterados, mas não constarão
-na próxima versão.</p>
+<p>Arquivos neste estado estão na versão atual (HEAD), foram alterados, mas não
+constarão na próxima versão.</p>
 <h1><a class="header" href="#estado-não-rastreado" id="estado-não-rastreado">Estado Não-Rastreado</a></h1>
-<p>Arquivos neste estado não estão presentes na versão atual (HEAD), mas não constarão na
-próxima versão.</p>
+<p>Arquivos neste estado não estão presentes na versão atual (HEAD), mas não
+constarão na próxima versão.</p>
 <h1><a class="header" href="#estado-staged" id="estado-staged">Estado Staged</a></h1>
 <p>Arquivos neste estado trazem alguma mudança e constarão na nova versão.</p>
+<h1><a class="header" href="#git-add" id="git-add">git add</a></h1>
+<p>Para adicionar arquivos modificados ou não-rastreados à <em>staging area</em>, existe
+o comando <code>git add</code>. A sintaxe do commando é:</p>
+<p>Adicionando um arquivo:</p>
+<pre><code class="language-sh">git add arquivo1
+</code></pre>
+<p>Adicionando múltiplos arquivos:</p>
+<pre><code class="language-sh">git add arquivo2 arquivo3 arquivo4
+</code></pre>
+<p>Adicionando diretórios inteiros:</p>
+<pre><code class="language-sh">git add src/
+</code></pre>
+<p>É uma padrão comum adicionar todo diretório atual (lembre-se de que <code>.</code>
+significa &quot;o diretório atual&quot;).</p>
+<pre><code class="language-sh">git add .
+</code></pre>
+<p>Há também a flag <code>-a</code> que adiciona todas as modificações, do projeto inteiro.</p>
+<pre><code class="language-sh">git add -a
+</code></pre>
+<p>Na prática, <code>git add .</code> e <code>git add -a</code> se comportam da mesma forma. Os dois só
+diferem quando o diretório atual não é a raiz do projeto, como por exemplo, o
+diretório <code>./src/</code>.</p>
+<h1><a class="header" href="#git-status" id="git-status">git status</a></h1>
+<p>O comando <code>git status</code> mostra o estado relativo à <em>staging area</em>. A sintaxe é
+simples:</p>
+<pre><code class="language-sh">git status
+</code></pre>
+<p>Um exemplo de saída:</p>
+<p><img src="./status.png" alt="exemplo de git status" /></p>
+<h1><a class="header" href="#git-rm" id="git-rm">git rm</a></h1>
+<h1><a class="header" href="#git-commit" id="git-commit">git commit</a></h1>
+<h1><a class="header" href="#juntando-tudo" id="juntando-tudo">Juntando tudo</a></h1>
 
                     </main>
 
