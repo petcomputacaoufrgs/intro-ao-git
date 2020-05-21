@@ -19,13 +19,13 @@ Arquivos neste estado estão na versão (HEAD) e não foram alterados.
 
 # Estado Modificado
 
-Arquivos neste estado estão na versão atual (HEAD), foram alterados, mas não constarão
-na próxima versão.
+Arquivos neste estado estão na versão atual (HEAD), foram alterados, mas não
+constarão na próxima versão.
 
 # Estado Não-Rastreado
 
-Arquivos neste estado não estão presentes na versão atual (HEAD), mas não constarão na
-próxima versão.
+Arquivos neste estado não estão presentes na versão atual (HEAD), mas não
+constarão na próxima versão.
 
 # Estado Staged
 
