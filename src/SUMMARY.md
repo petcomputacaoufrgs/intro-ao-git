@@ -11,4 +11,4 @@
     - [`git commit`](./git-commit.md)
     - [`git rm` E `git mv`](./git-rm-git-mv.md)
     - [`git reset` E `git restore`](./git-reset-git-restore.md)
-    - [Juntando tudo](./juntando-tudo.md)
+    - [Juntando Tudo](./staging-juntando-tudo.md)
