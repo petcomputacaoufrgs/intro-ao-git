@@ -1,4 +1,4 @@
-# git init
+# `git init`
 
 O Git gerencia os repositórios no mesmo diretório/pasta da aplicação. Para
 inicializar o repositório, vá até o diretório do projeto e execute `git init`.

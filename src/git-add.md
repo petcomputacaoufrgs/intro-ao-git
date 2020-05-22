@@ -1,4 +1,4 @@
-# git add
+# `git add`
 
 Para adicionar arquivos modificados ou não-rastreados à _staging area_, existe
 o comando `git add`. A sintaxe do commando é:
