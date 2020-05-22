@@ -1,7 +1,7 @@
 # Juntando tudo
 
 Então, como usar estes comandos em conjunto? O fluxo normal é `git add` =>
-`git status` => `git commit`. Eis um exemplo:
+`git status` => `git commit`. Eis um exemplo. Primeiro criaremos o projeto:
 ```sh
 mkdir projeto
 cd projeto
