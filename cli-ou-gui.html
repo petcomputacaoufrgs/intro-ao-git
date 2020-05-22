@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>git add - Uma Introdução Ao Git</title>
+        <title>Terminal Ou Interface Gráfica? - Uma Introdução Ao Git</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="2-instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4-1-git-add.html" class="active"><strong aria-hidden="true">4.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="4-2-git-status.html"><strong aria-hidden="true">4.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="4-3-git-commit.html"><strong aria-hidden="true">4.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="4-4-git-rm-git-mv.html"><strong aria-hidden="true">4.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="4-5-juntando-tudo.html"><strong aria-hidden="true">4.5.</strong> Juntando tudo</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html" class="active"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="juntando-tudo.html"><strong aria-hidden="true">5.6.</strong> Juntando tudo</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,41 +147,26 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#git-add" id="git-add">git add</a></h1>
-<p>Para adicionar arquivos modificados ou não-rastreados à <em>staging area</em>, existe
-o comando <code>git add</code>. A sintaxe do commando é:</p>
-<p>Adicionando um arquivo:</p>
-<pre><code class="language-sh">git add arquivo1
-</code></pre>
-<p>Adicionando múltiplos arquivos:</p>
-<pre><code class="language-sh">git add arquivo2 arquivo3 arquivo4
-</code></pre>
-<p>Adicionando diretórios inteiros:</p>
-<pre><code class="language-sh">git add src/
-</code></pre>
-<p>É uma padrão comum adicionar todo diretório atual (lembre-se de que <code>.</code>
-significa &quot;o diretório atual&quot;).</p>
-<pre><code class="language-sh">git add .
-</code></pre>
-<p>Há também a flag <code>-a</code> que adiciona todas as modificações, do projeto inteiro.</p>
-<pre><code class="language-sh">git add -a
-</code></pre>
-<p>Na prática, <code>git add .</code> e <code>git add -a</code> se comportam da mesma forma. Os dois só
-diferem quando o diretório atual não é a raiz do projeto, como por exemplo, o
-diretório <code>./src/</code>.</p>
+                        <h1><a class="header" href="#usar-git-no-terminal-ou-na-interface-gráfica" id="usar-git-no-terminal-ou-na-interface-gráfica">Usar Git No Terminal Ou Na Interface Gráfica?</a></h1>
+<p>A implementação padrão do Git é um programa CLI (Command Line Interface), ou
+seja, é usada no terminal. Se você não se sentir confortável com o terminal,
+você pode usar alguma interface gráfica como GitKraken, Github Desktop ou
+Smart Git.</p>
+<p>Este tutorial focará no programa CLI, uma vez que a interface é mais rápida
+de aprender. No entanto, <strong>os conceitos são os mesmos</strong>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="4-staging-area.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="o-que-eh.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="4-2-git-status.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="instalacao-config.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -193,13 +178,13 @@ diretório <code>./src/</code>.</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="4-staging-area.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="o-que-eh.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="4-2-git-status.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="instalacao-config.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

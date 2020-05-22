@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>O Que É O Git - Uma Introdução Ao Git</title>
+        <title>git init - Uma Introdução Ao Git</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="juntando-tudo.html"><strong aria-hidden="true">5.6.</strong> Juntando tudo</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html" class="active"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="juntando-tudo.html"><strong aria-hidden="true">5.6.</strong> Juntando tudo</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,39 +147,28 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#o-que-É-o-git" id="o-que-É-o-git">O Que É O Git?</a></h1>
-<p>Se eu fosse resumir a resposta, ela seria: git é uma ferramenta distribuída de controle de versionamento de software. As alterações de uma versão do software são
-chamadas &quot;<em>commit</em>&quot;. Os arquivos que contêm as versões são chamados
-&quot;repositório&quot;.</p>
-<h1><a class="header" href="#o-que-É-controle-de-versionamento" id="o-que-É-controle-de-versionamento">O Que É Controle De Versionamento?</a></h1>
-<p>Controle de versionamento de um software é o registro das alterações dos
-arquivos de um software ao longo do seu desenvolvimento; é o registro da
-história de um software. No entanto, é bom notar que versionamento normalmente
-não envolve grandes saltos entre versões. Ao invés disso, registram-se novas
-versões em pequenas mudanças, pequenos saltos, como adicionar um arquivo ou
-reescrever uma função.</p>
-<h1><a class="header" href="#o-que-significa-ser-distribuído" id="o-que-significa-ser-distribuído">O Que Significa Ser Distribuído?</a></h1>
-<p>Versionadores costumam trabalhar com o conceito de &quot;repositórios&quot;. Um
-repositório contém o software em questão e sua história. Alguns, como o SVN,
-centralizam um software em um repositório remoto (servidor). Isso significa que
-toda nova versão tem de passar pelo servidor. Este <strong>não</strong> é o caso do Git. O
-Git possibilita repositórios locais. Isto é, você pode ter toda história do
-software na sua máquina, fazer suas próprias mudanças, compartilhar com vários
-repositórios remotos, etc.</p>
-<h1><a class="header" href="#git-vs-github" id="git-vs-github">Git vs. GitHub</a></h1>
-<p>Às vezes a distinção entre Git e GitHub é confusa, mas é a seguinte: Git é o
-programa que faz o versionamento em si e administra repositórios; GitHub é um
-serviço que hospeda repositórios Git em um servidor. Existem outros serviços
-semelhantes, como o GitLab e o BitBucket.</p>
+                        <h1><a class="header" href="#git-init" id="git-init"><code>git init</code></a></h1>
+<p>O Git gerencia os repositórios no mesmo diretório/pasta da aplicação. Para
+inicializar o repositório, vá até o diretório do projeto e execute <code>git init</code>.</p>
+<pre><code class="language-sh">cd meu/projeto
+git init
+</code></pre>
+<p>Você verá que o diretório conterá uma pasta oculta chamada <code>.git</code>.
+<strong>Jamais edite</strong> o conteúdo dessa pasta diretamente. O Git gerencia ela por
+você.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="git-help.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
-                            <a rel="next" href="cli-ou-gui.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="staging-area.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -191,9 +180,13 @@ semelhantes, como o GitLab e o BitBucket.</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="git-help.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
                 
-                    <a rel="next" href="cli-ou-gui.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="staging-area.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1-o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="2-instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="3-git-init.html"><strong aria-hidden="true">3.</strong> git init</a></li><li class="chapter-item expanded "><a href="4-staging-area.html"><strong aria-hidden="true">4.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4-1-git-add.html"><strong aria-hidden="true">4.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="4-2-git-status.html"><strong aria-hidden="true">4.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="4-3-git-commit.html"><strong aria-hidden="true">4.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="4-4-git-rm-git-mv.html"><strong aria-hidden="true">4.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="4-5-juntando-tudo.html"><strong aria-hidden="true">4.5.</strong> Juntando tudo</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="juntando-tudo.html"><strong aria-hidden="true">5.6.</strong> Juntando tudo</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -215,7 +215,20 @@ git config user.name
 <pre><code class="language-sh"># Vai escrever na tela 'jdsilva@mail.com'
 git config user.email
 </code></pre>
-<h1><a class="header" href="#git-init" id="git-init">git init</a></h1>
+<h1><a class="header" href="#git-help" id="git-help"><code>git help</code></a></h1>
+<p>Se você instalou o <code>git</code>, você deve ter a documentação instalada também. Para
+acessar a documentação de qualquer comando, basta executar o seguinte:</p>
+<pre><code class="language-sh">git comando --help
+# ou
+git help comando
+</code></pre>
+<p>Por exemplo, para ver o manual do comando <code>git init</code>:</p>
+<pre><code class="language-sh">git init --help
+# ou
+git help init
+</code></pre>
+<p>Para sair do manual, aperte <code>q</code>.</p>
+<h1><a class="header" href="#git-init" id="git-init"><code>git init</code></a></h1>
 <p>O Git gerencia os repositórios no mesmo diretório/pasta da aplicação. Para
 inicializar o repositório, vá até o diretório do projeto e execute <code>git init</code>.</p>
 <pre><code class="language-sh">cd meu/projeto
@@ -248,7 +261,7 @@ constarão na próxima versão.</p>
 constarão na próxima versão.</p>
 <h1><a class="header" href="#estado-staged" id="estado-staged">Estado Staged</a></h1>
 <p>Arquivos neste estado trazem alguma mudança e constarão na nova versão.</p>
-<h1><a class="header" href="#git-add" id="git-add">git add</a></h1>
+<h1><a class="header" href="#git-add" id="git-add"><code>git add</code></a></h1>
 <p>Para adicionar arquivos modificados ou não-rastreados à <em>staging area</em>, existe
 o comando <code>git add</code>. A sintaxe do commando é:</p>
 <p>Adicionando um arquivo:</p>
@@ -270,7 +283,7 @@ significa &quot;o diretório atual&quot;).</p>
 <p>Na prática, <code>git add .</code> e <code>git add -a</code> se comportam da mesma forma. Os dois só
 diferem quando o diretório atual não é a raiz do projeto, como por exemplo, o
 diretório <code>./src/</code>.</p>
-<h1><a class="header" href="#git-status" id="git-status">git status</a></h1>
+<h1><a class="header" href="#git-status" id="git-status"><code>git status</code></a></h1>
 <p>O comando <code>git status</code> mostra o estado relativo à <em>staging area</em>. A sintaxe é
 simples:</p>
 <pre><code class="language-sh">git status
@@ -288,7 +301,33 @@ introduzidas. É recomendado que a mensagem do commit não tenha muito mais do q
 ocultar a opção <code>-m</code> e a mensagem, assim:</p>
 <pre><code class="language-sh">git commit
 </code></pre>
-<h1><a class="header" href="#git-rm-e-git-mv" id="git-rm-e-git-mv">git rm E git mv</a></h1>
+<h1><a class="header" href="#git-rm-e-git-mv" id="git-rm-e-git-mv"><code>git rm</code> E <code>git mv</code></a></h1>
+<p>Às vezes o Git é &quot;burrinho&quot; e não sabe diferenciar o caso de:</p>
+<ul>
+<li>Você reescreveu um arquivo vs. você removeu o arquivo e criou um novo com
+mesmo nome;</li>
+<li>Você renomeou um arquivo vs. você removeu o arquivo e criou outro parecido.</li>
+</ul>
+<p>Para resolver isso, existem os comandos <code>git rm</code> e <code>git mv</code>.</p>
+<h1><a class="header" href="#git-rm" id="git-rm"><code>git rm</code></a></h1>
+<p>O comando <code>git rm</code> registra no repositório que você removeu o arquivo, de tal
+forma que o Git não considerará que você reescreveu o arquivo ou renomeou.</p>
+<h1><a class="header" href="#git-mv" id="git-mv"><code>git mv</code></a></h1>
+<p>O comando <code>git mv</code> registra no repositório que você renomeou o arquivo, de tal
+forma que o Git não considerará que você removeu arquivo.</p>
+<h1><a class="header" href="#git-reset-e-git-restore" id="git-reset-e-git-restore">git reset E git restore</a></h1>
+<p>Para o caso de ser necessário tirar uma mudança do estado <em>staged</em>, ou até mesmo
+voltar ao estado do commit atual (HEAD), é possível usar os comandos <code>git reset</code>
+e <code>git restore</code>.</p>
+<h1><a class="header" href="#git-restore" id="git-restore"><code>git restore</code></a></h1>
+<p>Esse comando restaura os arquivos que estão visiveis (working tree) para serem
+idênticos aos do commit atual (HEAD). Para restaurar os arquivos <code>main.c</code> e
+<code>vetor.c</code> por exemplo:</p>
+<pre><code class="language-sh">git restore -- main.c vetor.c
+</code></pre>
+<h1><a class="header" href="#git-reset" id="git-reset"><code>git reset</code></a></h1>
+<p>Esse comando é semelhante ao <code>git restore</code>, mas tem mais variações além de ser
+mais fácil de fazer algo errado.</p>
 <h1><a class="header" href="#juntando-tudo" id="juntando-tudo">Juntando tudo</a></h1>
 
                     </main>
