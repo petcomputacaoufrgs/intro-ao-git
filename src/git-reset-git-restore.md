@@ -8,7 +8,7 @@ e `git restore`.
 
 O comando `git restore` restaura os arquivos que estão visiveis (working tree)
 para serem idênticos aos do commit atual (HEAD). Para restaurar os arquivos
-`main.c` e `vetor.c` por exemplo:
+`main.c` e `vetor.c`, por exemplo:
 ```sh
 git restore -- main.c vetor.c
 ```
