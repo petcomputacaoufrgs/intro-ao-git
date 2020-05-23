@@ -13,3 +13,7 @@ ocultar a opção `-m` e a mensagem, assim:
 ```sh
 git commit
 ```
+
+A todo _commit_, o Git associa um número chamado de _hash_. O número sempre é
+apresentado na sua forma hexadecimal, como por exemplo:
+`80ba4e49ee1fc346ee4934bdd2b4581e61b5c5fa`.
