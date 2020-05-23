@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="staging-juntando-tudo.html"><strong aria-hidden="true">5.6.</strong> Juntando Tudo</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="staging-juntando-tudo.html"><strong aria-hidden="true">5.6.</strong> Juntando Tudo</a></li></ol></li><li class="chapter-item expanded "><a href="linhas-e-branches.html"><strong aria-hidden="true">6.</strong> Linhas do Tempo E Branches</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="branches.html"><strong aria-hidden="true">6.1.</strong> Branches</a></li><li class="chapter-item expanded "><a href="navegando-commits.html"><strong aria-hidden="true">6.2.</strong> Navegando Entre Commits</a></li><li class="chapter-item expanded "><a href="merge.html"><strong aria-hidden="true">6.3.</strong> Merge</a></li><li class="chapter-item expanded "><a href="git-rebase.html"><strong aria-hidden="true">6.4.</strong> git rebase</a></li><li class="chapter-item expanded "><a href="git-log.html"><strong aria-hidden="true">6.5.</strong> git log</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -301,6 +301,9 @@ introduzidas. É recomendado que a mensagem do commit não tenha muito mais do q
 ocultar a opção <code>-m</code> e a mensagem, assim:</p>
 <pre><code class="language-sh">git commit
 </code></pre>
+<p>A todo <em>commit</em>, o Git associa um número chamado de <em>hash</em>. O número sempre é
+apresentado na sua forma hexadecimal, como por exemplo:
+<code>80ba4e49ee1fc346ee4934bdd2b4581e61b5c5fa</code>.</p>
 <h1><a class="header" href="#git-rm-e-git-mv" id="git-rm-e-git-mv"><code>git rm</code> E <code>git mv</code></a></h1>
 <p>Às vezes o Git é &quot;burrinho&quot; e não sabe diferenciar o caso de:</p>
 <ul>
@@ -366,6 +369,74 @@ git init
 <p>Pronto! Podemos fazer o nosso primeiro commit.</p>
 <pre><code class="language-sh">git commit -m 'adicionada a função principal'
 </code></pre>
+<h1><a class="header" href="#linhas-do-tempo-e-branches" id="linhas-do-tempo-e-branches">Linhas do Tempo E Branches</a></h1>
+<p>No Git, os <em>commit</em> s são arranjados em uma linha do tempo. Por padrão, essa
+linha do tempo é linear, mas o Git também permite expressar bifurcações na linha
+do tempo. Para isso, existe o conceito de &quot;<em>branch</em>&quot; (literalmente &quot;galho&quot;,
+&quot;ramo&quot;).</p>
+<p>Por padrão, a primeira branch do repositório se chama &quot;<em>master</em>&quot;. Ao fazer o
+primeiro commit, essa <em>branch</em> é criada. Esses diferentes &quot;galhos&quot; na linha do
+tempo, podem eventualmente juntar-se novamente, no que chamamos de <em>merge</em>
+(literalmente &quot;união&quot; ou &quot;mescla&quot;). É uma estratégia comum fazer-se várias
+<em>branches</em> com o objetivo de uní-las com a <em>master</em> eventualmente.</p>
+<h1><a class="header" href="#branches" id="branches">Branches</a></h1>
+<p>Uma <em>branch</em> é uma ramificação na linha do tempo do Git.</p>
+<h1><a class="header" href="#criando-e-trocando-de-branch" id="criando-e-trocando-de-branch">Criando E Trocando De Branch</a></h1>
+<p>Existem várias formas de criar uma <em>branch</em>. Uma delas, usando o comando
+<code>git branch</code>, que simplesmente cria uma <em>branch</em> e não faz mais nada. Para criar
+a <em>branch</em> com o nome &quot;minha-branch&quot;, use:</p>
+<pre><code class="language-sh">git branch minha-branch
+</code></pre>
+<p>Por padrão, você não vai estar na branch que criou.  Para trocar de branch use
+<code>git checkout</code>, assim:</p>
+<pre><code>git checkout minha-branch
+</code></pre>
+<p>Para <strong>criar e trocar</strong> de branch ao mesmo tempo, use <code>git checkout</code> com a
+<em>flag</em> <code>-b</code>, assim:</p>
+<pre><code>git checkout -b minha-branch
+</code></pre>
+<p>Por padrão, a nova <em>branch</em> começa do <em>commit</em> atual (HEAD). Então suponhamos um
+<em>commit</em> <code>3c97506</code> seguido de um <em>commit</em> <code>ec49a96</code>, ambos dentro da branch
+<code>master</code>. A <code>HEAD</code> aponta para este último. Temos uma árvore assim:</p>
+<pre><code>master
+ec49a96 &lt;- HEAD
+   |
+3c97506
+</code></pre>
+<p>Após fazermos uma nova <em>branch</em> &quot;teste&quot; (<code>git checkout -b teste</code>), e produzirmos
+um novo <em>commit</em> <code>4b12d0a</code> nela, temos a seguinte:</p>
+<pre><code>         teste
+         4b12d0a &lt;- HEAD
+        /
+master /
+ec49a96
+   |
+3c97506
+</code></pre>
+<p>Se voltarmos para a <em>master</em> (<code>git checkout master</code>), e produzirmos um novo
+<em>commit</em> <code>80ba4e4</code>, temos:</p>
+<pre><code>        master   teste
+HEAD -&gt; 80ba4e4  4b12d0a
+           |    /
+           |   /
+        ec49a96
+           |
+        3c97506
+</code></pre>
+<h1><a class="header" href="#deletando-branches" id="deletando-branches">Deletando Branches</a></h1>
+<p>Para deletar branches, existem duas formas. A primeira, a forma segura, requer
+que você tenha feito <em>merge</em> dessa branch em outra antes (será explicado nos
+próximos dois capítulos). Basta passar a flag <code>-d</code> para o comando <code>git branch</code>,
+junto ao nome da branch:</p>
+<pre><code>git branch -d minha-branch
+</code></pre>
+<p>Para forçar a deleção sem ter salvo a <code>branch</code> em outra, use <code>-D</code>:</p>
+<pre><code>git branch -D minha-branch
+</code></pre>
+<h1><a class="header" href="#navegando-entre-commits" id="navegando-entre-commits">Navegando Entre Commits</a></h1>
+<h1><a class="header" href="#merge" id="merge"><em>Merge</em></a></h1>
+<h1><a class="header" href="#git-rebase" id="git-rebase">git rebase</a></h1>
+<h1><a class="header" href="#git-log" id="git-log">git log</a></h1>
 
                     </main>
 
