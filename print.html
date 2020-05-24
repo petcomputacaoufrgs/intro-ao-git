@@ -277,8 +277,8 @@ o comando <code>git add</code>. A sintaxe do commando é:</p>
 significa &quot;o diretório atual&quot;).</p>
 <pre><code class="language-sh">git add .
 </code></pre>
-<p>Há também a flag <code>-a</code> que adiciona todas as modificações, do projeto inteiro.</p>
-<pre><code class="language-sh">git add -a
+<p>Há também a flag <code>-A</code> que adiciona todas as modificações, do projeto inteiro.</p>
+<pre><code class="language-sh">git add -A
 </code></pre>
 <p>Na prática, <code>git add .</code> e <code>git add -a</code> se comportam da mesma forma. Os dois só
 diferem quando o diretório atual não é a raiz do projeto, como por exemplo, o
@@ -434,6 +434,8 @@ junto ao nome da branch:</p>
 <pre><code>git branch -D minha-branch
 </code></pre>
 <h1><a class="header" href="#navegando-entre-commits" id="navegando-entre-commits">Navegando Entre Commits</a></h1>
+<p>É possível, no Git, mudar o commit o HEAD para um commit passado. Esse é mais um
+uso do comando <code>git checkout</code>.</p>
 <h1><a class="header" href="#merge" id="merge"><em>Merge</em></a></h1>
 <h1><a class="header" href="#git-rebase" id="git-rebase">git rebase</a></h1>
 <h1><a class="header" href="#git-log" id="git-log">git log</a></h1>
