@@ -23,9 +23,12 @@ _flag_ `-b`, assim:
 git checkout -b minha-branch
 ```
 
-Por padrão, a nova _branch_ começa do _commit_ atual (HEAD). Então suponhamos um
-_commit_ `3c97506` seguido de um _commit_ `ec49a96`, ambos dentro da branch
-`master`. A `HEAD` aponta para este último. Temos uma árvore assim:
+Por padrão, a nova _branch_ começa do _commit_ atual (HEAD).
+
+# Exemplo
+
+Suponhamos um _commit_ `3c97506` seguido de um _commit_ `ec49a96`, ambos dentro
+da branch `master`. A `HEAD` aponta para este último. Temos uma árvore assim:
 
 ```
 master
