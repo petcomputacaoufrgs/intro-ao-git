@@ -148,6 +148,18 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#merge" id="merge"><em>Merge</em></a></h1>
+<p>É possível aplicar as mudanças de uma <em>branch</em>  à outra, num processo chamado de
+<em>merge</em>.  Usa-se o comando <code>git merge</code>. Por exemplo, suponha que estejamos em
+uma <em>branch</em> <code>minha-branch</code>, e queiramos aplicar os <em>commits</em> de <code>outra-branch</code>
+em <code>minha-branch</code>:</p>
+<pre><code class="language-sh">git merge outra-branch
+</code></pre>
+<p>Um <em>merge</em> aplica somente os <em>commits</em> que as <em>branches</em> não têm em comum.</p>
+<h1><a class="header" href="#conflitos" id="conflitos">Conflitos</a></h1>
+<p>Por padrão, sempre que houver um conflito em um arquivo, o Git tenta resolver
+mesclando as versões dos arquivos. No entanto, nem sempre é válida essa
+mesclagem. Nesses casos, o Git falha em resolver o conflito, e intervenção
+manual é requisitada.</p>
 
                     </main>
 

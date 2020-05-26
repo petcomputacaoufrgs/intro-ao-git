@@ -389,13 +389,23 @@ a <em>branch</em> com o nome &quot;minha-branch&quot;, use:</p>
 </code></pre>
 <p>Por padrão, você não vai estar na branch que criou.  Para trocar de branch use
 <code>git checkout</code>, assim:</p>
-<pre><code>git checkout minha-branch
+<pre><code class="language-sh">git checkout minha-branch
+</code></pre>
+<p>É possível, também, utilizar <code>git reset</code> para trocar de <em>branch</em>.</p>
+<pre><code class="language-sh">git reset minha-branch
+</code></pre>
+<p>A flag <code>--soft</code> troca de <em>branch</em> preservando alterações feitas mas que não
+entraram no <em>commit</em>:</p>
+<pre><code class="language-sh">git reset --soft minha-branch
 </code></pre>
 <p>Para <strong>criar e trocar</strong> de branch ao mesmo tempo, use <code>git checkout</code> com a
 <em>flag</em> <code>-b</code>, assim:</p>
-<pre><code>git checkout -b minha-branch
+<pre><code class="language-sh">git checkout -b minha-branch
 </code></pre>
-<p>Por padrão, a nova <em>branch</em> começa do <em>commit</em> atual (HEAD).</p>
+<p>Por padrão, a nova <em>branch</em> começa do <em>commit</em> atual (HEAD). É possível criar
+uma branch a partir de um <em>commit</em>, digamos, <code>0935946</code>.</p>
+<pre><code class="language-sh">git branch minha-branch 0935946
+</code></pre>
 <h1><a class="header" href="#exemplo" id="exemplo">Exemplo</a></h1>
 <p>Suponhamos um <em>commit</em> <code>3c97506</code> seguido de um <em>commit</em> <code>ec49a96</code>, ambos dentro
 da branch <code>master</code>. A <code>HEAD</code> aponta para este último. Temos uma árvore assim:</p>
@@ -455,6 +465,18 @@ arquivos de um <em>commit</em> antigo.</p>
 <pre><code class="language-sh">git checkout master
 </code></pre>
 <h1><a class="header" href="#merge" id="merge"><em>Merge</em></a></h1>
+<p>É possível aplicar as mudanças de uma <em>branch</em>  à outra, num processo chamado de
+<em>merge</em>.  Usa-se o comando <code>git merge</code>. Por exemplo, suponha que estejamos em
+uma <em>branch</em> <code>minha-branch</code>, e queiramos aplicar os <em>commits</em> de <code>outra-branch</code>
+em <code>minha-branch</code>:</p>
+<pre><code class="language-sh">git merge outra-branch
+</code></pre>
+<p>Um <em>merge</em> aplica somente os <em>commits</em> que as <em>branches</em> não têm em comum.</p>
+<h1><a class="header" href="#conflitos" id="conflitos">Conflitos</a></h1>
+<p>Por padrão, sempre que houver um conflito em um arquivo, o Git tenta resolver
+mesclando as versões dos arquivos. No entanto, nem sempre é válida essa
+mesclagem. Nesses casos, o Git falha em resolver o conflito, e intervenção
+manual é requisitada.</p>
 <h1><a class="header" href="#git-rebase" id="git-rebase">git rebase</a></h1>
 <h1><a class="header" href="#git-log" id="git-log">git log</a></h1>
 
