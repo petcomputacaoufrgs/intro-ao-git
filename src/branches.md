@@ -13,17 +13,32 @@ git branch minha-branch
 
 Por padrão, você não vai estar na branch que criou.  Para trocar de branch use
 `git checkout`, assim:
-```
+```sh
 git checkout minha-branch
+```
+
+É possível, também, utilizar `git reset` para trocar de _branch_.
+```sh
+git reset minha-branch
+```
+
+A flag `--soft` troca de _branch_ preservando alterações feitas mas que não
+entraram no _commit_:
+```sh
+git reset --soft minha-branch
 ```
 
 Para **criar e trocar** de branch ao mesmo tempo, use `git checkout` com a
 _flag_ `-b`, assim:
-```
+```sh
 git checkout -b minha-branch
 ```
 
-Por padrão, a nova _branch_ começa do _commit_ atual (HEAD).
+Por padrão, a nova _branch_ começa do _commit_ atual (HEAD). É possível criar
+uma branch a partir de um _commit_, digamos, `0935946`.
+```sh
+git branch minha-branch 0935946
+```
 
 # Exemplo
 
