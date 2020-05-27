@@ -160,6 +160,71 @@ em <code>minha-branch</code>:</p>
 mesclando as versões dos arquivos. No entanto, nem sempre é válida essa
 mesclagem. Nesses casos, o Git falha em resolver o conflito, e intervenção
 manual é requisitada.</p>
+<p>Em cada arquivo, o que é comum entre as duas <em>branches</em> é mantido. Onde há o
+conflito, é indicado o quê pertence à <em>branch</em> atual, e o que pertence à outra
+<em>branch</em>. Assim:</p>
+<pre><code class="language-c">int main()
+{
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    vindo_da_minha_branch();
+=======
+    vindo_da_outra_branchl();
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; outra-branch
+    return 0;
+}
+</code></pre>
+<p>Uma resolução de conflitos manual consiste em ir em cada um desses arquivos com
+conflito, e, em cada conflito, escolher uma das versões, ou até mesmo
+mesclá-las. Para descobrir-se quais arquivos precisam de interveção, basta
+executar o comando <code>git status</code>. Após a resolução dos conflitos, e necessário
+fazer um novo <em>commit</em> contendo os arquivos corrigidos.</p>
+<p>Existem, no entanto, ferramentas para auxiliar na resolução dos conflitos, como
+o <code>kdiff</code>.</p>
+<h1><a class="header" href="#exemplo" id="exemplo">Exemplo</a></h1>
+<p>Suponha o seguinte cenário, uma <em>branch</em> &quot;master&quot; e uma &quot;teste&quot;:</p>
+<pre><code>        master    teste
+HEAD -&gt; 80ba4e4  b49a7ed
+           |        |
+           |     4b12d0a
+           |    /
+           |   /
+        ec49a96
+           |
+        3c97506
+</code></pre>
+<p>Suponha que queiramos aplicar as os dois <em>commits</em> <code>4b12d0a</code> e <code>b49a7ed</code> à
+<em>branch</em> &quot;master&quot;. Façamos o seguinte:</p>
+<pre><code class="language-sh">git merge teste
+</code></pre>
+<p>O resultado será o seguinte:</p>
+<pre><code>        master
+HEAD -&gt; 47d7959
+           |   \
+           |    \ teste
+        80ba4e4  b49a7ed
+           |        |
+           |     4b12d0a
+           |    /
+           |   /
+        ec49a96
+           |
+        3c97506
+</code></pre>
+<p>Note que a <em>branch</em> &quot;teste&quot; continuará existindo. Podemos fazer um novo <em>commit</em>
+nela:</p>
+<pre><code>master    teste
+47d7959  0935946 &lt;- HEAD
+   |   \    |
+   |    \   |
+80ba4e4  b49a7ed
+   |        |
+   |     4b12d0a
+   |    /
+   |   /
+ec49a96
+   |
+3c97506
+</code></pre>
 
                     </main>
 
