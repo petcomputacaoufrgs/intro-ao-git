@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>git rm E git mv - Uma Introdução Ao Git</title>
+        <title>git diff - Uma Introdução Ao Git</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html" class="active"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="staging-juntando-tudo.html"><strong aria-hidden="true">5.6.</strong> Juntando Tudo</a></li></ol></li><li class="chapter-item expanded "><a href="linhas-e-branches.html"><strong aria-hidden="true">6.</strong> Linhas do Tempo E Branches</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="branches.html"><strong aria-hidden="true">6.1.</strong> Branches</a></li><li class="chapter-item expanded "><a href="navegando-commits.html"><strong aria-hidden="true">6.2.</strong> Navegando Entre Commits</a></li><li class="chapter-item expanded "><a href="merge.html"><strong aria-hidden="true">6.3.</strong> Merge</a></li><li class="chapter-item expanded "><a href="git-rebase.html"><strong aria-hidden="true">6.4.</strong> git rebase</a></li><li class="chapter-item expanded "><a href="git-log.html"><strong aria-hidden="true">6.5.</strong> git log</a></li><li class="chapter-item expanded "><a href="git-diff.html"><strong aria-hidden="true">6.6.</strong> git diff</a></li><li class="chapter-item expanded "><a href="git-show.html"><strong aria-hidden="true">6.7.</strong> git show</a></li><li class="chapter-item expanded "><a href="git-tag.html"><strong aria-hidden="true">6.8.</strong> git tag</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="staging-juntando-tudo.html"><strong aria-hidden="true">5.6.</strong> Juntando Tudo</a></li></ol></li><li class="chapter-item expanded "><a href="linhas-e-branches.html"><strong aria-hidden="true">6.</strong> Linhas do Tempo E Branches</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="branches.html"><strong aria-hidden="true">6.1.</strong> Branches</a></li><li class="chapter-item expanded "><a href="navegando-commits.html"><strong aria-hidden="true">6.2.</strong> Navegando Entre Commits</a></li><li class="chapter-item expanded "><a href="merge.html"><strong aria-hidden="true">6.3.</strong> Merge</a></li><li class="chapter-item expanded "><a href="git-rebase.html"><strong aria-hidden="true">6.4.</strong> git rebase</a></li><li class="chapter-item expanded "><a href="git-log.html"><strong aria-hidden="true">6.5.</strong> git log</a></li><li class="chapter-item expanded "><a href="git-diff.html" class="active"><strong aria-hidden="true">6.6.</strong> git diff</a></li><li class="chapter-item expanded "><a href="git-show.html"><strong aria-hidden="true">6.7.</strong> git show</a></li><li class="chapter-item expanded "><a href="git-tag.html"><strong aria-hidden="true">6.8.</strong> git tag</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,33 +147,40 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#git-rm-e-git-mv" id="git-rm-e-git-mv"><code>git rm</code> E <code>git mv</code></a></h1>
-<p>Às vezes o Git é &quot;burrinho&quot; e não sabe diferenciar o caso de:</p>
-<ul>
-<li>Você reescreveu um arquivo vs. você removeu o arquivo e criou um novo com
-mesmo nome;</li>
-<li>Você renomeou um arquivo vs. você removeu o arquivo e criou outro parecido.</li>
-</ul>
-<p>Para resolver isso, existem os comandos <code>git rm</code> e <code>git mv</code>.</p>
-<h1><a class="header" href="#git-rm" id="git-rm"><code>git rm</code></a></h1>
-<p>O comando <code>git rm</code> registra no repositório que você removeu o arquivo, de tal
-forma que o Git não considerará que você reescreveu o arquivo ou renomeou.</p>
-<h1><a class="header" href="#git-mv" id="git-mv"><code>git mv</code></a></h1>
-<p>O comando <code>git mv</code> registra no repositório que você renomeou o arquivo, de tal
-forma que o Git não considerará que você removeu arquivo.</p>
+                        <h1><a class="header" href="#git-diff" id="git-diff"><code>git diff</code></a></h1>
+<p>Para visualizar diferenças entre versões do projeto, é possível utilizar o
+comando <code>git diff</code>. O comando exibe diferenças no seguinte formato: uma versão
+é dada como versão mais antiga, a outra como mais nova, as linhas que a versão
+mais nova introduziu são marcadas com um <code>+</code> e as que a versão mais nova removeu
+são marcadas com um <code>-</code>. Para visualizar a diferença entre um <em>commit</em> antigo
+<code>e544ad4</code> e um <em>commit</em> novo <code>d4b67d0</code>, basta executar:</p>
+<pre><code class="language-sh">git diff e544ad4 d4b67d0
+</code></pre>
+<p>Para sair do comando, basta digitar <code>q</code>.</p>
+<p>Para visualizar a diferença apenas nos arquivos <code>main.c</code> e <code>vetor.c</code>, em relação
+a esses mesmos <em>commits</em>, basta executar:</p>
+<pre><code class="language-sh">git diff e544ad4 d4b67d0 -- main.c vetor.c
+</code></pre>
+<p>Para visualizar a diferença entre algum <em>commit</em> <code>e544ad4</code> e os arquivos que
+você vê no diretório do projeto (<em>working tree</em>), basta executar:</p>
+<pre><code class="language-sh">git diff e544ad4
+</code></pre>
+<p>Para comparar duas <em>branches</em> &quot;master&quot; e &quot;desenvolvimento&quot;, basta executar:</p>
+<pre><code class="language-sh">git diff master desenvolvimento
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="git-commit.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="git-log.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="git-reset-git-restore.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="git-show.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -185,13 +192,13 @@ forma que o Git não considerará que você removeu arquivo.</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="git-commit.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="git-log.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="git-reset-git-restore.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="git-show.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
