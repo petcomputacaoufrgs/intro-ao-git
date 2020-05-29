@@ -55,9 +55,10 @@ esse:
 
 ![texto descrevendo um rebase interativo](./git-rebase-1.png)
 
-A imagem por si só é bem descritiva. Mas como exemplo, tomemos a seguinte
-edição, onde juntaremos os dois primeiros _commits_ em um (_squash_) e
-editaremos a mensagem do terceiro.
+A imagem por si só é bem descritiva. Note que você pode alterar a ordem também,
+como no _rebase_ não-interativo. Mas como exemplo, tomemos a seguinte edição,
+onde juntaremos os dois primeiros _commits_ em um (_squash_) e editaremos a
+mensagem do terceiro.
 
 ![texto descrevendo um rebase interativo editado](./git-rebase-2.png)
 
