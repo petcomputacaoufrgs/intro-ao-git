@@ -608,7 +608,23 @@ antiga, mas basta editar o texto de forma semelhante ao <em>squash</em>.</p>
 <p>Se em algum momento você quiser abortar o <em>rebase</em>, execute:</p>
 <pre><code class="language-sh">git rebase --abort
 </code></pre>
-<h1><a class="header" href="#git-log" id="git-log">git log</a></h1>
+<h1><a class="header" href="#git-log" id="git-log"><code>git log</code></a></h1>
+<p>O comando <code>git log</code> permite visualizar o histórico do repositório. Sua forma
+mais básica é:</p>
+<pre><code class="language-sh">git log
+</code></pre>
+<p>Para sair do comando, basta digitar <code>q</code>. Exemplo de visualização:
+<img src="./git-log-1.png" alt="saída do git log básico" /></p>
+<p>É possível compactar a formatação do comando:</p>
+<pre><code class="language-sh">git log --oneline
+</code></pre>
+<p><img src="./git-log-2.png" alt="saída do git log em uma linha" /></p>
+<p>Por padrão, o <code>git log</code> só exibe conteúdo da <em>branch</em> atual. Para mostrar outras
+<em>branches</em>, a <em>flag</em> <code>--all</code> é necessária. Além disso, faz sentido visualizar o
+grafo das <em>branches</em> neste caso, com a <em>flag</em> <code>--graph</code>:</p>
+<pre><code class="language-sh">git log --all --graph
+</code></pre>
+<p><img src="./git-log-3.png" alt="saída do git log em grafo" /></p>
 
                     </main>
 
