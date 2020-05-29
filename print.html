@@ -542,7 +542,71 @@ ec49a96
    |
 3c97506
 </code></pre>
-<h1><a class="header" href="#git-rebase" id="git-rebase">git rebase</a></h1>
+<h1><a class="header" href="#git-rebase" id="git-rebase"><code>git rebase</code></a></h1>
+<p>Além do <em>merge</em>, é possível mover ou editar seus commits. O comando <code>git rebase</code>
+permite isso. Há dois tipos de <code>rebase</code>: o interativo e o não-interativo.</p>
+<h1><a class="header" href="#rebase-não-interativo" id="rebase-não-interativo"><em>Rebase</em> Não-Interativo</a></h1>
+<p>Um <em>rebase</em> não-interativo &quot;desloca&quot; os <em>commits</em> de uma <em>branch</em> para de tal
+forma que os <em>commits</em> de outra branch façam parte da história desta <em>branch</em>,
+preservando o conteúdo dos arquivos da primeira <em>branch</em>. Por exemplo, imagine o
+seguinte cenário:</p>
+<pre><code>master    teste
+80ba4e4  b49a7ed &lt;- HEAD
+   |        |
+   |     4b12d0a
+   |    /
+   |   /
+ec49a96
+   |
+3c97506
+</code></pre>
+<p>Agora, suponha que queremos &quot;fingir&quot; que a <em>branch</em> começa no <em>commit</em> <code>80ba4e4</code>
+e não no <em>commit</em> <code>ec49a96</code>. Basta executarmos o seguinte:</p>
+<pre><code class="language-sh">git rebase master teste
+</code></pre>
+<p>O Resultado é:</p>
+<pre><code>          teste
+         b49a7ed &lt;- HEAD
+            |
+         4b12d0a
+        /
+master /
+80ba4e4
+   |
+ec49a96
+   |
+3c97506
+</code></pre>
+<h1><a class="header" href="#rebase-interativo" id="rebase-interativo"><em>Rebase</em> Interativo</a></h1>
+<p>Para iniciar um <em>rebase</em> interativo desde 3 <em>commits</em> atrás, basta executar:</p>
+<pre><code class="language-sh">git rebase -i HEAD~3
+</code></pre>
+<p>Isso abrirá um editor de texto (No Linux, o padrão é o <code>vi</code>) para escolher como
+você vai editar os <em>commits</em>. Você deve ver no editor um conteúdo similar a
+esse:</p>
+<p><img src="./git-rebase-1.png" alt="texto descrevendo um rebase interativo" /></p>
+<p>A imagem por si só é bem descritiva. Mas como exemplo, tomemos a seguinte
+edição, onde juntaremos os dois primeiros <em>commits</em> em um (<em>squash</em>) e
+editaremos a mensagem do terceiro.</p>
+<p><img src="./git-rebase-2.png" alt="texto descrevendo um rebase interativo editado" /></p>
+<p>Ao salvarmos e saírmos do editor, seremos requisitados para fornecer a mensagem
+dos <em>commits</em> que serão fundidos.</p>
+<p><img src="./git-rebase-3.png" alt="texto descrevendo um squash" /></p>
+<p>Basta editar a área que não está comentada (isto é, que não inicia com &quot;<code>#</code>&quot;),
+e sair do editor.</p>
+<p><img src="./git-rebase-4.png" alt="texto descrevendo um squash editado" /></p>
+<p>Depois, precisamos editar a mensagem terceiro commit do <em>rebase</em>. Para isso,
+basta executar:</p>
+<pre><code class="language-sh">git commit --amend
+</code></pre>
+<p>E um editor irá abrir para inserirmos a mensagem. Ele virá com a mensagem
+antiga, mas basta editar o texto de forma semelhante ao <em>squash</em>.</p>
+<p>Para seguir em frente da edição do <em>commit</em>, basta executar:</p>
+<pre><code class="language-sh">git rebase --continue
+</code></pre>
+<p>Se em algum momento você quiser abortar o <em>rebase</em>, execute:</p>
+<pre><code class="language-sh">git rebase --abort
+</code></pre>
 <h1><a class="header" href="#git-log" id="git-log">git log</a></h1>
 
                     </main>
