@@ -18,3 +18,6 @@
     - [_Merge_](./merge.md)
     - [`git rebase`](./git-rebase.md)
     - [`git log`](./git-log.md)
+    - [`git diff`](./git-diff.md)
+    - [`git show`](./git-show.md)
+    - [`git tag`](./git-tag.md)
