@@ -150,23 +150,23 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#o-que-É-o-git" id="o-que-É-o-git">O Que É O Git?</a></h1>
-<p>Se eu fosse resumir a resposta, ela seria: git é uma ferramenta distribuída de controle de versionamento de software. As alterações de uma versão do software são
+<p>Se eu fosse resumir a resposta, ela seria: git é uma ferramenta distribuída de controle de versionamento de <em>software</em>. As alterações de uma versão do <em>software</em> são
 chamadas &quot;<em>commit</em>&quot;. Os arquivos que contêm as versões são chamados
 &quot;repositório&quot;.</p>
 <h1><a class="header" href="#o-que-É-controle-de-versionamento" id="o-que-É-controle-de-versionamento">O Que É Controle De Versionamento?</a></h1>
-<p>Controle de versionamento de um software é o registro das alterações dos
-arquivos de um software ao longo do seu desenvolvimento; é o registro da
-história de um software. No entanto, é bom notar que versionamento normalmente
+<p>Controle de versionamento de um <em>software</em> é o registro das alterações dos
+arquivos de um <em>software</em> ao longo do seu desenvolvimento; é o registro da
+história de um <em>software</em>. No entanto, é bom notar que versionamento normalmente
 não envolve grandes saltos entre versões. Ao invés disso, registram-se novas
 versões em pequenas mudanças, pequenos saltos, como adicionar um arquivo ou
 reescrever uma função.</p>
 <h1><a class="header" href="#o-que-significa-ser-distribuído" id="o-que-significa-ser-distribuído">O Que Significa Ser Distribuído?</a></h1>
 <p>Versionadores costumam trabalhar com o conceito de &quot;repositórios&quot;. Um
-repositório contém o software em questão e sua história. Alguns, como o SVN,
-centralizam um software em um repositório remoto (servidor). Isso significa que
+repositório contém o <em>software</em> em questão e sua história. Alguns, como o SVN,
+centralizam um <em>software</em> em um repositório remoto (servidor). Isso significa que
 toda nova versão tem de passar pelo servidor. Este <strong>não</strong> é o caso do Git. O
 Git possibilita repositórios locais. Isto é, você pode ter toda história do
-software na sua máquina, fazer suas próprias mudanças, compartilhar com vários
+<em>software</em> na sua máquina, fazer suas próprias mudanças, compartilhar com vários
 repositórios remotos, etc.</p>
 <h1><a class="header" href="#git-vs-github" id="git-vs-github">Git vs. GitHub</a></h1>
 <p>Às vezes a distinção entre Git e GitHub é confusa, mas é a seguinte: Git é o
@@ -277,7 +277,7 @@ o comando <code>git add</code>. A sintaxe do commando é:</p>
 significa &quot;o diretório atual&quot;).</p>
 <pre><code class="language-sh">git add .
 </code></pre>
-<p>Há também a flag <code>-A</code> que adiciona todas as modificações, do projeto inteiro.</p>
+<p>Há também a <em>flag</em> <code>-A</code> que adiciona todas as modificações, do projeto inteiro.</p>
 <pre><code class="language-sh">git add -A
 </code></pre>
 <p>Na prática, <code>git add .</code> e <code>git add -a</code> se comportam da mesma forma. Os dois só
@@ -332,19 +332,19 @@ para serem idênticos aos do commit atual (HEAD). Para restaurar os arquivos
 do Git, por isso, você pode precisar usar o comando <code>git reset</code>.</p>
 <h1><a class="header" href="#git-reset" id="git-reset"><code>git reset</code></a></h1>
 <p>O comando <code>git reset</code> é semelhante ao <code>git restore</code>, mas tem mais variações
-além de ser mais fácil de fazer algo errado. Se não for usada nenhuma flag, ou
-a flag <code>--mixed</code> for usada, os arquivos que estavam <em>staged</em> vão deixar de ser
+além de ser mais fácil de fazer algo errado. Se não for usada nenhuma <em>flag</em>, ou
+a <em>flag</em> <code>--mixed</code> for usada, os arquivos que estavam <em>staged</em> vão deixar de ser
 <em>staged</em>, mas não serão alterados. Por exemplo, para restaurar todos os
 arquivos:</p>
 <pre><code class="language-sh">git reset --mixed HEAD
 # ou simplesmente
 git reset HEAD
 </code></pre>
-<p>Com a flag <code>--hard</code>, o comportamento é semelhante ao de <code>git restore</code>, exceto
+<p>Com a <em>flag</em> <code>--hard</code>, o comportamento é semelhante ao de <code>git restore</code>, exceto
 que arquivos novos não serão deletados.</p>
 <pre><code class="language-sh">git reset --hard HEAD
 </code></pre>
-<p>Há ainda a flag <code>--soft</code>, que será explicado mais a frente, pois envolve um uso
+<p>Há ainda a <em>flag</em> <code>--soft</code>, que será explicado mais a frente, pois envolve um uso
 do comando ainda não explicado.</p>
 <h1><a class="header" href="#juntando-tudo" id="juntando-tudo">Juntando tudo</a></h1>
 <p>Então, como usar estes comandos em conjunto? O fluxo normal é <code>git add</code> =&gt;
@@ -394,7 +394,7 @@ a <em>branch</em> com o nome &quot;minha-branch&quot;, use:</p>
 <p>É possível, também, utilizar <code>git reset</code> para trocar de <em>branch</em>.</p>
 <pre><code class="language-sh">git reset minha-branch
 </code></pre>
-<p>A flag <code>--soft</code> troca de <em>branch</em> preservando alterações feitas mas que não
+<p>A <em>flag</em> <code>--soft</code> troca de <em>branch</em> preservando alterações feitas mas que não
 entraram no <em>commit</em>:</p>
 <pre><code class="language-sh">git reset --soft minha-branch
 </code></pre>
@@ -437,7 +437,7 @@ HEAD -&gt; 80ba4e4  4b12d0a
 <h1><a class="header" href="#deletando-branches" id="deletando-branches">Deletando Branches</a></h1>
 <p>Para deletar branches, existem duas formas. A primeira, a forma segura, requer
 que você tenha feito <em>merge</em> dessa branch em outra antes (será explicado nos
-próximos dois capítulos). Basta passar a flag <code>-d</code> para o comando <code>git branch</code>,
+próximos dois capítulos). Basta passar a <em>flag</em> <code>-d</code> para o comando <code>git branch</code>,
 junto ao nome da branch:</p>
 <pre><code>git branch -d minha-branch
 </code></pre>
@@ -654,7 +654,7 @@ exemplo, para visualizar o arquivo <code>main.c</code> do <em>commit</em> <code>
 <p>Para sair do comando, basta digitar <code>q</code>.</p>
 <h1><a class="header" href="#git-tag" id="git-tag"><code>git tag</code></a></h1>
 <p>É possível rotular <em>commits</em> usando aqueles rótulos bem conhecidos para se
-referir a versões de software como <code>v0.1.3</code>, <code>v1.0</code>, v<code>2.5.3</code>, etc. O comando
+referir a versões de <em>software</em> como <code>v0.1.3</code>, <code>v1.0</code>, v<code>2.5.3</code>, etc. O comando
 usado para tal é o <code>git tag</code>. Para marcar o <em>commit</em> atual como <code>v1.0</code>, basta
 executar:</p>
 <pre><code class="language-sh">git tag v1.0

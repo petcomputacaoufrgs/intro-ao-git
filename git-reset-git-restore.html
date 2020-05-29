@@ -161,19 +161,19 @@ para serem idênticos aos do commit atual (HEAD). Para restaurar os arquivos
 do Git, por isso, você pode precisar usar o comando <code>git reset</code>.</p>
 <h1><a class="header" href="#git-reset" id="git-reset"><code>git reset</code></a></h1>
 <p>O comando <code>git reset</code> é semelhante ao <code>git restore</code>, mas tem mais variações
-além de ser mais fácil de fazer algo errado. Se não for usada nenhuma flag, ou
-a flag <code>--mixed</code> for usada, os arquivos que estavam <em>staged</em> vão deixar de ser
+além de ser mais fácil de fazer algo errado. Se não for usada nenhuma <em>flag</em>, ou
+a <em>flag</em> <code>--mixed</code> for usada, os arquivos que estavam <em>staged</em> vão deixar de ser
 <em>staged</em>, mas não serão alterados. Por exemplo, para restaurar todos os
 arquivos:</p>
 <pre><code class="language-sh">git reset --mixed HEAD
 # ou simplesmente
 git reset HEAD
 </code></pre>
-<p>Com a flag <code>--hard</code>, o comportamento é semelhante ao de <code>git restore</code>, exceto
+<p>Com a <em>flag</em> <code>--hard</code>, o comportamento é semelhante ao de <code>git restore</code>, exceto
 que arquivos novos não serão deletados.</p>
 <pre><code class="language-sh">git reset --hard HEAD
 </code></pre>
-<p>Há ainda a flag <code>--soft</code>, que será explicado mais a frente, pois envolve um uso
+<p>Há ainda a <em>flag</em> <code>--soft</code>, que será explicado mais a frente, pois envolve um uso
 do comando ainda não explicado.</p>
 
                     </main>
