@@ -22,7 +22,7 @@ git checkout minha-branch
 git reset minha-branch
 ```
 
-A flag `--soft` troca de _branch_ preservando alterações feitas mas que não
+A _flag_ `--soft` troca de _branch_ preservando alterações feitas mas que não
 entraram no _commit_:
 ```sh
 git reset --soft minha-branch
@@ -82,7 +82,7 @@ HEAD -> 80ba4e4  4b12d0a
 
 Para deletar branches, existem duas formas. A primeira, a forma segura, requer
 que você tenha feito _merge_ dessa branch em outra antes (será explicado nos
-próximos dois capítulos). Basta passar a flag `-d` para o comando `git branch`,
+próximos dois capítulos). Basta passar a _flag_ `-d` para o comando `git branch`,
 junto ao nome da branch:
 ```
 git branch -d minha-branch

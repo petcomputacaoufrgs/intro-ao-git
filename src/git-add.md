@@ -24,7 +24,7 @@ significa "o diretório atual").
 git add .
 ```
 
-Há também a flag `-A` que adiciona todas as modificações, do projeto inteiro.
+Há também a _flag_ `-A` que adiciona todas as modificações, do projeto inteiro.
 ```sh
 git add -A
 ```
