@@ -21,3 +21,7 @@
     - [`git diff`](./git-diff.md)
     - [`git show`](./git-show.md)
     - [`git tag`](./git-tag.md)
+- [Repositórios Remotos](./repos-remotos.md)
+    - [`git clone`](./git-clone.md)
+    - [`git remote`](./git-remote.md)
+    - [`git pull` E `git push`](./git-pull-e-git-push.md)
