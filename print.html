@@ -722,6 +722,31 @@ existe o comando <code>git remote</code>. Para adicionar um remoto, com nome &qu
 <h1><a class="header" href="#git-pull-e-git-push" id="git-pull-e-git-push"><code>git pull</code> E <code>git push</code></a></h1>
 <p>Para &quot;puxar&quot; mudanças de um repositório remoto, existe o <code>git pull</code>, e para
 &quot;empurar&quot; mudanças a um repositório remoto, existe o <code>git push</code>.</p>
+<h1><a class="header" href="#git-push" id="git-push"><code>git push</code></a></h1>
+<p>Para mandar suas mudanças a um remoto salvo como &quot;origin&quot; numa <em>branch</em>
+&quot;master&quot;, use:</p>
+<pre><code class="language-sh">git push origin master
+</code></pre>
+<p>O comando, no entanto, pode falhar pelo fato de você não ter seu repositório
+local atualizado com novas mudanças do remoto. Nesse caso, você terá de executar
+o comando <code>git pull</code> antes, resolver um <em>merge</em>, e só então poderá executar
+<code>git push</code>. Veja abaixo como executar <code>git pull</code>.</p>
+<h1><a class="header" href="#git-pull" id="git-pull"><code>git pull</code></a></h1>
+<p>Semelhantemente, para receber mudanças de um repositório remoto salvo como
+&quot;origin&quot; numa <em>branch</em> master, use:</p>
+<pre><code class="language-sh">git pull origin master
+</code></pre>
+<p>Tome cuidado para que a <em>HEAD</em> esteja apontando para a mesma <em>branch</em>.</p>
+<p>Além disso, note que, se seu repositório local tiver novos <em>commits</em>, e o remoto
+também tiver novos <em>commits</em>, divergindo a respeito da história da <em>branch</em>,
+você terá de resolver um <em>merge</em>.</p>
+<h1><a class="header" href="#tags-também-podem-ser-movimentadas" id="tags-também-podem-ser-movimentadas"><em>Tags</em> Também Podem Ser Movimentadas</a></h1>
+<p>Suponha que você tenha executado:</p>
+<pre><code class="language-sh">git tag v0.3.5
+</code></pre>
+<p>Para mandar essa <em>tag</em> para o remoto &quot;origin&quot;, execute:</p>
+<pre><code>git push origin v0.3.5
+</code></pre>
 
                     </main>
 
