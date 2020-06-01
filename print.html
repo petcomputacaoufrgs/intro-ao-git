@@ -698,8 +698,30 @@ clonar um repositório remoto através do link
 o destino. Para clonar o repositório acima em <code>./esta/pasta</code>, basta executar:</p>
 <pre><code class="language-sh">git clone https://github.com/petcomputacaoufrgs/intro-ao-git.git ./esta/pasta
 </code></pre>
-<h1><a class="header" href="#git-remote" id="git-remote">git remote</a></h1>
-<h1><a class="header" href="#git-pull-e-git-push" id="git-pull-e-git-push">git pull E git push</a></h1>
+<h1><a class="header" href="#git-remote" id="git-remote"><code>git remote</code></a></h1>
+<p>Para gerenciar comunicação repositórios remotos, você precisa salvar no seu
+repositório local referências para os repositórios remotos. Para fazer isso,
+existe o comando <code>git remote</code>. Para adicionar um remoto, com nome &quot;origin&quot; e URL
+<a href="https://github.com/petcomputacaoufrgs/intro-ao-git.git">https://github.com/petcomputacaoufrgs/intro-ao-git.git</a>:</p>
+<pre><code class="language-sh">git remote add origin https://github.com/petcomputacaoufrgs/intro-ao-git.git
+</code></pre>
+<p>Por padrão, quando você usa <code>git clone</code>, ele cria um remoto chamado &quot;origin&quot;.</p>
+<p>Para visualizar os remotos salvos, basta executar:</p>
+<pre><code class="language-sh">git remote
+</code></pre>
+<p>Para visualizar a URL de um remoto chamado &quot;origin&quot;, basta executar:</p>
+<pre><code class="language-sh">git remote get-url origin
+</code></pre>
+<p>Para remover um remoto chamado &quot;origin&quot;, basta executar:</p>
+<pre><code class="language-sh">git remote remove origin
+</code></pre>
+<p>Para redefinir a URL de um remoto chamado &quot;origin&quot; com a URL
+<a href="https://github.com/fulanodasilva/intro-ao-git.git">https://github.com/fulanodasilva/intro-ao-git.git</a>, basta executar:</p>
+<pre><code class="language-sh">git remote set-url origin https://github.com/fulanodasilva/intro-ao-git.git
+</code></pre>
+<h1><a class="header" href="#git-pull-e-git-push" id="git-pull-e-git-push"><code>git pull</code> E <code>git push</code></a></h1>
+<p>Para &quot;puxar&quot; mudanças de um repositório remoto, existe o <code>git pull</code>, e para
+&quot;empurar&quot; mudanças a um repositório remoto, existe o <code>git push</code>.</p>
 
                     </main>
 
