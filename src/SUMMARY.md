@@ -25,3 +25,4 @@
     - [`git clone`](./git-clone.md)
     - [`git remote`](./git-remote.md)
     - [`git pull` E `git push`](./git-pull-e-git-push.md)
+- [Exemplo](./exemplo.md)
