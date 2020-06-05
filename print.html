@@ -827,10 +827,10 @@ git init
 <h1><a class="header" href="#cabeçalho-c" id="cabeçalho-c">Cabeçalho C</a></h1>
 <p>Agora vamos fazer um cabeçalho da linguagem C. Nossa pilha vai guardar <code>double</code>,
 já que é o que a calculadora precisa. Vamos declarar duas funções básicas de
-pilhas: <code>push</code> e <code>pop</code>. Elas vão receber um ponteiro duplo, mas não se assuste,
-o ponteiro de dentro representa a pilha em si, que pode ser <code>NULL</code>, e o ponteiro
-de fora serve para modificarmos o endereço do ponteiro de dentro, e não pode ser
-<code>NULL</code>.</p>
+pilhas: <code>push</code> e <code>pop</code>, além de uma função para liberar memória. Elas vão
+receber um ponteiro duplo, mas não se assuste, o ponteiro de dentro representa a
+pilha em si, que pode ser <code>NULL</code>, e o ponteiro de fora serve para modificarmos o
+endereço do ponteiro de dentro, e não pode ser <code>NULL</code>.</p>
 <p>Arquivo <code>stack.h</code>:</p>
 <pre><code class="language-C">#ifndef STACK_H
 #define STACK_H
@@ -845,6 +845,8 @@ struct stack {
 void stack_push(struct stack **stack, stack_data data);
 
 int stack_pop(struct stack **stack, stack_data *data);
+
+void stack_free(struct stack **stack);
 
 #endif
 </code></pre>
@@ -912,6 +914,11 @@ int stack_pop(struct stack **stack, stack_data *data)
     }
 
     return success;
+}
+
+void stack_free(struct stack **stack)
+{
+    while (stack_pop(stack, NULL)) {}
 }
 </code></pre>
 <p>Agora vamos fazer um <em>commit</em>.</p>
