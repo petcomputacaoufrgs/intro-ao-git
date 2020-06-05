@@ -14,10 +14,10 @@ Pronto. Projeto inicializado.
 
 Agora vamos fazer um cabeçalho da linguagem C. Nossa pilha vai guardar `double`,
 já que é o que a calculadora precisa. Vamos declarar duas funções básicas de
-pilhas: `push` e `pop`. Elas vão receber um ponteiro duplo, mas não se assuste,
-o ponteiro de dentro representa a pilha em si, que pode ser `NULL`, e o ponteiro
-de fora serve para modificarmos o endereço do ponteiro de dentro, e não pode ser
-`NULL`.
+pilhas: `push` e `pop`, além de uma função para liberar memória. Elas vão
+receber um ponteiro duplo, mas não se assuste, o ponteiro de dentro representa a
+pilha em si, que pode ser `NULL`, e o ponteiro de fora serve para modificarmos o
+endereço do ponteiro de dentro, e não pode ser `NULL`.
 
 Arquivo `stack.h`:
 ```C
@@ -34,6 +34,8 @@ struct stack {
 void stack_push(struct stack **stack, stack_data data);
 
 int stack_pop(struct stack **stack, stack_data *data);
+
+void stack_free(struct stack **stack);
 
 #endif
 ```
@@ -125,6 +127,11 @@ int stack_pop(struct stack **stack, stack_data *data)
     }
 
     return success;
+}
+
+void stack_free(struct stack **stack)
+{
+    while (stack_pop(stack, NULL)) {}
 }
 ```
 
