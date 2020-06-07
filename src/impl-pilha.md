@@ -55,13 +55,13 @@ tem uma licença e um arquivo de `README`. Se você utilizar um remoto, lembre d
 substituir a URL por uma adequada. Vamos salvar esse remoto:
 
 ```sh
-git remote add origin https://github.com/petcomputacaoufrgs/rpn-calc
+git remote add github https://github.com/petcomputacaoufrgs/rpn-calc
 ```
 
 Agora vamos executar um `push`.
 
 ```sh
-git push origin master
+git push github master
 ```
 
 TODO: adicionar imagem com o erro.
@@ -70,7 +70,7 @@ Oopsss... Eu criei o repositório remoto com licença e `README`. Primeiro vamos
 ter que executar `git pull`.
 
 ```sh
-git pull origin master
+git pull github master
 ```
 
 TODO: adicionar imagem com o erro.
@@ -79,12 +79,12 @@ Oopsss de novo...Esse erro aconteceu porque as histórias dos repositórios não
 têm conexão. Basta usar a _flag_ `--allow-unrelated-histories`.
 
 ```sh
-git pull origin master --allow-unrelated-histories
+git pull github master --allow-unrelated-histories
 ```
 
 Pronto, agora podemos executar `git push` tranquilamente.
 ```sh
-git push origin master
+git push github master
 ```
 
 # Arquivo de Implementação C
@@ -93,7 +93,7 @@ Agora, vamos implementar a pilha.
 
 Arquivo `stack.c`:
 
-```c
+```C
 #include "stack.h"
 #include <stdlib.h>
 
@@ -144,5 +144,5 @@ git commit -m 'implementação da stack'
 
 E publicar a mudança:
 ```sh
-git push origin master
+git push github master
 ```

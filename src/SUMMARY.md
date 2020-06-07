@@ -27,3 +27,4 @@
     - [`git pull` E `git push`](./git-pull-e-git-push.md)
 - [Exemplo](./exemplo.md)
     - [Implementando Uma Pilha](./impl-pilha.md)
+    - [Implementando As Operações](./impl-operacoes.md)
