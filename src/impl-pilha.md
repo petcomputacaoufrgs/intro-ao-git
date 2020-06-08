@@ -135,6 +135,12 @@ void stack_free(struct stack **stack)
 }
 ```
 
+Vamos ver se não ocorre algum erro de compilação (no Linux):
+```sh
+gcc -o stack.o -c stack.c
+```
+Perfeito, não ocorre.
+
 Agora vamos fazer um _commit_.
 ```sh
 git add .

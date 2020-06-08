@@ -71,6 +71,12 @@ int op_exec(enum operation op, struct stack **stack)
 }
 ```
 
+Vamos ver se não ocorre algum erro de compilação (no Linux):
+```sh
+gcc -o ops.o -c ops.c
+```
+Perfeito, não ocorre.
+
 Agora, vamos ao _commit_:
 
 ```sh
