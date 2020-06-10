@@ -1,14 +1,7 @@
 # Implementando Uma Pilha
 
 Como o nosso avaliador de expressões precisa de uma pilha para avaliar as
-expressões, vamos primeiro implementar uma pilha. Primeiro, criaremos o projeto:
-
-```sh
-mkdir rpn-calc
-cd rpn-calc
-git init
-```
-Pronto. Projeto inicializado.
+expressões, vamos primeiro implementar uma pilha.
 
 # Cabeçalho C
 

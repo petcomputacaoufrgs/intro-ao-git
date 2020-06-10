@@ -83,7 +83,7 @@ static int advance_op(struct parser *parser, char const *test, size_t test_n)
 
     if (strncmp(parser->cursor, test, size) == 0) {
         ch = parser->cursor[size];
-        if (ch == 0 || is_whitespace(ch)) {
+        if (is_whitespace(ch)) {
             success = 1;
             parser->cursor += size;
         }
