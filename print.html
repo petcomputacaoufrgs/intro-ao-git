@@ -1282,6 +1282,37 @@ git push github master
 <p>TODO: fazer o teste</p>
 <p>Não funcionou :( Vamos tentar descobrir porquê!</p>
 <h1><a class="header" href="#fazendo-branches" id="fazendo-branches"><em>Fazendo branches</em></a></h1>
+<p>O nosso cenário é o seguinte: nosso código não funciona e vamos criar uma
+<em>branch</em> &quot;bugfix&quot; para implementar a resolução do problema. Além disso, um
+colega entrou para um time e vai implementar mais operações, em paralelo.
+Para isso, ele vai criar uma <em>branch</em> &quot;mais-ops&quot;.</p>
+<h1><a class="header" href="#nossa-branch" id="nossa-branch">Nossa <em>Branch</em></a></h1>
+<p>Vamos criar e trocar de <em>branch</em>:</p>
+<pre><code class="language-sh">git checkout -b bugfix
+</code></pre>
+<p>O problema está no arquivo <code>parser.c</code>. Esta é a modificação que devemos fazer,
+na linha 36:</p>
+<pre><code class="language-C">     if (strncmp(parser-&gt;cursor, test, size) == 0) {
+         ch = parser-&gt;cursor[size];
+-        if (is_whitespace(ch)) {
++        if (ch == 0 || is_whitespace(ch)) {
+             success = 1;
+             parser-&gt;cursor += size;
+</code></pre>
+<p>Vamos ver se não ocorre algum erro de compilação (no Linux):</p>
+<pre><code class="language-sh">gcc -o parser.o -c parser.c
+</code></pre>
+<p>Perfeito, não ocorre.</p>
+<p>Agora, vamos ao <em>commit</em>:</p>
+<pre><code class="language-sh">git add .
+git status
+git commit -m 'corrigido bug que fazia operador no fim falhar'
+git push github bugfix
+</code></pre>
+<h1><a class="header" href="#a-branch-do-coleguinha" id="a-branch-do-coleguinha">A <em>Branch</em> Do Coleguinha</a></h1>
+<p>Primeiro, criaremos e trocaremos de <em>branch</em>:</p>
+<pre><code class="language-sh">git checkout -b mais-ops
+</code></pre>
 
                     </main>
 
