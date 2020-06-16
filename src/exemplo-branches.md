@@ -1,48 +1,87 @@
 # _Fazendo branches_
 
-O nosso cenário é o seguinte: nosso código não funciona e vamos criar uma
-_branch_ "bugfix" para implementar a resolução do problema. Além disso, um
-colega entrou para um time e vai implementar mais operações, em paralelo.
-Para isso, ele vai criar uma _branch_ "mais-ops".
+Suponha que temos mais um coleguinha no time. Suponha que ele decidiu
+adicionar trigonometria. Suponha que nós decidimos adicionar exponenciação
+e logaritmo. Para fazer tais tarefas, vamos criar mais duas _branches_, uma
+chamada "trig", a outra chamada "exp".
 
 # Nossa _Branch_
 
-Vamos criar e trocar de _branch_:
-
+Para criá-la, e ao mesmo tempo mudar para ela:
 ```sh
-git checkout -b bugfix
+git checkout -b exp
 ```
 
-O problema está no arquivo `parser.c`. Esta é a modificação que devemos fazer,
-na linha 36:
+Vamos começar com exponenciação adicionando os identificadores das operações. Uma
+exponenciação em qualquer base, e outra na base `e` (número de Euler). As linhas
+marcadas com `-` no início serão excluídas, e as marcadas com `+` serão incluídas.
+
+Arquivo `ops.h`:
 ```C
-     if (strncmp(parser->cursor, test, size) == 0) {
-         ch = parser->cursor[size];
--        if (is_whitespace(ch)) {
-+        if (ch == 0 || is_whitespace(ch)) {
-             success = 1;
-             parser->cursor += size;
+ #define OP_MUL_SYM "*"
+ #define OP_DIV_SYM "/"
++#define OP_POW_SYM "^"
++#define OP_EXP_SYM "exp"
+ 
+ enum operation {
+     op_add,
+     op_sub,
+     op_mul,
+-    op_div
++    op_div,
++    op_pow,
++    op_exp
+ };
+```
+
+Depois, vamos implementar a execução dessas operações:
+
+Arquivo `ops.c`:
+```C
+ #include "ops.h"
++#include <math.h>
+
+ int op_exec(enum operation op, struct stack **stack)
+ {
+...
+             stack_push(stack, left / right);
+         }
+         break;
++    case op_pow:
++        success = stack_pop(stack, &right) && stack_pop(stack, &left);
++        if (success) {
++            stack_push(stack, pow(left, right));
++        }
++        break;
++    case op_exp:
++        success = stack_pop(stack, &left);
++        if (success) {
++            stack_push(stack, exp(left));
++        }
++        break;
+     }
+
+     return success;
 ```
 
 Vamos ver se não ocorre algum erro de compilação (no Linux):
 ```sh
-gcc -o parser.o -c parser.c
+gcc -o ops.o -c ops.c
 ```
 Perfeito, não ocorre.
 
-Agora, vamos ao _commit_:
+Vamos testar também (precisamos de `-lm  para usar funções `math`):
+```sh
+gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
+```
+
+TODO: fazer teste.
+
+Funciona! Agora podemos subir as modificações:
 
 ```sh
 git add .
 git status
-git commit -m 'corrigido bug que fazia operador no fim falhar'
-git push github bugfix
+git commit -m 'implementado exponenciação'
+git push github exp
 ```
-
-# A _Branch_ Do Coleguinha
-
-Primeiro, criaremos e trocaremos de _branch_:
-```sh
-git checkout -b mais-ops
-```
-

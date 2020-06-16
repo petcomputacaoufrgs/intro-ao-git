@@ -120,4 +120,4 @@ gcc main.o parser.o stack.o ops.o -o rpn-calc
 
 TODO: fazer o teste
 
-Não funcionou :( Vamos tentar descobrir porquê!
+Funciona!
