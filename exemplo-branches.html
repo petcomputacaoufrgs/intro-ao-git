@@ -148,36 +148,73 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#fazendo-branches" id="fazendo-branches"><em>Fazendo branches</em></a></h1>
-<p>O nosso cenário é o seguinte: nosso código não funciona e vamos criar uma
-<em>branch</em> &quot;bugfix&quot; para implementar a resolução do problema. Além disso, um
-colega entrou para um time e vai implementar mais operações, em paralelo.
-Para isso, ele vai criar uma <em>branch</em> &quot;mais-ops&quot;.</p>
+<p>Suponha que temos mais um coleguinha no time. Suponha que ele decidiu
+adicionar trigonometria. Suponha que nós decidimos adicionar exponenciação
+e logaritmo. Para fazer tais tarefas, vamos criar mais duas <em>branches</em>, uma
+chamada &quot;trig&quot;, a outra chamada &quot;exp&quot;.</p>
 <h1><a class="header" href="#nossa-branch" id="nossa-branch">Nossa <em>Branch</em></a></h1>
-<p>Vamos criar e trocar de <em>branch</em>:</p>
-<pre><code class="language-sh">git checkout -b bugfix
+<p>Para criá-la, e ao mesmo tempo mudar para ela:</p>
+<pre><code class="language-sh">git checkout -b exp
 </code></pre>
-<p>O problema está no arquivo <code>parser.c</code>. Esta é a modificação que devemos fazer,
-na linha 36:</p>
-<pre><code class="language-C">     if (strncmp(parser-&gt;cursor, test, size) == 0) {
-         ch = parser-&gt;cursor[size];
--        if (is_whitespace(ch)) {
-+        if (ch == 0 || is_whitespace(ch)) {
-             success = 1;
-             parser-&gt;cursor += size;
+<p>Vamos começar com exponenciação adicionando os identificadores das operações. Uma
+exponenciação em qualquer base, e outra na base <code>e</code> (número de Euler). As linhas
+marcadas com <code>-</code> no início serão excluídas, e as marcadas com <code>+</code> serão incluídas.</p>
+<p>Arquivo <code>ops.h</code>:</p>
+<pre><code class="language-C"> #define OP_MUL_SYM &quot;*&quot;
+ #define OP_DIV_SYM &quot;/&quot;
++#define OP_POW_SYM &quot;^&quot;
++#define OP_EXP_SYM &quot;exp&quot;
+ 
+ enum operation {
+     op_add,
+     op_sub,
+     op_mul,
+-    op_div
++    op_div,
++    op_pow,
++    op_exp
+ };
+</code></pre>
+<p>Depois, vamos implementar a execução dessas operações:</p>
+<p>Arquivo <code>ops.c</code>:</p>
+<pre><code class="language-C"> #include &quot;ops.h&quot;
++#include &lt;math.h&gt;
+
+ int op_exec(enum operation op, struct stack **stack)
+ {
+...
+             stack_push(stack, left / right);
+         }
+         break;
++    case op_pow:
++        success = stack_pop(stack, &amp;right) &amp;&amp; stack_pop(stack, &amp;left);
++        if (success) {
++            stack_push(stack, pow(left, right));
++        }
++        break;
++    case op_exp:
++        success = stack_pop(stack, &amp;left);
++        if (success) {
++            stack_push(stack, exp(left));
++        }
++        break;
+     }
+
+     return success;
 </code></pre>
 <p>Vamos ver se não ocorre algum erro de compilação (no Linux):</p>
-<pre><code class="language-sh">gcc -o parser.o -c parser.c
+<pre><code class="language-sh">gcc -o ops.o -c ops.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
-<p>Agora, vamos ao <em>commit</em>:</p>
+<p>Vamos testar também (precisamos de <code>-lm  para usar funções </code>math`):</p>
+<pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
+</code></pre>
+<p>TODO: fazer teste.</p>
+<p>Funciona! Agora podemos subir as modificações:</p>
 <pre><code class="language-sh">git add .
 git status
-git commit -m 'corrigido bug que fazia operador no fim falhar'
-git push github bugfix
-</code></pre>
-<h1><a class="header" href="#a-branch-do-coleguinha" id="a-branch-do-coleguinha">A <em>Branch</em> Do Coleguinha</a></h1>
-<p>Primeiro, criaremos e trocaremos de <em>branch</em>:</p>
-<pre><code class="language-sh">git checkout -b mais-ops
+git commit -m 'implementado exponenciação'
+git push github exp
 </code></pre>
 
                     </main>
