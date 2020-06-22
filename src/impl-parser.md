@@ -147,7 +147,6 @@ struct token parse_token(struct parser *parser)
 }
 ```
 
-
 Vamos ver se não ocorre algum erro de compilação (no Linux):
 ```sh
 gcc -o parser.o -c parser.c

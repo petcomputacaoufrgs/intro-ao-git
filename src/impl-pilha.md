@@ -57,7 +57,7 @@ Agora vamos executar um `push`.
 git push github master
 ```
 
-TODO: adicionar imagem com o erro.
+![erro de git pull](./exemplo-pull-erro.png)
 
 Oopsss... Eu criei o repositório remoto com licença e `README`. Primeiro vamos
 ter que executar `git pull`.
@@ -66,7 +66,7 @@ ter que executar `git pull`.
 git pull github master
 ```
 
-TODO: adicionar imagem com o erro.
+![erro de git pull](./exemplo-pull-erro2.png)
 
 Oopsss de novo...Esse erro aconteceu porque as histórias dos repositórios não
 têm conexão. Basta usar a _flag_ `--allow-unrelated-histories`.
@@ -74,6 +74,11 @@ têm conexão. Basta usar a _flag_ `--allow-unrelated-histories`.
 ```sh
 git pull github master --allow-unrelated-histories
 ```
+
+Então, abrir-se-á um escritor de texto perguntando por uma mensagem de
+_commit_. Basta editar, salvar, e sair.
+
+![merge de git pull](./exemplo-pull-merge.png)
 
 Pronto, agora podemos executar `git push` tranquilamente.
 ```sh
