@@ -206,10 +206,36 @@ marcadas com <code>-</code> no início serão excluídas, e as marcadas com <cod
 <pre><code class="language-sh">gcc -o ops.o -c ops.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
-<p>Vamos testar também (precisamos de <code>-lm  para usar funções </code>math`):</p>
+<p>Precisamos alterar o <em>parser</em> também.</p>
+<p>Arquivo <code>parser.c</code>:</p>
+<pre><code class="language-C">     if (advance_op(parser, OP_ADD_SYM, sizeof(OP_ADD_SYM))) {
+         *output = op_add;
+     } else if (advance_op(parser, OP_SUB_SYM, sizeof(OP_SUB_SYM))) {
+         *output = op_sub;
+     } else if (advance_op(parser, OP_MUL_SYM, sizeof(OP_MUL_SYM))) {
+        *output = op_mul;
+     } else if (advance_op(parser, OP_DIV_SYM, sizeof(OP_DIV_SYM))) {
+         *output = op_div;
++    } else if (advance_op(parser, OP_POW_SYM, sizeof(OP_POW_SYM))) {
++        *output = op_pow;
++    } else if (advance_op(parser, OP_EXP_SYM, sizeof(OP_EXP_SYM))) {
++        *output = op_exp;
+     } else {
+         success = 0;
+     }
+
+     return success;
+</code></pre>
+<p>Vamos ver se não ocorre algum erro de compilação (no Linux):</p>
+<pre><code class="language-sh">gcc -o parser.o -c parser.c
+</code></pre>
+<p>Perfeito, não ocorre.</p>
+<p>Vamos testar também (precisamos de <code>-lm</code>  para usar funções <code>math</code>):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
-<p>TODO: fazer teste.</p>
+<p>Vamos fazer dois testes: <code>3 4 ^</code>, e <code>1 exp</code>, que devem resultar em <code>81</code> e
+<code>2.718282</code> respectivamente.</p>
+<p><img src="./exemplo-teste-exp.png" alt="teste funcionando" /></p>
 <p>Funciona! Agora podemos subir as modificações:</p>
 <pre><code class="language-sh">git add .
 git status
@@ -276,6 +302,32 @@ começar pelas três funções mais conhecidas: <code>sin</code>, <code>cos</cod
 </code></pre>
 <p>O colega vai ver se não ocorre algum erro de compilação (no Linux):</p>
 <pre><code class="language-sh">gcc -o ops.o -c ops.c
+</code></pre>
+<p>Perfeito, não ocorre.</p>
+<p>Precisamos alterar o <em>parser</em> também.</p>
+<p>Arquivo <code>parser.c</code>:</p>
+<pre><code class="language-C">     if (advance_op(parser, OP_ADD_SYM, sizeof(OP_ADD_SYM))) {
+         *output = op_add;
+     } else if (advance_op(parser, OP_SUB_SYM, sizeof(OP_SUB_SYM))) {
+         *output = op_sub;
+     } else if (advance_op(parser, OP_MUL_SYM, sizeof(OP_MUL_SYM))) {
+        *output = op_mul;
+     } else if (advance_op(parser, OP_DIV_SYM, sizeof(OP_DIV_SYM))) {
+         *output = op_div;
++    } else if (advance_op(parser, OP_SIN_SYM, sizeof(OP_SIN_SYM))) {
++        *output = op_sin;
++    } else if (advance_op(parser, OP_COS_SYM, sizeof(OP_COS_SYM))) {
++        *output = op_cos;
++    } else if (advance_op(parser, OP_TAN_SYM, sizeof(OP_TAN_SYM))) {
++        *output = op_tan;
+     } else {
+         success = 0;
+     }
+
+     return success;
+</code></pre>
+<p>Vamos ver se não ocorre algum erro de compilação (no Linux):</p>
+<pre><code class="language-sh">gcc -o parser.o -c parser.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
 <p>O colega vai testar também (precisa de <code>-lm  para usar funções </code>math`):</p>
@@ -346,6 +398,32 @@ git push github trig
 <pre><code class="language-sh">gcc -o ops.o -c ops.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
+<p>Precisamos alterar o <em>parser</em> também.</p>
+<p>Arquivo <code>parser.c</code>:</p>
+<pre><code class="language-C">     } else if (advance_op(parser, OP_DIV_SYM, sizeof(OP_DIV_SYM))) {
+         *output = op_div;
+     } else if (advance_op(parser, OP_SIN_SYM, sizeof(OP_SIN_SYM))) {
+         *output = op_sin;
+     } else if (advance_op(parser, OP_COS_SYM, sizeof(OP_COS_SYM))) {
+         *output = op_cos;
+     } else if (advance_op(parser, OP_TAN_SYM, sizeof(OP_TAN_SYM))) {
+         *output = op_tan;
++    } else if (advance_op(parser, OP_ARCSIN_SYM, sizeof(OP_ARCSIN_SYM))) {
++        *output = op_arcsin;
++    } else if (advance_op(parser, OP_ARCCOS_SYM, sizeof(OP_ARCCOS_SYM))) {
++        *output = op_arccos;
++    } else if (advance_op(parser, OP_ARCTAN_SYM, sizeof(OP_ARCTAN_SYM))) {
++        *output = op_arctan;
+     } else {
+         success = 0;
+     }
+
+     return success;
+</code></pre>
+<p>Vamos ver se não ocorre algum erro de compilação (no Linux):</p>
+<pre><code class="language-sh">gcc -o parser.o -c parser.c
+</code></pre>
+<p>Perfeito, não ocorre.</p>
 <p>O colega vai testar também (precisa de <code>-lm  para usar funções </code>math`):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
@@ -384,10 +462,12 @@ adicionar logaritmos.</p>
      op_add,
      op_sub,
      op_mul,
--    op_div
-+    op_div,
-+    op_pow,
-+    op_exp
+     op_div,
+     op_pow,
+-    op_exp
++    op_exp,
++    op_log,
++    op_ln
  };
 </code></pre>
 <p>Depois, vamos implementar a execução dessas operações:</p>
@@ -398,7 +478,7 @@ adicionar logaritmos.</p>
  int op_exec(enum operation op, struct stack **stack)
  {
 ...
-             stack_push(stack, pow(left, right));
+             stack_push(stack, exp(left));
          }
          break;
 +    case op_log:
@@ -421,10 +501,36 @@ adicionar logaritmos.</p>
 <pre><code class="language-sh">gcc -o ops.o -c ops.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
+<p>Precisamos alterar o <em>parser</em> também.</p>
+<p>Arquivo <code>parser.c</code>:</p>
+<pre><code class="language-C">     } else if (advance_op(parser, OP_MUL_SYM, sizeof(OP_MUL_SYM))) {
+        *output = op_mul;
+     } else if (advance_op(parser, OP_DIV_SYM, sizeof(OP_DIV_SYM))) {
+         *output = op_div;
+     } else if (advance_op(parser, OP_POW_SYM, sizeof(OP_POW_SYM))) {
+         *output = op_pow;
+     } else if (advance_op(parser, OP_EXP_SYM, sizeof(OP_EXP_SYM))) {
+         *output = op_exp;
++    } else if (advance_op(parser, OP_LOG_SYM, sizeof(OP_LOG_SYM))) {
++        *output = op_log;
++    } else if (advance_op(parser, OP_LN_SYM, sizeof(OP_LN_SYM))) {
++        *output = op_ln;
+     } else {
+         success = 0;
+     }
+
+     return success;
+</code></pre>
+<p>Vamos ver se não ocorre algum erro de compilação (no Linux):</p>
+<pre><code class="language-sh">gcc -o parser.o -c parser.c
+</code></pre>
+<p>Perfeito, não ocorre.</p>
 <p>Vamos testar também (precisamos de <code>-lm  para usar funções </code>math`):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
-<p>TODO: fazer teste.</p>
+<p>Vamos fazer dois testes: <code>3 81 log</code>, e <code>2.718282 ln</code>, que devem resultar em <code>4</code>
+e <code>1</code> respectivamente.</p>
+<p><img src="./exemplo-teste-log.png" alt="teste funcionando" /></p>
 <p>Funciona! Agora podemos subir as modificações:</p>
 <pre><code class="language-sh">git add .
 git status

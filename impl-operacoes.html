@@ -181,7 +181,7 @@ int op_exec(enum operation op, struct stack **stack);
 int op_exec(enum operation op, struct stack **stack)
 {
     double left, right;
-    int success;
+    int success = 0;
 
     switch (op) {
     case op_add:
