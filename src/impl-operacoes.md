@@ -38,7 +38,7 @@ Arquivo `ops.c`:
 int op_exec(enum operation op, struct stack **stack)
 {
     double left, right;
-    int success;
+    int success = 0;
 
     switch (op) {
     case op_add:

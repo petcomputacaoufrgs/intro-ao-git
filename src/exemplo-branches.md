@@ -70,12 +70,44 @@ gcc -o ops.o -c ops.c
 ```
 Perfeito, não ocorre.
 
-Vamos testar também (precisamos de `-lm  para usar funções `math`):
+Precisamos alterar o _parser_ também.
+
+Arquivo `parser.c`:
+```C
+     if (advance_op(parser, OP_ADD_SYM, sizeof(OP_ADD_SYM))) {
+         *output = op_add;
+     } else if (advance_op(parser, OP_SUB_SYM, sizeof(OP_SUB_SYM))) {
+         *output = op_sub;
+     } else if (advance_op(parser, OP_MUL_SYM, sizeof(OP_MUL_SYM))) {
+        *output = op_mul;
+     } else if (advance_op(parser, OP_DIV_SYM, sizeof(OP_DIV_SYM))) {
+         *output = op_div;
++    } else if (advance_op(parser, OP_POW_SYM, sizeof(OP_POW_SYM))) {
++        *output = op_pow;
++    } else if (advance_op(parser, OP_EXP_SYM, sizeof(OP_EXP_SYM))) {
++        *output = op_exp;
+     } else {
+         success = 0;
+     }
+
+     return success;
+```
+
+Vamos ver se não ocorre algum erro de compilação (no Linux):
+```sh
+gcc -o parser.o -c parser.c
+```
+Perfeito, não ocorre.
+
+Vamos testar também (precisamos de `-lm`  para usar funções `math`):
 ```sh
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 ```
 
-TODO: fazer teste.
+Vamos fazer dois testes: `3 4 ^`, e `1 exp`, que devem resultar em `81` e
+`2.718282` respectivamente.
+
+![teste funcionando](./exemplo-teste-exp.png)
 
 Funciona! Agora podemos subir as modificações:
 
@@ -156,6 +188,37 @@ Arquivo `ops.c`:
 O colega vai ver se não ocorre algum erro de compilação (no Linux):
 ```sh
 gcc -o ops.o -c ops.c
+```
+Perfeito, não ocorre.
+
+Precisamos alterar o _parser_ também.
+
+Arquivo `parser.c`:
+```C
+     if (advance_op(parser, OP_ADD_SYM, sizeof(OP_ADD_SYM))) {
+         *output = op_add;
+     } else if (advance_op(parser, OP_SUB_SYM, sizeof(OP_SUB_SYM))) {
+         *output = op_sub;
+     } else if (advance_op(parser, OP_MUL_SYM, sizeof(OP_MUL_SYM))) {
+        *output = op_mul;
+     } else if (advance_op(parser, OP_DIV_SYM, sizeof(OP_DIV_SYM))) {
+         *output = op_div;
++    } else if (advance_op(parser, OP_SIN_SYM, sizeof(OP_SIN_SYM))) {
++        *output = op_sin;
++    } else if (advance_op(parser, OP_COS_SYM, sizeof(OP_COS_SYM))) {
++        *output = op_cos;
++    } else if (advance_op(parser, OP_TAN_SYM, sizeof(OP_TAN_SYM))) {
++        *output = op_tan;
+     } else {
+         success = 0;
+     }
+
+     return success;
+```
+
+Vamos ver se não ocorre algum erro de compilação (no Linux):
+```sh
+gcc -o parser.o -c parser.c
 ```
 Perfeito, não ocorre.
 
@@ -240,6 +303,37 @@ gcc -o ops.o -c ops.c
 ```
 Perfeito, não ocorre.
 
+Precisamos alterar o _parser_ também.
+
+Arquivo `parser.c`:
+```C
+     } else if (advance_op(parser, OP_DIV_SYM, sizeof(OP_DIV_SYM))) {
+         *output = op_div;
+     } else if (advance_op(parser, OP_SIN_SYM, sizeof(OP_SIN_SYM))) {
+         *output = op_sin;
+     } else if (advance_op(parser, OP_COS_SYM, sizeof(OP_COS_SYM))) {
+         *output = op_cos;
+     } else if (advance_op(parser, OP_TAN_SYM, sizeof(OP_TAN_SYM))) {
+         *output = op_tan;
++    } else if (advance_op(parser, OP_ARCSIN_SYM, sizeof(OP_ARCSIN_SYM))) {
++        *output = op_arcsin;
++    } else if (advance_op(parser, OP_ARCCOS_SYM, sizeof(OP_ARCCOS_SYM))) {
++        *output = op_arccos;
++    } else if (advance_op(parser, OP_ARCTAN_SYM, sizeof(OP_ARCTAN_SYM))) {
++        *output = op_arctan;
+     } else {
+         success = 0;
+     }
+
+     return success;
+```
+
+Vamos ver se não ocorre algum erro de compilação (no Linux):
+```sh
+gcc -o parser.o -c parser.c
+```
+Perfeito, não ocorre.
+
 O colega vai testar também (precisa de `-lm  para usar funções `math`):
 ```sh
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
@@ -299,10 +393,12 @@ Arquivo `ops.h`:
      op_add,
      op_sub,
      op_mul,
--    op_div
-+    op_div,
-+    op_pow,
-+    op_exp
+     op_div,
+     op_pow,
+-    op_exp
++    op_exp,
++    op_log,
++    op_ln
  };
 ```
 
@@ -316,7 +412,7 @@ Arquivo `ops.c`:
  int op_exec(enum operation op, struct stack **stack)
  {
 ...
-             stack_push(stack, pow(left, right));
+             stack_push(stack, exp(left));
          }
          break;
 +    case op_log:
@@ -342,12 +438,44 @@ gcc -o ops.o -c ops.c
 ```
 Perfeito, não ocorre.
 
+Precisamos alterar o _parser_ também.
+
+Arquivo `parser.c`:
+```C
+     } else if (advance_op(parser, OP_MUL_SYM, sizeof(OP_MUL_SYM))) {
+        *output = op_mul;
+     } else if (advance_op(parser, OP_DIV_SYM, sizeof(OP_DIV_SYM))) {
+         *output = op_div;
+     } else if (advance_op(parser, OP_POW_SYM, sizeof(OP_POW_SYM))) {
+         *output = op_pow;
+     } else if (advance_op(parser, OP_EXP_SYM, sizeof(OP_EXP_SYM))) {
+         *output = op_exp;
++    } else if (advance_op(parser, OP_LOG_SYM, sizeof(OP_LOG_SYM))) {
++        *output = op_log;
++    } else if (advance_op(parser, OP_LN_SYM, sizeof(OP_LN_SYM))) {
++        *output = op_ln;
+     } else {
+         success = 0;
+     }
+
+     return success;
+```
+
+Vamos ver se não ocorre algum erro de compilação (no Linux):
+```sh
+gcc -o parser.o -c parser.c
+```
+Perfeito, não ocorre.
+
+
 Vamos testar também (precisamos de `-lm  para usar funções `math`):
 ```sh
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 ```
+Vamos fazer dois testes: `3 81 log`, e `2.718282 ln`, que devem resultar em `4`
+e `1` respectivamente.
 
-TODO: fazer teste.
+![teste funcionando](./exemplo-teste-log.png)
 
 Funciona! Agora podemos subir as modificações:
 
