@@ -874,16 +874,19 @@ substituir a URL por uma adequada. Vamos salvar esse remoto:</p>
 <p>Agora vamos executar um <code>push</code>.</p>
 <pre><code class="language-sh">git push github master
 </code></pre>
-<p>TODO: adicionar imagem com o erro.</p>
+<p><img src="./exemplo-pull-erro.png" alt="erro de git pull" /></p>
 <p>Oopsss... Eu criei o repositório remoto com licença e <code>README</code>. Primeiro vamos
 ter que executar <code>git pull</code>.</p>
 <pre><code class="language-sh">git pull github master
 </code></pre>
-<p>TODO: adicionar imagem com o erro.</p>
+<p><img src="./exemplo-pull-erro2.png" alt="erro de git pull" /></p>
 <p>Oopsss de novo...Esse erro aconteceu porque as histórias dos repositórios não
 têm conexão. Basta usar a <em>flag</em> <code>--allow-unrelated-histories</code>.</p>
 <pre><code class="language-sh">git pull github master --allow-unrelated-histories
 </code></pre>
+<p>Então, abrir-se-á um escritor de texto perguntando por uma mensagem de
+<em>commit</em>. Basta editar, salvar, e sair.</p>
+<p><img src="./exemplo-pull-merge.png" alt="merge de git pull" /></p>
 <p>Pronto, agora podemos executar <code>git push</code> tranquilamente.</p>
 <pre><code class="language-sh">git push github master
 </code></pre>
