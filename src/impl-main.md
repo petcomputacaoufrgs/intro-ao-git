@@ -118,6 +118,8 @@ Vamos testar (no Linux):
 gcc main.o parser.o stack.o ops.o -o rpn-calc
 ```
 
-TODO: fazer o teste
+Vamos avaliar a expressão `0 4 3 + 2 * -`, que deve resultar em `-14`.
+
+![teste funcionando](./exemplo-teste.png)
 
 Funciona!
