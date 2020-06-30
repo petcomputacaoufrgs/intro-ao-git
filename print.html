@@ -1382,7 +1382,7 @@ git push github exp
 </code></pre>
 <h1><a class="header" href="#a-branch-do-colega" id="a-branch-do-colega">A <em>Branch</em> Do Colega</a></h1>
 <p>Agora suponha que trocamos de computador, que somos o colega no computador
-dele. A <em>HEAD</em> deve estar na &quot;master&quot; a partir de agora.</p>
+dele. A <em>HEAD</em> deve estar na &quot;master&quot; a partir de agora (<code>git checkout master</code>).</p>
 <p>Para criar a nova <em>branch</em>, e ao mesmo tempo mudar para ela:</p>
 <pre><code class="language-sh">git checkout -b trig
 </code></pre>
@@ -1391,9 +1391,9 @@ começar pelas três funções mais conhecidas: <code>sin</code>, <code>cos</cod
 <p>Arquivo <code>ops.h</code>:</p>
 <pre><code class="language-C"> #define OP_MUL_SYM &quot;*&quot;
  #define OP_DIV_SYM &quot;/&quot;
-+#define OP_POW_SYM &quot;sin&quot;
-+#define OP_EXP_SYM &quot;cos&quot;
-+#define OP_EXP_SYM &quot;tan&quot;
++#define OP_SIN_SYM &quot;sin&quot;
++#define OP_COS_SYM &quot;cos&quot;
++#define OP_TAN_SYM &quot;tan&quot;
  
  enum operation {
      op_add,
@@ -1471,7 +1471,9 @@ começar pelas três funções mais conhecidas: <code>sin</code>, <code>cos</cod
 <p>O colega vai testar também (precisa de <code>-lm  para usar funções </code>math`):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
-<p>TODO: fazer teste.</p>
+<p>Vamos fazer três testes: <code>0 cos</code>, <code>0 sin</code>, e <code>0 tan</code>, que devem resultar em <code>1</code>,
+<code>0</code>, e <code>0</code> respectivamente.</p>
+<p><img src="./exemplo-teste-trig.png" alt="teste funcionando" /></p>
 <p>Funciona! Agora ele pode subir as modificações:</p>
 <pre><code class="language-sh">git add .
 git status
@@ -1480,11 +1482,11 @@ git push github trig
 </code></pre>
 <p>O colega vai adicionar trigonometria inversa também:</p>
 <p>Arquivo <code>ops.h</code>:</p>
-<pre><code class="language-C"> #define OP_EXP_SYM &quot;cos&quot;
- #define OP_EXP_SYM &quot;tan&quot;
-+#define OP_POW_SYM &quot;arcsin&quot;
-+#define OP_EXP_SYM &quot;arccos&quot;
-+#define OP_EXP_SYM &quot;arctan&quot;
+<pre><code class="language-C"> #define OP_COS_SYM &quot;cos&quot;
+ #define OP_TAN_SYM &quot;tan&quot;
++#define OP_ARCSIN_SYM &quot;arcsin&quot;
++#define OP_ARCCOS_SYM &quot;arccos&quot;
++#define OP_ARCTAN_SYM &quot;arctan&quot;
      
  enum operation {
      op_add,
@@ -1565,7 +1567,9 @@ git push github trig
 <p>O colega vai testar também (precisa de <code>-lm  para usar funções </code>math`):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
-<p>TODO: fazer teste.</p>
+<p>Vamos fazer três testes: <code>1 arccos</code>, <code>0 arcsin</code>, e <code>0 arctan</code>, que devem
+resultar em <code>0</code>, <code>0</code>, e <code>0</code> respectivamente.</p>
+<p><img src="./exemplo-teste-trig-rev.png" alt="teste funcionando" /></p>
 <p>Funciona! Agora ele pode subir as modificações:</p>
 <pre><code class="language-sh">git add .
 git status
@@ -1579,11 +1583,11 @@ ele vai trocar para ela.</p>
 <p>Após isso, ele vai checar se o repositório local está atualizado.</p>
 <pre><code class="language-sh">git pull github master
 </code></pre>
-<p>TODO: colocar print.</p>
+<p><img src="./exemplo-pull-already.png" alt="pull atualizado" /></p>
 <p>Ele está atualizado. Ele vai executar o <code>merge</code>.</p>
 <pre><code class="language-sh">git merge trig
 </code></pre>
-<p>TODO: colocar print.</p>
+<p><img src="./exemplo-merge-sucesso.png" alt="merge feito com sucesso" /></p>
 <p>Não é necessário resolver conflitos. O colega vai publicar as mudanças.</p>
 <pre><code class="language-sh">git push github master
 </code></pre>
