@@ -121,7 +121,7 @@ git push github exp
 # A _Branch_ Do Colega
 
 Agora suponha que trocamos de computador, que somos o colega no computador
-dele. A _HEAD_ deve estar na "master" a partir de agora.
+dele. A _HEAD_ deve estar na "master" a partir de agora (`git checkout master`).
 
 Para criar a nova _branch_, e ao mesmo tempo mudar para ela:
 ```sh
@@ -135,9 +135,9 @@ Arquivo `ops.h`:
 ```C
  #define OP_MUL_SYM "*"
  #define OP_DIV_SYM "/"
-+#define OP_POW_SYM "sin"
-+#define OP_EXP_SYM "cos"
-+#define OP_EXP_SYM "tan"
++#define OP_SIN_SYM "sin"
++#define OP_COS_SYM "cos"
++#define OP_TAN_SYM "tan"
  
  enum operation {
      op_add,
@@ -227,7 +227,10 @@ O colega vai testar também (precisa de `-lm  para usar funções `math`):
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 ```
 
-TODO: fazer teste.
+Vamos fazer três testes: `0 cos`, `0 sin`, e `0 tan`, que devem resultar em `1`,
+`0`, e `0` respectivamente.
+
+![teste funcionando](./exemplo-teste-trig.png)
 
 Funciona! Agora ele pode subir as modificações:
 
@@ -242,11 +245,11 @@ O colega vai adicionar trigonometria inversa também:
 
 Arquivo `ops.h`:
 ```C
- #define OP_EXP_SYM "cos"
- #define OP_EXP_SYM "tan"
-+#define OP_POW_SYM "arcsin"
-+#define OP_EXP_SYM "arccos"
-+#define OP_EXP_SYM "arctan"
+ #define OP_COS_SYM "cos"
+ #define OP_TAN_SYM "tan"
++#define OP_ARCSIN_SYM "arcsin"
++#define OP_ARCCOS_SYM "arccos"
++#define OP_ARCTAN_SYM "arctan"
      
  enum operation {
      op_add,
@@ -339,7 +342,10 @@ O colega vai testar também (precisa de `-lm  para usar funções `math`):
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 ```
 
-TODO: fazer teste.
+Vamos fazer três testes: `1 arccos`, `0 arcsin`, e `0 arctan`, que devem
+resultar em `0`, `0`, e `0` respectivamente.
+
+![teste funcionando](./exemplo-teste-trig-rev.png)
 
 Funciona! Agora ele pode subir as modificações:
 
@@ -360,8 +366,7 @@ Após isso, ele vai checar se o repositório local está atualizado.
 ```sh
 git pull github master
 ```
-
-TODO: colocar print.
+![pull atualizado](./exemplo-pull-already.png)
 
 Ele está atualizado. Ele vai executar o `merge`.
 
@@ -369,7 +374,7 @@ Ele está atualizado. Ele vai executar o `merge`.
 git merge trig
 ```
 
-TODO: colocar print.
+![merge feito com sucesso](./exemplo-merge-sucesso.png)
 
 Não é necessário resolver conflitos. O colega vai publicar as mudanças.
 
