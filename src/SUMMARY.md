@@ -11,6 +11,7 @@
     - [`git commit`](./git-commit.md)
     - [`git rm` E `git mv`](./git-rm-git-mv.md)
     - [`git reset` E `git restore`](./git-reset-git-restore.md)
+    - [`.gitignore`](./gitignore.md)
     - [Juntando Tudo](./staging-juntando-tudo.md)
 - [Linhas do Tempo E Branches](./linhas-e-branches.md)
     - [Branches](./branches.md)
@@ -33,3 +34,5 @@
     - [Função _Main_](./impl-main.md)
     - [Trabalhando Com _Branches_ (1)](./exemplo-branches.md)
     - [Trabalhando Com _Branches_ (2)](./exemplo-branches-2.md)
+    - [Conflitos De Um _Merge_](./exemplo-merge.md)
+    - [Finalizando Com Um `Makefile`](./exemplo-makefile.md)
