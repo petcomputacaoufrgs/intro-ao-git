@@ -31,4 +31,5 @@
     - [Implementando As Operações](./impl-operacoes.md)
     - [Implementando O _Parser_](./impl-parser.md)
     - [Função _Main_](./impl-main.md)
-    - [Criando _Branches_](./exemplo-branches.md)
+    - [Trabalhando Com _Branches_ (1)](./exemplo-branches.md)
+    - [Trabalhando Com _Branches_ (2)](./exemplo-branches-2.md)
