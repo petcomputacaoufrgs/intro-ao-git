@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Implementando As Operações - Uma Introdução Ao Git</title>
+        <title>Conflitos De Um Merge - Uma Introdução Ao Git</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="gitignore.html"><strong aria-hidden="true">5.6.</strong> .gitignore</a></li><li class="chapter-item expanded "><a href="staging-juntando-tudo.html"><strong aria-hidden="true">5.7.</strong> Juntando Tudo</a></li></ol></li><li class="chapter-item expanded "><a href="linhas-e-branches.html"><strong aria-hidden="true">6.</strong> Linhas do Tempo E Branches</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="branches.html"><strong aria-hidden="true">6.1.</strong> Branches</a></li><li class="chapter-item expanded "><a href="navegando-commits.html"><strong aria-hidden="true">6.2.</strong> Navegando Entre Commits</a></li><li class="chapter-item expanded "><a href="merge.html"><strong aria-hidden="true">6.3.</strong> Merge</a></li><li class="chapter-item expanded "><a href="git-rebase.html"><strong aria-hidden="true">6.4.</strong> git rebase</a></li><li class="chapter-item expanded "><a href="git-log.html"><strong aria-hidden="true">6.5.</strong> git log</a></li><li class="chapter-item expanded "><a href="git-diff.html"><strong aria-hidden="true">6.6.</strong> git diff</a></li><li class="chapter-item expanded "><a href="git-show.html"><strong aria-hidden="true">6.7.</strong> git show</a></li><li class="chapter-item expanded "><a href="git-tag.html"><strong aria-hidden="true">6.8.</strong> git tag</a></li></ol></li><li class="chapter-item expanded "><a href="repos-remotos.html"><strong aria-hidden="true">7.</strong> Repositórios Remotos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-clone.html"><strong aria-hidden="true">7.1.</strong> git clone</a></li><li class="chapter-item expanded "><a href="git-remote.html"><strong aria-hidden="true">7.2.</strong> git remote</a></li><li class="chapter-item expanded "><a href="git-pull-e-git-push.html"><strong aria-hidden="true">7.3.</strong> git pull E git push</a></li></ol></li><li class="chapter-item expanded "><a href="exemplo.html"><strong aria-hidden="true">8.</strong> Exemplo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="exemplo-inicio.html"><strong aria-hidden="true">8.1.</strong> Inicializando (E Com .gitignore)</a></li><li class="chapter-item expanded "><a href="impl-pilha.html"><strong aria-hidden="true">8.2.</strong> Implementando Uma Pilha</a></li><li class="chapter-item expanded "><a href="impl-operacoes.html" class="active"><strong aria-hidden="true">8.3.</strong> Implementando As Operações</a></li><li class="chapter-item expanded "><a href="impl-parser.html"><strong aria-hidden="true">8.4.</strong> Implementando O Parser</a></li><li class="chapter-item expanded "><a href="impl-main.html"><strong aria-hidden="true">8.5.</strong> Função Main</a></li><li class="chapter-item expanded "><a href="exemplo-branches.html"><strong aria-hidden="true">8.6.</strong> Trabalhando Com Branches (1)</a></li><li class="chapter-item expanded "><a href="exemplo-branches-2.html"><strong aria-hidden="true">8.7.</strong> Trabalhando Com Branches (2)</a></li><li class="chapter-item expanded "><a href="exemplo-merge.html"><strong aria-hidden="true">8.8.</strong> Conflitos De Um Merge</a></li><li class="chapter-item expanded "><a href="exemplo-makefile.html"><strong aria-hidden="true">8.9.</strong> Finalizando Com Um Makefile</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="gitignore.html"><strong aria-hidden="true">5.6.</strong> .gitignore</a></li><li class="chapter-item expanded "><a href="staging-juntando-tudo.html"><strong aria-hidden="true">5.7.</strong> Juntando Tudo</a></li></ol></li><li class="chapter-item expanded "><a href="linhas-e-branches.html"><strong aria-hidden="true">6.</strong> Linhas do Tempo E Branches</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="branches.html"><strong aria-hidden="true">6.1.</strong> Branches</a></li><li class="chapter-item expanded "><a href="navegando-commits.html"><strong aria-hidden="true">6.2.</strong> Navegando Entre Commits</a></li><li class="chapter-item expanded "><a href="merge.html"><strong aria-hidden="true">6.3.</strong> Merge</a></li><li class="chapter-item expanded "><a href="git-rebase.html"><strong aria-hidden="true">6.4.</strong> git rebase</a></li><li class="chapter-item expanded "><a href="git-log.html"><strong aria-hidden="true">6.5.</strong> git log</a></li><li class="chapter-item expanded "><a href="git-diff.html"><strong aria-hidden="true">6.6.</strong> git diff</a></li><li class="chapter-item expanded "><a href="git-show.html"><strong aria-hidden="true">6.7.</strong> git show</a></li><li class="chapter-item expanded "><a href="git-tag.html"><strong aria-hidden="true">6.8.</strong> git tag</a></li></ol></li><li class="chapter-item expanded "><a href="repos-remotos.html"><strong aria-hidden="true">7.</strong> Repositórios Remotos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-clone.html"><strong aria-hidden="true">7.1.</strong> git clone</a></li><li class="chapter-item expanded "><a href="git-remote.html"><strong aria-hidden="true">7.2.</strong> git remote</a></li><li class="chapter-item expanded "><a href="git-pull-e-git-push.html"><strong aria-hidden="true">7.3.</strong> git pull E git push</a></li></ol></li><li class="chapter-item expanded "><a href="exemplo.html"><strong aria-hidden="true">8.</strong> Exemplo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="exemplo-inicio.html"><strong aria-hidden="true">8.1.</strong> Inicializando (E Com .gitignore)</a></li><li class="chapter-item expanded "><a href="impl-pilha.html"><strong aria-hidden="true">8.2.</strong> Implementando Uma Pilha</a></li><li class="chapter-item expanded "><a href="impl-operacoes.html"><strong aria-hidden="true">8.3.</strong> Implementando As Operações</a></li><li class="chapter-item expanded "><a href="impl-parser.html"><strong aria-hidden="true">8.4.</strong> Implementando O Parser</a></li><li class="chapter-item expanded "><a href="impl-main.html"><strong aria-hidden="true">8.5.</strong> Função Main</a></li><li class="chapter-item expanded "><a href="exemplo-branches.html"><strong aria-hidden="true">8.6.</strong> Trabalhando Com Branches (1)</a></li><li class="chapter-item expanded "><a href="exemplo-branches-2.html"><strong aria-hidden="true">8.7.</strong> Trabalhando Com Branches (2)</a></li><li class="chapter-item expanded "><a href="exemplo-merge.html" class="active"><strong aria-hidden="true">8.8.</strong> Conflitos De Um Merge</a></li><li class="chapter-item expanded "><a href="exemplo-makefile.html"><strong aria-hidden="true">8.9.</strong> Finalizando Com Um Makefile</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,12 +147,10 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#implementando-as-operações" id="implementando-as-operações">Implementando As Operações</a></h1>
-<p>Vamos definir as operações da nossa calculadora. No momento, vamos manter apenas
-as quatro operações básicas da matemática (<code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>). Vamos definir,
-também, como executá-las, além do símbolo correspondente a cada operação. A
-função de execução retorna se ouve sucesso. Começaremos com o cabeçalho:</p>
-<p>Arquivo <code>ops.h</code>:</p>
+                        <h1><a class="header" href="#conflitos-de-um-merge" id="conflitos-de-um-merge">Conflitos De Um <em>Merge</em></a></h1>
+<p>Na nessa tentativa de <em>merge</em>, houve conflitos. Veja a mensagem:</p>
+<p><img src="./exemplo-merge-conflito.png" alt="merge teve conflitos" /></p>
+<p>Vamos olhar para os arquivos com os conflitos. Começaremos com <code>ops.h</code>:</p>
 <pre><code class="language-C">#ifndef OPS_H
 #define OPS_H
 
@@ -162,65 +160,114 @@ função de execução retorna se ouve sucesso. Começaremos com o cabeçalho:</
 #define OP_SUB_SYM &quot;-&quot;
 #define OP_MUL_SYM &quot;*&quot;
 #define OP_DIV_SYM &quot;/&quot;
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+#define OP_SIN_SYM &quot;sin&quot;
+#define OP_COS_SYM &quot;cos&quot;
+#define OP_TAN_SYM &quot;tan&quot;
+#define OP_ARCSIN_SYM &quot;arcsin&quot;
+#define OP_ARCCOS_SYM &quot;arccos&quot;
+#define OP_ARCTAN_SYM &quot;arctan&quot;
+=======
+#define OP_POW_SYM &quot;^&quot;
+#define OP_EXP_SYM &quot;exp&quot;
+#define OP_LOG_SYM &quot;log&quot;
+#define OP_LN_SYM &quot;ln&quot;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp
 
 enum operation {
     op_add,
     op_sub,
     op_mul,
-    op_div
+    op_div,
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    op_sin,
+    op_cos,
+    op_tan,
+    op_arcsin,
+    op_arccos,
+    op_arctan
+=======
+    op_pow,
+    op_exp,
+    op_log,
+    op_ln
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp
 };
 
 int op_exec(enum operation op, struct stack **stack);
 
 #endif
 </code></pre>
-<p>Vamos implementar a execução das operações:</p>
-<p>Arquivo <code>ops.c</code>:</p>
-<pre><code class="language-C">#include &quot;ops.h&quot;
+<p>Atente para as linhas: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>. Tudo que está
+entre <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e <code>=======</code> é aquilo que nossa <em>HEAD</em> introduziu (ou seja,
+o que foi passado da <em>branch</em> &quot;trig&quot; para a <em>branch</em> &quot;master&quot;). Tudo entre
+<code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code> é o que a nossa <em>branch</em> &quot;exp&quot; tentou introduzir. O
+processo de resolução de <em>merge</em> consiste em, manualmente, escolher o que vai
+ser usado no próximo <em>commit</em>. No nosso caso, ambos conteúdos serão escolhidos,
+logo, basta deletar as linhas com <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>.</p>
+<p>Cuidado, que alguns casos exigem edição extra. Atente dentro do <code>enum</code>, que
+<code>op_arctan</code> precisa de uma vírgula no final da linha.</p>
+<pre><code class="language-C">#ifndef OPS_H
+#define OPS_H
 
-int op_exec(enum operation op, struct stack **stack)
-{
-    double left, right;
-    int success = 0;
+#include &quot;stack.h&quot;
 
-    switch (op) {
-    case op_add:
-        success = stack_pop(stack, &amp;right) &amp;&amp; stack_pop(stack, &amp;left);
-        if (success) {
-            stack_push(stack, left + right);
-        }
-        break;
-    case op_sub:
-        success = stack_pop(stack, &amp;right) &amp;&amp; stack_pop(stack, &amp;left);
-        if (success) {
-            stack_push(stack, left - right);
-        }
-        break;
-    case op_mul:
-        success = stack_pop(stack, &amp;right) &amp;&amp; stack_pop(stack, &amp;left);
-        if (success) {
-            stack_push(stack, left * right);
-        }
-        break;
-    case op_div:
-        success = stack_pop(stack, &amp;right) &amp;&amp; stack_pop(stack, &amp;left);
-        if (success) {
-            stack_push(stack, left / right);
-        }
-        break;
-    }
+#define OP_ADD_SYM &quot;+&quot;
+#define OP_SUB_SYM &quot;-&quot;
+#define OP_MUL_SYM &quot;*&quot;
+#define OP_DIV_SYM &quot;/&quot;
+#define OP_SIN_SYM &quot;sin&quot;
+#define OP_COS_SYM &quot;cos&quot;
+#define OP_TAN_SYM &quot;tan&quot;
+#define OP_ARCSIN_SYM &quot;arcsin&quot;
+#define OP_ARCCOS_SYM &quot;arccos&quot;
+#define OP_ARCTAN_SYM &quot;arctan&quot;
+#define OP_POW_SYM &quot;^&quot;
+#define OP_EXP_SYM &quot;exp&quot;
+#define OP_LOG_SYM &quot;log&quot;
+#define OP_LN_SYM &quot;ln&quot;
 
-    return success;
-}
+enum operation {
+    op_add,
+    op_sub,
+    op_mul,
+    op_div,
+    op_sin,
+    op_cos,
+    op_tan,
+    op_arcsin,
+    op_arccos,
+    op_arctan,
+    op_pow,
+    op_exp,
+    op_log,
+    op_ln
+};
+
+int op_exec(enum operation op, struct stack **stack);
+
+#endif
 </code></pre>
-<p>Vamos ver se não ocorre algum erro de compilação (no Linux):</p>
-<pre><code class="language-sh">gcc -o ops.o -c ops.c
+<p>Faça o mesmo nos arquivos <code>ops.c</code> e <code>parser.c</code>. Após isso, podemos registrar e
+publicar as mudanças. Atenção: o arquivo <code>ops.c</code> necessita de um cuidado. Na
+intenção de ajudar com a resolução, o Git apagou algumas linhas. Precisamos
+reintroduzi-las:</p>
+<pre><code class="language-C">     case op_arctan:
+         success = stack_pop(stack, &amp;left);
+         if (success) {
+             stack_push(stack, atan(left));
++        }
++        break;
+     case op_pow:
+         success = stack_pop(stack, &amp;right) &amp;&amp; stack_pop(stack, &amp;left);
+         if (success) {
+             stack_push(stack, pow(left, right));
+         }
+         break;
 </code></pre>
-<p>Perfeito, não ocorre.</p>
-<p>Agora, vamos ao <em>commit</em>:</p>
 <pre><code class="language-sh">git add .
 git status
-git commit -m 'implementadas operações básicas'
+git commit -m 'resolvido merge da branch exp na branch master'
 git push github master
 </code></pre>
 
@@ -229,13 +276,13 @@ git push github master
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="impl-pilha.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="exemplo-branches-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="impl-parser.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="exemplo-makefile.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -247,13 +294,13 @@ git push github master
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="impl-pilha.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="exemplo-branches-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="impl-parser.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="exemplo-makefile.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
