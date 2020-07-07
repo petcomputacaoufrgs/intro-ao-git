@@ -55,3 +55,10 @@ Para verificar o email definido:
 # Vai escrever na tela 'jdsilva@mail.com'
 git config user.email
 ```
+
+Dependendo da versão do Git, você pode precisar executar o seguinte comando
+também:
+
+```sh
+git config --global pull.rebase false
+```
