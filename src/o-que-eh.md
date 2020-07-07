@@ -16,12 +16,13 @@ reescrever uma função.
 # O Que Significa Ser Distribuído?
 
 Versionadores costumam trabalhar com o conceito de "repositórios". Um
-repositório contém o _software_ em questão e sua história. Alguns, como o SVN,
-centralizam um _software_ em um repositório remoto (servidor). Isso significa que
-toda nova versão tem de passar pelo servidor. Este **não** é o caso do Git. O
-Git possibilita repositórios locais. Isto é, você pode ter toda história do
-_software_ na sua máquina, fazer suas próprias mudanças, compartilhar com vários
-repositórios remotos, etc.
+repositório contém o _software_ em questão e sua história. Alguns
+versionadores, como o SVN, centralizam um _software_ em um repositório
+remoto (servidor).  Isso significa que toda nova versão tem de passar pelo
+servidor. Este **não** é o caso do Git. O Git possibilita repositórios
+locais. Isto é, você pode ter toda história do _software_ na sua máquina,
+fazer suas próprias mudanças, compartilhar com vários repositórios remotos,
+etc.
 
 # Git vs. GitHub
 
