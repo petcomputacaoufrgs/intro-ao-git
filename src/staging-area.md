@@ -15,7 +15,7 @@ estados. Estes são:
 
 # Estado Não-Modificado
 
-Arquivos neste estado estão na versão (HEAD) e não foram alterados.
+Arquivos neste estado estão na versão atual (HEAD) e não foram alterados.
 
 # Estado Modificado
 
