@@ -1,13 +1,13 @@
 # git reset E git restore
 
 Para o caso de ser necessário tirar uma mudança do estado _staged_, ou até mesmo
-voltar ao estado do commit atual (HEAD), é possível usar os comandos `git reset`
+voltar ao estado do commit atual (_HEAD_), é possível usar os comandos `git reset`
 e `git restore`.
 
 # `git restore`
 
 O comando `git restore` restaura os arquivos que estão visiveis (working tree)
-para serem idênticos aos do commit atual (HEAD). Para restaurar os arquivos
+para serem idênticos aos do commit atual (_HEAD_). Para restaurar os arquivos
 `main.c` e `vetor.c`, por exemplo:
 ```sh
 git restore -- main.c vetor.c
@@ -24,15 +24,15 @@ a _flag_ `--mixed` for usada, os arquivos que estavam _staged_ vão deixar de se
 _staged_, mas não serão alterados. Por exemplo, para restaurar todos os
 arquivos:
 ```sh
-git reset --mixed HEAD
+git reset --mixed _HEAD_
 # ou simplesmente
-git reset HEAD
+git reset _HEAD_
 ```
 
 Com a _flag_ `--hard`, o comportamento é semelhante ao de `git restore`, exceto
 que arquivos novos não serão deletados.
 ```sh
-git reset --hard HEAD
+git reset --hard _HEAD_
 ```
 
 Há ainda a _flag_ `--soft`, que será explicado mais a frente, pois envolve um uso

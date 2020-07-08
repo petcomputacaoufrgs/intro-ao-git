@@ -24,7 +24,7 @@ _branch_. Assim:
 ```c
 int main()
 {
-<<<<<<< HEAD
+<<<<<<< _HEAD_
     vindo_da_minha_branch();
 =======
     vindo_da_outra_branchl();
@@ -47,7 +47,7 @@ o `kdiff`.
 Suponha o seguinte cenário, uma _branch_ "master" e uma "teste":
 ```
         master    teste
-HEAD -> 80ba4e4  b49a7ed
+_HEAD_ -> 80ba4e4  b49a7ed
            |        |
            |     4b12d0a
            |    /
@@ -66,7 +66,7 @@ O resultado será o seguinte:
 
 ```
         master
-HEAD -> 47d7959
+_HEAD_ -> 47d7959
            |   \
            |    \ teste
         80ba4e4  b49a7ed
@@ -83,7 +83,7 @@ Note que a _branch_ "teste" continuará existindo. Podemos fazer um novo _commit
 nela:
 ```
 master    teste
-47d7959  0935946 <- HEAD
+47d7959  0935946 <- _HEAD_
    |   \    |
    |    \   |
 80ba4e4  b49a7ed

@@ -11,7 +11,7 @@ preservando o conteúdo dos arquivos da primeira _branch_. Por exemplo, imagine 
 seguinte cenário:
 ```
 master    teste
-80ba4e4  b49a7ed <- HEAD
+80ba4e4  b49a7ed <- _HEAD_
    |        |
    |     4b12d0a
    |    /
@@ -30,7 +30,7 @@ git rebase master teste
 O Resultado é:
 ```
           teste
-         b49a7ed <- HEAD
+         b49a7ed <- _HEAD_
             |
          4b12d0a
         /
@@ -46,7 +46,7 @@ ec49a96
 
 Para iniciar um _rebase_ interativo desde 3 _commits_ atrás, basta executar:
 ```sh
-git rebase -i HEAD~3
+git rebase -i _HEAD_~3
 ```
 
 Isso abrirá um editor de texto (No Linux, o padrão é o `vi`) para escolher como

@@ -16,7 +16,7 @@ Vamos olhar para os arquivos com os conflitos. Começaremos com `ops.h`:
 #define OP_SUB_SYM "-"
 #define OP_MUL_SYM "*"
 #define OP_DIV_SYM "/"
-<<<<<<< HEAD
+<<<<<<< _HEAD_
 #define OP_SIN_SYM "sin"
 #define OP_COS_SYM "cos"
 #define OP_TAN_SYM "tan"
@@ -35,7 +35,7 @@ enum operation {
     op_sub,
     op_mul,
     op_div,
-<<<<<<< HEAD
+<<<<<<< _HEAD_
     op_sin,
     op_cos,
     op_tan,
@@ -55,13 +55,13 @@ int op_exec(enum operation op, struct stack **stack);
 #endif
 ```
 
-Atente para as linhas: `<<<<<<< HEAD`, `=======` e `>>>>>>> exp`. Tudo que está
-entre `<<<<<<< HEAD` e `=======` é aquilo que nossa _HEAD_ introduziu (ou seja,
+Atente para as linhas: `<<<<<<< _HEAD_`, `=======` e `>>>>>>> exp`. Tudo que está
+entre `<<<<<<< _HEAD_` e `=======` é aquilo que nossa _HEAD_ introduziu (ou seja,
 o que foi passado da _branch_ "trig" para a _branch_ "master"). Tudo entre
 `=======` e `>>>>>>> exp` é o que a nossa _branch_ "exp" tentou introduzir. O
 processo de resolução de _merge_ consiste em, manualmente, escolher o que vai
 ser usado no próximo _commit_. No nosso caso, ambos conteúdos serão escolhidos,
-logo, basta deletar as linhas com `<<<<<<< HEAD`, `=======` e `>>>>>>> exp`.
+logo, basta deletar as linhas com `<<<<<<< _HEAD_`, `=======` e `>>>>>>> exp`.
 
 Cuidado, que alguns casos exigem edição extra. Atente dentro do `enum`, que
 `op_arctan` precisa de uma vírgula no final da linha.

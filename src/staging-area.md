@@ -8,25 +8,25 @@ versão.
 
 Na janela de tempo entre uma versão e outra, os arquivos podem estar em quatro
 estados. Estes são:
-- Não-modificado (unmodified)
-- Modificado (modified)
-- Não-rastreado (untracked)
-- Staged
+- Não-modificado (_unmodified_)
+- Modificado (_modified_)
+- Não-rastreado (_untracked_)
+- _Staged_
 
 # Estado Não-Modificado
 
-Arquivos neste estado estão na versão atual (HEAD) e não foram alterados.
+Arquivos neste estado estão na versão atual (_HEAD_) e não foram alterados.
 
 # Estado Modificado
 
-Arquivos neste estado estão na versão atual (HEAD), foram alterados, mas não
+Arquivos neste estado estão na versão atual (_HEAD_), foram alterados, mas não
 constarão na próxima versão.
 
 # Estado Não-Rastreado
 
-Arquivos neste estado não estão presentes na versão atual (HEAD), mas não
+Arquivos neste estado não estão presentes na versão atual (_HEAD_) e não
 constarão na próxima versão.
 
-# Estado Staged
+# Estado _Staged_
 
 Arquivos neste estado trazem alguma mudança e constarão na nova versão.

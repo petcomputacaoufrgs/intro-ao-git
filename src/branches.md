@@ -34,7 +34,7 @@ _flag_ `-b`, assim:
 git checkout -b minha-branch
 ```
 
-Por padrão, a nova _branch_ começa do _commit_ atual (HEAD). É possível criar
+Por padrão, a nova _branch_ começa do _commit_ atual (_HEAD_). É possível criar
 uma branch a partir de um _commit_, digamos, `0935946`.
 ```sh
 git branch minha-branch 0935946
@@ -43,11 +43,11 @@ git branch minha-branch 0935946
 # Exemplo
 
 Suponhamos um _commit_ `3c97506` seguido de um _commit_ `ec49a96`, ambos dentro
-da branch `master`. A `HEAD` aponta para este último. Temos uma árvore assim:
+da branch `master`. A `_HEAD_` aponta para este último. Temos uma árvore assim:
 
 ```
 master
-ec49a96 <- HEAD
+ec49a96 <- _HEAD_
    |
 3c97506
 ```
@@ -57,7 +57,7 @@ um novo _commit_ `4b12d0a` nela, temos a seguinte:
 
 ```
          teste
-         4b12d0a <- HEAD
+         4b12d0a <- _HEAD_
         /
 master /
 ec49a96
@@ -70,7 +70,7 @@ _commit_ `80ba4e4`, temos:
 
 ```
         master   teste
-HEAD -> 80ba4e4  4b12d0a
+_HEAD_ -> 80ba4e4  4b12d0a
            |    /
            |   /
         ec49a96
