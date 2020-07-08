@@ -165,7 +165,7 @@ conflito, é indicado o quê pertence à <em>branch</em> atual, e o que pertence
 <em>branch</em>. Assim:</p>
 <pre><code class="language-c">int main()
 {
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_
     vindo_da_minha_branch();
 =======
     vindo_da_outra_branchl();
@@ -183,7 +183,7 @@ o <code>kdiff</code>.</p>
 <h1><a class="header" href="#exemplo" id="exemplo">Exemplo</a></h1>
 <p>Suponha o seguinte cenário, uma <em>branch</em> &quot;master&quot; e uma &quot;teste&quot;:</p>
 <pre><code>        master    teste
-HEAD -&gt; 80ba4e4  b49a7ed
+_HEAD_ -&gt; 80ba4e4  b49a7ed
            |        |
            |     4b12d0a
            |    /
@@ -198,7 +198,7 @@ HEAD -&gt; 80ba4e4  b49a7ed
 </code></pre>
 <p>O resultado será o seguinte:</p>
 <pre><code>        master
-HEAD -&gt; 47d7959
+_HEAD_ -&gt; 47d7959
            |   \
            |    \ teste
         80ba4e4  b49a7ed
@@ -213,7 +213,7 @@ HEAD -&gt; 47d7959
 <p>Note que a <em>branch</em> &quot;teste&quot; continuará existindo. Podemos fazer um novo <em>commit</em>
 nela:</p>
 <pre><code>master    teste
-47d7959  0935946 &lt;- HEAD
+47d7959  0935946 &lt;- _HEAD_
    |   \    |
    |    \   |
 80ba4e4  b49a7ed

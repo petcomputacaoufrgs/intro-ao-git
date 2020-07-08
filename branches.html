@@ -170,22 +170,22 @@ entraram no <em>commit</em>:</p>
 <em>flag</em> <code>-b</code>, assim:</p>
 <pre><code class="language-sh">git checkout -b minha-branch
 </code></pre>
-<p>Por padrão, a nova <em>branch</em> começa do <em>commit</em> atual (HEAD). É possível criar
+<p>Por padrão, a nova <em>branch</em> começa do <em>commit</em> atual (<em>HEAD</em>). É possível criar
 uma branch a partir de um <em>commit</em>, digamos, <code>0935946</code>.</p>
 <pre><code class="language-sh">git branch minha-branch 0935946
 </code></pre>
 <h1><a class="header" href="#exemplo" id="exemplo">Exemplo</a></h1>
 <p>Suponhamos um <em>commit</em> <code>3c97506</code> seguido de um <em>commit</em> <code>ec49a96</code>, ambos dentro
-da branch <code>master</code>. A <code>HEAD</code> aponta para este último. Temos uma árvore assim:</p>
+da branch <code>master</code>. A <code>_HEAD_</code> aponta para este último. Temos uma árvore assim:</p>
 <pre><code>master
-ec49a96 &lt;- HEAD
+ec49a96 &lt;- _HEAD_
    |
 3c97506
 </code></pre>
 <p>Após fazermos uma nova <em>branch</em> &quot;teste&quot; (<code>git checkout -b teste</code>), e produzirmos
 um novo <em>commit</em> <code>4b12d0a</code> nela, temos a seguinte:</p>
 <pre><code>         teste
-         4b12d0a &lt;- HEAD
+         4b12d0a &lt;- _HEAD_
         /
 master /
 ec49a96
@@ -195,7 +195,7 @@ ec49a96
 <p>Se voltarmos para a <em>master</em> (<code>git checkout master</code>), e produzirmos um novo
 <em>commit</em> <code>80ba4e4</code>, temos:</p>
 <pre><code>        master   teste
-HEAD -&gt; 80ba4e4  4b12d0a
+_HEAD_ -&gt; 80ba4e4  4b12d0a
            |    /
            |   /
         ec49a96

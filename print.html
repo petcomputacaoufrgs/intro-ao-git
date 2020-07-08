@@ -251,20 +251,20 @@ versão.</p>
 <p>Na janela de tempo entre uma versão e outra, os arquivos podem estar em quatro
 estados. Estes são:</p>
 <ul>
-<li>Não-modificado (unmodified)</li>
-<li>Modificado (modified)</li>
-<li>Não-rastreado (untracked)</li>
-<li>Staged</li>
+<li>Não-modificado (<em>unmodified</em>)</li>
+<li>Modificado (<em>modified</em>)</li>
+<li>Não-rastreado (<em>untracked</em>)</li>
+<li><em>Staged</em></li>
 </ul>
 <h1><a class="header" href="#estado-não-modificado" id="estado-não-modificado">Estado Não-Modificado</a></h1>
-<p>Arquivos neste estado estão na versão atual (HEAD) e não foram alterados.</p>
+<p>Arquivos neste estado estão na versão atual (<em>HEAD</em>) e não foram alterados.</p>
 <h1><a class="header" href="#estado-modificado" id="estado-modificado">Estado Modificado</a></h1>
-<p>Arquivos neste estado estão na versão atual (HEAD), foram alterados, mas não
+<p>Arquivos neste estado estão na versão atual (<em>HEAD</em>), foram alterados, mas não
 constarão na próxima versão.</p>
 <h1><a class="header" href="#estado-não-rastreado" id="estado-não-rastreado">Estado Não-Rastreado</a></h1>
-<p>Arquivos neste estado não estão presentes na versão atual (HEAD), mas não
+<p>Arquivos neste estado não estão presentes na versão atual (<em>HEAD</em>) e não
 constarão na próxima versão.</p>
-<h1><a class="header" href="#estado-staged" id="estado-staged">Estado Staged</a></h1>
+<h1><a class="header" href="#estado-staged" id="estado-staged">Estado <em>Staged</em></a></h1>
 <p>Arquivos neste estado trazem alguma mudança e constarão na nova versão.</p>
 <h1><a class="header" href="#git-add" id="git-add"><code>git add</code></a></h1>
 <p>Para adicionar arquivos modificados ou não-rastreados à <em>staging area</em>, existe
@@ -325,11 +325,11 @@ forma que o Git não considerará que você reescreveu o arquivo ou renomeou.</p
 forma que o Git não considerará que você removeu arquivo.</p>
 <h1><a class="header" href="#git-reset-e-git-restore" id="git-reset-e-git-restore">git reset E git restore</a></h1>
 <p>Para o caso de ser necessário tirar uma mudança do estado <em>staged</em>, ou até mesmo
-voltar ao estado do commit atual (HEAD), é possível usar os comandos <code>git reset</code>
+voltar ao estado do commit atual (<em>HEAD</em>), é possível usar os comandos <code>git reset</code>
 e <code>git restore</code>.</p>
 <h1><a class="header" href="#git-restore" id="git-restore"><code>git restore</code></a></h1>
 <p>O comando <code>git restore</code> restaura os arquivos que estão visiveis (working tree)
-para serem idênticos aos do commit atual (HEAD). Para restaurar os arquivos
+para serem idênticos aos do commit atual (<em>HEAD</em>). Para restaurar os arquivos
 <code>main.c</code> e <code>vetor.c</code>, por exemplo:</p>
 <pre><code class="language-sh">git restore -- main.c vetor.c
 </code></pre>
@@ -341,13 +341,13 @@ além de ser mais fácil de fazer algo errado. Se não for usada nenhuma <em>fla
 a <em>flag</em> <code>--mixed</code> for usada, os arquivos que estavam <em>staged</em> vão deixar de ser
 <em>staged</em>, mas não serão alterados. Por exemplo, para restaurar todos os
 arquivos:</p>
-<pre><code class="language-sh">git reset --mixed HEAD
+<pre><code class="language-sh">git reset --mixed _HEAD_
 # ou simplesmente
-git reset HEAD
+git reset _HEAD_
 </code></pre>
 <p>Com a <em>flag</em> <code>--hard</code>, o comportamento é semelhante ao de <code>git restore</code>, exceto
 que arquivos novos não serão deletados.</p>
-<pre><code class="language-sh">git reset --hard HEAD
+<pre><code class="language-sh">git reset --hard _HEAD_
 </code></pre>
 <p>Há ainda a <em>flag</em> <code>--soft</code>, que será explicado mais a frente, pois envolve um uso
 do comando ainda não explicado.</p>
@@ -418,22 +418,22 @@ entraram no <em>commit</em>:</p>
 <em>flag</em> <code>-b</code>, assim:</p>
 <pre><code class="language-sh">git checkout -b minha-branch
 </code></pre>
-<p>Por padrão, a nova <em>branch</em> começa do <em>commit</em> atual (HEAD). É possível criar
+<p>Por padrão, a nova <em>branch</em> começa do <em>commit</em> atual (<em>HEAD</em>). É possível criar
 uma branch a partir de um <em>commit</em>, digamos, <code>0935946</code>.</p>
 <pre><code class="language-sh">git branch minha-branch 0935946
 </code></pre>
 <h1><a class="header" href="#exemplo" id="exemplo">Exemplo</a></h1>
 <p>Suponhamos um <em>commit</em> <code>3c97506</code> seguido de um <em>commit</em> <code>ec49a96</code>, ambos dentro
-da branch <code>master</code>. A <code>HEAD</code> aponta para este último. Temos uma árvore assim:</p>
+da branch <code>master</code>. A <code>_HEAD_</code> aponta para este último. Temos uma árvore assim:</p>
 <pre><code>master
-ec49a96 &lt;- HEAD
+ec49a96 &lt;- _HEAD_
    |
 3c97506
 </code></pre>
 <p>Após fazermos uma nova <em>branch</em> &quot;teste&quot; (<code>git checkout -b teste</code>), e produzirmos
 um novo <em>commit</em> <code>4b12d0a</code> nela, temos a seguinte:</p>
 <pre><code>         teste
-         4b12d0a &lt;- HEAD
+         4b12d0a &lt;- _HEAD_
         /
 master /
 ec49a96
@@ -443,7 +443,7 @@ ec49a96
 <p>Se voltarmos para a <em>master</em> (<code>git checkout master</code>), e produzirmos um novo
 <em>commit</em> <code>80ba4e4</code>, temos:</p>
 <pre><code>        master   teste
-HEAD -&gt; 80ba4e4  4b12d0a
+_HEAD_ -&gt; 80ba4e4  4b12d0a
            |    /
            |   /
         ec49a96
@@ -461,12 +461,12 @@ junto ao nome da branch:</p>
 <pre><code>git branch -D minha-branch
 </code></pre>
 <h1><a class="header" href="#navegando-entre-commits" id="navegando-entre-commits">Navegando Entre Commits</a></h1>
-<p>É possível, no Git, mudar o commit o HEAD para um commit passado. Esse é mais um
+<p>É possível, no Git, mudar o commit o <em>HEAD</em> para um commit passado. Esse é mais um
 uso do comando <code>git checkout</code>.</p>
 <p>Pàra navegar até o commit <code>fae6c2e</code>, use:</p>
 <pre><code class="language-sh">git checkout fae6c2e
 </code></pre>
-<p>No entanto, ao fazer isso, você entrará no &quot;<em>detached HEAD state</em>&quot; (estado de
+<p>No entanto, ao fazer isso, você entrará no &quot;<em>detached <em>HEAD</em> state</em>&quot; (estado de
 <em>HEAD</em> descolado). Isso significa que você a <em>HEAD</em> não aponta para uma
 <em>branch</em>, mas para um <em>commit</em> específico. O problema disso é: se você for fazer
 um novo <em>commit</em>, ele não pertencerá a nenhuma <em>branch</em>. Portanto, não use
@@ -476,8 +476,8 @@ arquivos de um <em>commit</em> antigo.</p>
 <p>Semelhantemente, é possível usar <code>git reset</code>.</p>
 <pre><code class="language-sh">git reset fae6c2e
 </code></pre>
-<p>Mas isso também entra no &quot;<em>detached HEAD state</em>&quot;.</p>
-<p>Para sair do &quot;<em>detached HEAD state</em>&quot;, faça <em>checkout</em> para uma <em>branch</em>.</p>
+<p>Mas isso também entra no &quot;<em>detached <em>HEAD</em> state</em>&quot;.</p>
+<p>Para sair do &quot;<em>detached <em>HEAD</em> state</em>&quot;, faça <em>checkout</em> para uma <em>branch</em>.</p>
 <pre><code class="language-sh">git checkout master
 </code></pre>
 <h1><a class="header" href="#merge" id="merge"><em>Merge</em></a></h1>
@@ -498,7 +498,7 @@ conflito, é indicado o quê pertence à <em>branch</em> atual, e o que pertence
 <em>branch</em>. Assim:</p>
 <pre><code class="language-c">int main()
 {
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_
     vindo_da_minha_branch();
 =======
     vindo_da_outra_branchl();
@@ -516,7 +516,7 @@ o <code>kdiff</code>.</p>
 <h1><a class="header" href="#exemplo-1" id="exemplo-1">Exemplo</a></h1>
 <p>Suponha o seguinte cenário, uma <em>branch</em> &quot;master&quot; e uma &quot;teste&quot;:</p>
 <pre><code>        master    teste
-HEAD -&gt; 80ba4e4  b49a7ed
+_HEAD_ -&gt; 80ba4e4  b49a7ed
            |        |
            |     4b12d0a
            |    /
@@ -531,7 +531,7 @@ HEAD -&gt; 80ba4e4  b49a7ed
 </code></pre>
 <p>O resultado será o seguinte:</p>
 <pre><code>        master
-HEAD -&gt; 47d7959
+_HEAD_ -&gt; 47d7959
            |   \
            |    \ teste
         80ba4e4  b49a7ed
@@ -546,7 +546,7 @@ HEAD -&gt; 47d7959
 <p>Note que a <em>branch</em> &quot;teste&quot; continuará existindo. Podemos fazer um novo <em>commit</em>
 nela:</p>
 <pre><code>master    teste
-47d7959  0935946 &lt;- HEAD
+47d7959  0935946 &lt;- _HEAD_
    |   \    |
    |    \   |
 80ba4e4  b49a7ed
@@ -567,7 +567,7 @@ forma que os <em>commits</em> de outra branch façam parte da história desta <e
 preservando o conteúdo dos arquivos da primeira <em>branch</em>. Por exemplo, imagine o
 seguinte cenário:</p>
 <pre><code>master    teste
-80ba4e4  b49a7ed &lt;- HEAD
+80ba4e4  b49a7ed &lt;- _HEAD_
    |        |
    |     4b12d0a
    |    /
@@ -582,7 +582,7 @@ e não no <em>commit</em> <code>ec49a96</code>. Basta executarmos o seguinte:</p
 </code></pre>
 <p>O Resultado é:</p>
 <pre><code>          teste
-         b49a7ed &lt;- HEAD
+         b49a7ed &lt;- _HEAD_
             |
          4b12d0a
         /
@@ -595,7 +595,7 @@ ec49a96
 </code></pre>
 <h1><a class="header" href="#rebase-interativo" id="rebase-interativo"><em>Rebase</em> Interativo</a></h1>
 <p>Para iniciar um <em>rebase</em> interativo desde 3 <em>commits</em> atrás, basta executar:</p>
-<pre><code class="language-sh">git rebase -i HEAD~3
+<pre><code class="language-sh">git rebase -i _HEAD_~3
 </code></pre>
 <p>Isso abrirá um editor de texto (No Linux, o padrão é o <code>vi</code>) para escolher como
 você vai editar os <em>commits</em>. Você deve ver no editor um conteúdo similar a
@@ -1725,7 +1725,7 @@ que resolver algum conflito. Vamos ver:</p>
 #define OP_SUB_SYM &quot;-&quot;
 #define OP_MUL_SYM &quot;*&quot;
 #define OP_DIV_SYM &quot;/&quot;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_
 #define OP_SIN_SYM &quot;sin&quot;
 #define OP_COS_SYM &quot;cos&quot;
 #define OP_TAN_SYM &quot;tan&quot;
@@ -1744,7 +1744,7 @@ enum operation {
     op_sub,
     op_mul,
     op_div,
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_
     op_sin,
     op_cos,
     op_tan,
@@ -1763,13 +1763,13 @@ int op_exec(enum operation op, struct stack **stack);
 
 #endif
 </code></pre>
-<p>Atente para as linhas: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>. Tudo que está
-entre <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e <code>=======</code> é aquilo que nossa <em>HEAD</em> introduziu (ou seja,
+<p>Atente para as linhas: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>. Tudo que está
+entre <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_</code> e <code>=======</code> é aquilo que nossa <em>HEAD</em> introduziu (ou seja,
 o que foi passado da <em>branch</em> &quot;trig&quot; para a <em>branch</em> &quot;master&quot;). Tudo entre
 <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code> é o que a nossa <em>branch</em> &quot;exp&quot; tentou introduzir. O
 processo de resolução de <em>merge</em> consiste em, manualmente, escolher o que vai
 ser usado no próximo <em>commit</em>. No nosso caso, ambos conteúdos serão escolhidos,
-logo, basta deletar as linhas com <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>.</p>
+logo, basta deletar as linhas com <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>.</p>
 <p>Cuidado, que alguns casos exigem edição extra. Atente dentro do <code>enum</code>, que
 <code>op_arctan</code> precisa de uma vírgula no final da linha.</p>
 <pre><code class="language-C">#ifndef OPS_H

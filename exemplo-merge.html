@@ -160,7 +160,7 @@
 #define OP_SUB_SYM &quot;-&quot;
 #define OP_MUL_SYM &quot;*&quot;
 #define OP_DIV_SYM &quot;/&quot;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_
 #define OP_SIN_SYM &quot;sin&quot;
 #define OP_COS_SYM &quot;cos&quot;
 #define OP_TAN_SYM &quot;tan&quot;
@@ -179,7 +179,7 @@ enum operation {
     op_sub,
     op_mul,
     op_div,
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_
     op_sin,
     op_cos,
     op_tan,
@@ -198,13 +198,13 @@ int op_exec(enum operation op, struct stack **stack);
 
 #endif
 </code></pre>
-<p>Atente para as linhas: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>. Tudo que está
-entre <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e <code>=======</code> é aquilo que nossa <em>HEAD</em> introduziu (ou seja,
+<p>Atente para as linhas: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>. Tudo que está
+entre <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_</code> e <code>=======</code> é aquilo que nossa <em>HEAD</em> introduziu (ou seja,
 o que foi passado da <em>branch</em> &quot;trig&quot; para a <em>branch</em> &quot;master&quot;). Tudo entre
 <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code> é o que a nossa <em>branch</em> &quot;exp&quot; tentou introduzir. O
 processo de resolução de <em>merge</em> consiste em, manualmente, escolher o que vai
 ser usado no próximo <em>commit</em>. No nosso caso, ambos conteúdos serão escolhidos,
-logo, basta deletar as linhas com <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>.</p>
+logo, basta deletar as linhas com <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; _HEAD_</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>.</p>
 <p>Cuidado, que alguns casos exigem edição extra. Atente dentro do <code>enum</code>, que
 <code>op_arctan</code> precisa de uma vírgula no final da linha.</p>
 <pre><code class="language-C">#ifndef OPS_H
