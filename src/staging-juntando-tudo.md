@@ -27,7 +27,7 @@ git status
 ```
 ![saída do git status](./status-staging.png)
 
-Pronto! Podemos fazer o nosso primeiro commit.
+Pronto! Podemos fazer o nosso primeiro _commit_.
 ```sh
 git commit -m 'adicionada a função principal'
 ```

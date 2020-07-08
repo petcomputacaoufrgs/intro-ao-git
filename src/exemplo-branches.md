@@ -3,7 +3,7 @@
 Suponha que temos mais um colega no time. Suponha que ele decidiu
 adicionar trigonometria. Suponha que nós decidimos adicionar exponenciação
 e logaritmo. Para fazer tais tarefas, vamos criar mais duas _branches_, uma
-chamada "trig", a outra chamada "exp".
+chamada "_trig_", a outra chamada "_exp_".
 
 ## Nossa _Branch_
 
@@ -99,7 +99,7 @@ gcc -o parser.o -c parser.c
 ```
 Perfeito, não ocorre.
 
-Vamos testar também (precisamos de `-lm`  para usar funções `math`):
+Vamos testar também (precisamos de `-lm``  para usar funções `math`):
 ```sh
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 ```
@@ -121,7 +121,7 @@ git push github exp
 ## A _Branch_ Do Colega
 
 Agora suponha que trocamos de computador, que somos o colega no computador
-dele. A _HEAD_ deve estar na "master" a partir de agora (`git checkout master`).
+dele. A _HEAD_ deve estar na "_master_" a partir de agora (`git checkout master`).
 
 Para criar a nova _branch_, e ao mesmo tempo mudar para ela:
 ```sh
@@ -222,7 +222,7 @@ gcc -o parser.o -c parser.c
 ```
 Perfeito, não ocorre.
 
-O colega vai testar também (precisa de `-lm  para usar funções `math`):
+O colega vai testar também (precisa de `-lm`  para usar funções `math`):
 ```sh
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 ```

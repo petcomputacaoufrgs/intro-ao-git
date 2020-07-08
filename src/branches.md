@@ -6,12 +6,12 @@ Uma _branch_ é uma ramificação na linha do tempo do Git.
 
 Existem várias formas de criar uma _branch_. Uma delas, usando o comando
 `git branch`, que simplesmente cria uma _branch_ e não faz mais nada. Para criar
-a _branch_ com o nome "minha-branch", use:
+a _branch_ com o nome "_minha-branch_", use:
 ```sh
 git branch minha-branch
 ```
 
-Por padrão, você não vai estar na branch que criou.  Para trocar de branch use
+Por padrão, você não vai estar na _branch_ que criou.  Para trocar de _branch_ use
 `git checkout`, assim:
 ```sh
 git checkout minha-branch
@@ -28,7 +28,7 @@ entraram no _commit_:
 git reset --soft minha-branch
 ```
 
-Para **criar e trocar** de branch ao mesmo tempo, use `git checkout` com a
+Para **criar e trocar** de _branch_ ao mesmo tempo, use `git checkout` com a
 _flag_ `-b`, assim:
 ```sh
 git checkout -b minha-branch
@@ -43,11 +43,11 @@ git branch minha-branch 0935946
 # Exemplo
 
 Suponhamos um _commit_ `3c97506` seguido de um _commit_ `ec49a96`, ambos dentro
-da branch `master`. A `_HEAD_` aponta para este último. Temos uma árvore assim:
+da branch `master`. A _HEAD_ aponta para este último. Temos uma árvore assim:
 
 ```
 master
-ec49a96 <- _HEAD_
+ec49a96 <- HEAD
    |
 3c97506
 ```
@@ -57,7 +57,7 @@ um novo _commit_ `4b12d0a` nela, temos a seguinte:
 
 ```
          teste
-         4b12d0a <- _HEAD_
+         4b12d0a <- HEAD
         /
 master /
 ec49a96
@@ -70,7 +70,7 @@ _commit_ `80ba4e4`, temos:
 
 ```
         master   teste
-_HEAD_ -> 80ba4e4  4b12d0a
+HEAD -> 80ba4e4  4b12d0a
            |    /
            |   /
         ec49a96
@@ -81,7 +81,7 @@ _HEAD_ -> 80ba4e4  4b12d0a
 # Deletando Branches
 
 Para deletar branches, existem duas formas. A primeira, a forma segura, requer
-que você tenha feito _merge_ dessa branch em outra antes (será explicado nos
+que você tenha feito _merge_ dessa _branch_ em outra antes (será explicado nos
 próximos dois capítulos). Basta passar a _flag_ `-d` para o comando `git branch`,
 junto ao nome da branch:
 ```

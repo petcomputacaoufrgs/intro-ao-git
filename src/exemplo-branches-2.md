@@ -100,7 +100,7 @@ gcc -o parser.o -c parser.c
 ```
 Perfeito, não ocorre.
 
-O colega vai testar também (precisa de `-lm  para usar funções `math`):
+O colega vai testar também (precisa de `-lm`  para usar funções `math`):
 ```sh
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 ```
@@ -119,7 +119,7 @@ git commit -m 'implementada trigonometria inversa'
 git push github trig
 ```
 
-O colega está pronto, e vai mandar as mudanças pra _branch_ "master". Primeiro,
+O colega está pronto, e vai mandar as mudanças pra _branch_ "_master_". Primeiro,
 ele vai trocar para ela.
 ```sh
 git checkout master
@@ -147,7 +147,7 @@ git push github master
 
 ## Voltando Para Nosso Computador
 
-Temos que estar na _branch_ "exp". Vamos fazer mais uma mudança, vamos
+Temos que estar na _branch_ "_exp_". Vamos fazer mais uma mudança, vamos
 adicionar logaritmos.
 
 Arquivo `ops.h`:
@@ -236,7 +236,7 @@ gcc -o parser.o -c parser.c
 Perfeito, não ocorre.
 
 
-Vamos testar também (precisamos de `-lm  para usar funções `math`):
+Vamos testar também (precisamos de `-lm`  para usar funções `math`):
 ```sh
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 ```
@@ -263,7 +263,7 @@ Agora, vamos ver se não estamos desatualizados:
 git pull github master
 ```
 
-![pull teve mudanças](./exemplo-pull-mudancas.png)
+![pull teve mudanças](./exemplo-pull-mudanca.png)
 
 Ok, estávamos desatualizados, mas baixamos as atualizações. É possível que tenhamos
 que resolver algum conflito. Vamos ver:
