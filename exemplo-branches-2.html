@@ -234,7 +234,7 @@
 <pre><code class="language-sh">gcc -o parser.o -c parser.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
-<p>O colega vai testar também (precisa de <code>-lm  para usar funções </code>math`):</p>
+<p>O colega vai testar também (precisa de <code>-lm</code>  para usar funções <code>math</code>):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
 <p>Vamos fazer três testes: <code>1 arccos</code>, <code>0 arcsin</code>, e <code>0 arctan</code>, que devem
@@ -246,7 +246,7 @@ git status
 git commit -m 'implementada trigonometria inversa'
 git push github trig
 </code></pre>
-<p>O colega está pronto, e vai mandar as mudanças pra <em>branch</em> &quot;master&quot;. Primeiro,
+<p>O colega está pronto, e vai mandar as mudanças pra <em>branch</em> &quot;<em>master</em>&quot;. Primeiro,
 ele vai trocar para ela.</p>
 <pre><code class="language-sh">git checkout master
 </code></pre>
@@ -262,7 +262,7 @@ ele vai trocar para ela.</p>
 <pre><code class="language-sh">git push github master
 </code></pre>
 <h2><a class="header" href="#voltando-para-nosso-computador" id="voltando-para-nosso-computador">Voltando Para Nosso Computador</a></h2>
-<p>Temos que estar na <em>branch</em> &quot;exp&quot;. Vamos fazer mais uma mudança, vamos
+<p>Temos que estar na <em>branch</em> &quot;<em>exp</em>&quot;. Vamos fazer mais uma mudança, vamos
 adicionar logaritmos.</p>
 <p>Arquivo <code>ops.h</code>:</p>
 <pre><code class="language-C"> #define OP_POW_SYM &quot;^&quot;
@@ -337,7 +337,7 @@ adicionar logaritmos.</p>
 <pre><code class="language-sh">gcc -o parser.o -c parser.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
-<p>Vamos testar também (precisamos de <code>-lm  para usar funções </code>math`):</p>
+<p>Vamos testar também (precisamos de <code>-lm</code>  para usar funções <code>math</code>):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
 <p>Vamos fazer dois testes: <code>3 81 log</code>, e <code>2.718282 ln</code>, que devem resultar em <code>4</code>
@@ -355,7 +355,7 @@ git push github exp
 <p>Agora, vamos ver se não estamos desatualizados:</p>
 <pre><code class="language-sh">git pull github master
 </code></pre>
-<p><img src="./exemplo-pull-mudancas.png" alt="pull teve mudanças" /></p>
+<p><img src="./exemplo-pull-mudanca.png" alt="pull teve mudanças" /></p>
 <p>Ok, estávamos desatualizados, mas baixamos as atualizações. É possível que tenhamos
 que resolver algum conflito. Vamos ver:</p>
 <pre><code class="language-sh">git merge exp

@@ -148,7 +148,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#git-rm-e-git-mv" id="git-rm-e-git-mv"><code>git rm</code> E <code>git mv</code></a></h1>
-<p>Às vezes o Git é &quot;burrinho&quot; e não sabe diferenciar o caso de:</p>
+<p>Às vezes o Git não é tão inteligente e não sabe diferenciar o caso de:</p>
 <ul>
 <li>Você reescreveu um arquivo vs. você removeu o arquivo e criou um novo com
 mesmo nome;</li>
@@ -157,10 +157,16 @@ mesmo nome;</li>
 <p>Para resolver isso, existem os comandos <code>git rm</code> e <code>git mv</code>.</p>
 <h1><a class="header" href="#git-rm" id="git-rm"><code>git rm</code></a></h1>
 <p>O comando <code>git rm</code> registra no repositório que você removeu o arquivo, de tal
-forma que o Git não considerará que você reescreveu o arquivo ou renomeou.</p>
+forma que o Git não considerará que você reescreveu o arquivo ou renomeou.
+Exemplo, para remover o arquivo <code>main.c</code>:</p>
+<pre><code class="language-sh">git rm main.c
+</code></pre>
 <h1><a class="header" href="#git-mv" id="git-mv"><code>git mv</code></a></h1>
 <p>O comando <code>git mv</code> registra no repositório que você renomeou o arquivo, de tal
-forma que o Git não considerará que você removeu arquivo.</p>
+forma que o Git não considerará que você removeu arquivo. Exemplo, para renomear
+o arquivo <code>main.c</code> de tal forma que o nome seja <code>main.py</code>:</p>
+<pre><code class="language-sh">git mv main.c main.py
+</code></pre>
 
                     </main>
 

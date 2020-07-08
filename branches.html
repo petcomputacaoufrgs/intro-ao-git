@@ -152,10 +152,10 @@
 <h1><a class="header" href="#criando-e-trocando-de-branch" id="criando-e-trocando-de-branch">Criando E Trocando De Branch</a></h1>
 <p>Existem várias formas de criar uma <em>branch</em>. Uma delas, usando o comando
 <code>git branch</code>, que simplesmente cria uma <em>branch</em> e não faz mais nada. Para criar
-a <em>branch</em> com o nome &quot;minha-branch&quot;, use:</p>
+a <em>branch</em> com o nome &quot;<em>minha-branch</em>&quot;, use:</p>
 <pre><code class="language-sh">git branch minha-branch
 </code></pre>
-<p>Por padrão, você não vai estar na branch que criou.  Para trocar de branch use
+<p>Por padrão, você não vai estar na <em>branch</em> que criou.  Para trocar de <em>branch</em> use
 <code>git checkout</code>, assim:</p>
 <pre><code class="language-sh">git checkout minha-branch
 </code></pre>
@@ -166,7 +166,7 @@ a <em>branch</em> com o nome &quot;minha-branch&quot;, use:</p>
 entraram no <em>commit</em>:</p>
 <pre><code class="language-sh">git reset --soft minha-branch
 </code></pre>
-<p>Para <strong>criar e trocar</strong> de branch ao mesmo tempo, use <code>git checkout</code> com a
+<p>Para <strong>criar e trocar</strong> de <em>branch</em> ao mesmo tempo, use <code>git checkout</code> com a
 <em>flag</em> <code>-b</code>, assim:</p>
 <pre><code class="language-sh">git checkout -b minha-branch
 </code></pre>
@@ -176,16 +176,16 @@ uma branch a partir de um <em>commit</em>, digamos, <code>0935946</code>.</p>
 </code></pre>
 <h1><a class="header" href="#exemplo" id="exemplo">Exemplo</a></h1>
 <p>Suponhamos um <em>commit</em> <code>3c97506</code> seguido de um <em>commit</em> <code>ec49a96</code>, ambos dentro
-da branch <code>master</code>. A <code>_HEAD_</code> aponta para este último. Temos uma árvore assim:</p>
+da branch <code>master</code>. A <em>HEAD</em> aponta para este último. Temos uma árvore assim:</p>
 <pre><code>master
-ec49a96 &lt;- _HEAD_
+ec49a96 &lt;- HEAD
    |
 3c97506
 </code></pre>
 <p>Após fazermos uma nova <em>branch</em> &quot;teste&quot; (<code>git checkout -b teste</code>), e produzirmos
 um novo <em>commit</em> <code>4b12d0a</code> nela, temos a seguinte:</p>
 <pre><code>         teste
-         4b12d0a &lt;- _HEAD_
+         4b12d0a &lt;- HEAD
         /
 master /
 ec49a96
@@ -195,7 +195,7 @@ ec49a96
 <p>Se voltarmos para a <em>master</em> (<code>git checkout master</code>), e produzirmos um novo
 <em>commit</em> <code>80ba4e4</code>, temos:</p>
 <pre><code>        master   teste
-_HEAD_ -&gt; 80ba4e4  4b12d0a
+HEAD -&gt; 80ba4e4  4b12d0a
            |    /
            |   /
         ec49a96
@@ -204,7 +204,7 @@ _HEAD_ -&gt; 80ba4e4  4b12d0a
 </code></pre>
 <h1><a class="header" href="#deletando-branches" id="deletando-branches">Deletando Branches</a></h1>
 <p>Para deletar branches, existem duas formas. A primeira, a forma segura, requer
-que você tenha feito <em>merge</em> dessa branch em outra antes (será explicado nos
+que você tenha feito <em>merge</em> dessa <em>branch</em> em outra antes (será explicado nos
 próximos dois capítulos). Basta passar a <em>flag</em> <code>-d</code> para o comando <code>git branch</code>,
 junto ao nome da branch:</p>
 <pre><code>git branch -d minha-branch

@@ -148,12 +148,12 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#navegando-entre-commits" id="navegando-entre-commits">Navegando Entre Commits</a></h1>
-<p>É possível, no Git, mudar o commit o <em>HEAD</em> para um commit passado. Esse é mais um
+<p>É possível, no Git, mudar o <em>commit</em> o <em>HEAD</em> para um <em>commit</em> passado. Esse é mais um
 uso do comando <code>git checkout</code>.</p>
-<p>Pàra navegar até o commit <code>fae6c2e</code>, use:</p>
+<p>Pàra navegar até o <em>commit</em> <code>fae6c2e</code>, use:</p>
 <pre><code class="language-sh">git checkout fae6c2e
 </code></pre>
-<p>No entanto, ao fazer isso, você entrará no &quot;<em>detached <em>HEAD</em> state</em>&quot; (estado de
+<p>No entanto, ao fazer isso, você entrará no &quot;<em>detached HEAD state</em>&quot; (estado de
 <em>HEAD</em> descolado). Isso significa que você a <em>HEAD</em> não aponta para uma
 <em>branch</em>, mas para um <em>commit</em> específico. O problema disso é: se você for fazer
 um novo <em>commit</em>, ele não pertencerá a nenhuma <em>branch</em>. Portanto, não use
@@ -163,8 +163,8 @@ arquivos de um <em>commit</em> antigo.</p>
 <p>Semelhantemente, é possível usar <code>git reset</code>.</p>
 <pre><code class="language-sh">git reset fae6c2e
 </code></pre>
-<p>Mas isso também entra no &quot;<em>detached <em>HEAD</em> state</em>&quot;.</p>
-<p>Para sair do &quot;<em>detached <em>HEAD</em> state</em>&quot;, faça <em>checkout</em> para uma <em>branch</em>.</p>
+<p>Mas isso também entra no &quot;<em>detached HEAD state</em>&quot;.</p>
+<p>Para sair do &quot;<em>detached HEAD state</em>&quot;, faça <em>checkout</em> para uma <em>branch</em>.</p>
 <pre><code class="language-sh">git checkout master
 </code></pre>
 

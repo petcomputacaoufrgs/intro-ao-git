@@ -151,7 +151,7 @@
 <p>Suponha que temos mais um colega no time. Suponha que ele decidiu
 adicionar trigonometria. Suponha que nós decidimos adicionar exponenciação
 e logaritmo. Para fazer tais tarefas, vamos criar mais duas <em>branches</em>, uma
-chamada &quot;trig&quot;, a outra chamada &quot;exp&quot;.</p>
+chamada &quot;<em>trig</em>&quot;, a outra chamada &quot;<em>exp</em>&quot;.</p>
 <h2><a class="header" href="#nossa-branch" id="nossa-branch">Nossa <em>Branch</em></a></h2>
 <p>Para criá-la, e ao mesmo tempo mudar para ela:</p>
 <pre><code class="language-sh">git checkout -b exp
@@ -230,7 +230,7 @@ marcadas com <code>-</code> no início serão excluídas, e as marcadas com <cod
 <pre><code class="language-sh">gcc -o parser.o -c parser.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
-<p>Vamos testar também (precisamos de <code>-lm</code>  para usar funções <code>math</code>):</p>
+<p>Vamos testar também (precisamos de <code>-lm``  para usar funções </code>math`):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
 <p>Vamos fazer dois testes: <code>3 4 ^</code>, e <code>1 exp</code>, que devem resultar em <code>81</code> e
@@ -244,7 +244,7 @@ git push github exp
 </code></pre>
 <h2><a class="header" href="#a-branch-do-colega" id="a-branch-do-colega">A <em>Branch</em> Do Colega</a></h2>
 <p>Agora suponha que trocamos de computador, que somos o colega no computador
-dele. A <em>HEAD</em> deve estar na &quot;master&quot; a partir de agora (<code>git checkout master</code>).</p>
+dele. A <em>HEAD</em> deve estar na &quot;<em>master</em>&quot; a partir de agora (<code>git checkout master</code>).</p>
 <p>Para criar a nova <em>branch</em>, e ao mesmo tempo mudar para ela:</p>
 <pre><code class="language-sh">git checkout -b trig
 </code></pre>
@@ -330,7 +330,7 @@ começar pelas três funções mais conhecidas: <code>sin</code>, <code>cos</cod
 <pre><code class="language-sh">gcc -o parser.o -c parser.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
-<p>O colega vai testar também (precisa de <code>-lm  para usar funções </code>math`):</p>
+<p>O colega vai testar também (precisa de <code>-lm</code>  para usar funções <code>math</code>):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
 <p>Vamos fazer três testes: <code>0 cos</code>, <code>0 sin</code>, e <code>0 tan</code>, que devem resultar em <code>1</code>,

@@ -147,13 +147,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#git-reset-e-git-restore" id="git-reset-e-git-restore">git reset E git restore</a></h1>
+                        <h1><a class="header" href="#git-reset-e-git-restore" id="git-reset-e-git-restore"><code>git reset</code> E <code>git restore</code></a></h1>
 <p>Para o caso de ser necessário tirar uma mudança do estado <em>staged</em>, ou até mesmo
-voltar ao estado do commit atual (<em>HEAD</em>), é possível usar os comandos <code>git reset</code>
+voltar ao estado do <em>commit</em> atual (<em>HEAD</em>), é possível usar os comandos <code>git reset</code>
 e <code>git restore</code>.</p>
 <h1><a class="header" href="#git-restore" id="git-restore"><code>git restore</code></a></h1>
-<p>O comando <code>git restore</code> restaura os arquivos que estão visiveis (working tree)
-para serem idênticos aos do commit atual (<em>HEAD</em>). Para restaurar os arquivos
+<p>O comando <code>git restore</code> restaura os arquivos que estão visiveis (<em>working tree</em>)
+para serem idênticos aos do <em>commit</em> atual (<em>HEAD</em>). Para restaurar os arquivos
 <code>main.c</code> e <code>vetor.c</code>, por exemplo:</p>
 <pre><code class="language-sh">git restore -- main.c vetor.c
 </code></pre>
@@ -165,13 +165,13 @@ além de ser mais fácil de fazer algo errado. Se não for usada nenhuma <em>fla
 a <em>flag</em> <code>--mixed</code> for usada, os arquivos que estavam <em>staged</em> vão deixar de ser
 <em>staged</em>, mas não serão alterados. Por exemplo, para restaurar todos os
 arquivos:</p>
-<pre><code class="language-sh">git reset --mixed _HEAD_
+<pre><code class="language-sh">git reset --mixed HEAD
 # ou simplesmente
-git reset _HEAD_
+git reset HEAD
 </code></pre>
 <p>Com a <em>flag</em> <code>--hard</code>, o comportamento é semelhante ao de <code>git restore</code>, exceto
 que arquivos novos não serão deletados.</p>
-<pre><code class="language-sh">git reset --hard _HEAD_
+<pre><code class="language-sh">git reset --hard HEAD
 </code></pre>
 <p>Há ainda a <em>flag</em> <code>--soft</code>, que será explicado mais a frente, pois envolve um uso
 do comando ainda não explicado.</p>

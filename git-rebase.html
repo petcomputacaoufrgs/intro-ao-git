@@ -156,7 +156,7 @@ forma que os <em>commits</em> de outra branch façam parte da história desta <e
 preservando o conteúdo dos arquivos da primeira <em>branch</em>. Por exemplo, imagine o
 seguinte cenário:</p>
 <pre><code>master    teste
-80ba4e4  b49a7ed &lt;- _HEAD_
+80ba4e4  b49a7ed &lt;- HEAD
    |        |
    |     4b12d0a
    |    /
@@ -171,7 +171,7 @@ e não no <em>commit</em> <code>ec49a96</code>. Basta executarmos o seguinte:</p
 </code></pre>
 <p>O Resultado é:</p>
 <pre><code>          teste
-         b49a7ed &lt;- _HEAD_
+         b49a7ed &lt;- HEAD
             |
          4b12d0a
         /
@@ -184,7 +184,7 @@ ec49a96
 </code></pre>
 <h1><a class="header" href="#rebase-interativo" id="rebase-interativo"><em>Rebase</em> Interativo</a></h1>
 <p>Para iniciar um <em>rebase</em> interativo desde 3 <em>commits</em> atrás, basta executar:</p>
-<pre><code class="language-sh">git rebase -i _HEAD_~3
+<pre><code class="language-sh">git rebase -i HEAD~3
 </code></pre>
 <p>Isso abrirá um editor de texto (No Linux, o padrão é o <code>vi</code>) para escolher como
 você vai editar os <em>commits</em>. Você deve ver no editor um conteúdo similar a
@@ -201,7 +201,7 @@ dos <em>commits</em> que serão fundidos.</p>
 <p>Basta editar a área que não está comentada (isto é, que não inicia com &quot;<code>#</code>&quot;),
 e sair do editor.</p>
 <p><img src="./git-rebase-4.png" alt="texto descrevendo um squash editado" /></p>
-<p>Depois, precisamos editar a mensagem terceiro commit do <em>rebase</em>. Para isso,
+<p>Depois, precisamos editar a mensagem terceiro <em>commit</em> do <em>rebase</em>. Para isso,
 basta executar:</p>
 <pre><code class="language-sh">git commit --amend
 </code></pre>
