@@ -1,4 +1,4 @@
-# Linhas do Tempo E Branches
+# Linhas do Tempo E _Branches_
 
 No Git, os _commit_ s são arranjados em uma linha do tempo. Por padrão, essa
 linha do tempo é linear, mas o Git também permite expressar bifurcações na linha

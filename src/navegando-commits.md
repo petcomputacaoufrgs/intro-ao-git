@@ -1,4 +1,4 @@
-# Navegando Entre Commits
+# Navegando Entre _Commits_
 
 É possível, no Git, mudar o _commit_ o _HEAD_ para um _commit_ passado. Esse é mais um
 uso do comando `git checkout`.
