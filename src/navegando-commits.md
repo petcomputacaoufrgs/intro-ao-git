@@ -1,6 +1,6 @@
 # Navegando Entre _Commits_
 
-É possível, no Git, mudar o _commit_ o _HEAD_ para um _commit_ passado. Esse é mais um
+É possível, no Git, mudar o _HEAD_ para um _commit_ passado. Esse é mais um
 uso do comando `git checkout`.
 
 Pàra navegar até o _commit_ `fae6c2e`, use:
@@ -24,6 +24,8 @@ git reset fae6c2e
 Mas isso também entra no "_detached HEAD state_".
 
 Para sair do "_detached HEAD state_", faça _checkout_ para uma _branch_.
+Por exemplo, para retornar o _HEAD_ ao _commit_ mais recente da _branch_
+_master_:
 ```sh
 git checkout master
 ```
