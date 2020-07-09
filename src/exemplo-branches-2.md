@@ -119,7 +119,7 @@ git commit -m 'implementada trigonometria inversa'
 git push github trig
 ```
 
-O colega está pronto, e vai mandar as mudanças pra _branch_ "_master_". Primeiro,
+O colega está pronto, e vai mandar as mudanças pra _branch_ `master`. Primeiro,
 ele vai trocar para ela.
 ```sh
 git checkout master
@@ -147,7 +147,7 @@ git push github master
 
 ## Voltando Para Nosso Computador
 
-Temos que estar na _branch_ "_exp_". Vamos fazer mais uma mudança, vamos
+Temos que estar na _branch_ `exp`. Vamos fazer mais uma mudança, vamos
 adicionar logaritmos.
 
 Arquivo `ops.h`:

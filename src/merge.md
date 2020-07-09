@@ -44,7 +44,7 @@ o `kdiff`.
 
 
 # Exemplo
-Suponha o seguinte cenário, uma _branch_ "_master_" e uma "teste":
+Suponha o seguinte cenário, uma _branch_ `master` e uma `teste`:
 ```
         master    teste
 HEAD -> 80ba4e4  b49a7ed
@@ -58,7 +58,7 @@ HEAD -> 80ba4e4  b49a7ed
 ```
 
 Suponha que queiramos aplicar as os dois _commits_ `4b12d0a` e `b49a7ed` à
-_branch_ "_master_". Façamos o seguinte:
+_branch_ `master`. Façamos o seguinte:
 ```sh
 git merge teste
 ```
@@ -79,7 +79,7 @@ HEAD -> 47d7959
         3c97506
 ```
 
-Note que a _branch_ "teste" continuará existindo. Podemos fazer um novo _commit_
+Note que a _branch_ `teste` continuará existindo. Podemos fazer um novo _commit_
 nela:
 ```
 master    teste

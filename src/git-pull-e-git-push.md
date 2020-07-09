@@ -6,7 +6,7 @@ Para "puxar" mudanças de um repositório remoto, existe o `git pull`, e para
 # `git push`
 
 Para mandar suas mudanças a um remoto salvo como "origin" numa _branch_
-"_master_", use:
+`master`, use:
 ```sh
 git push origin master
 ```
@@ -19,7 +19,7 @@ o comando `git pull` antes, resolver um _merge_, e só então poderá executar
 # `git pull`
 
 Semelhantemente, para receber mudanças de um repositório remoto salvo como
-"origin" numa _branch_ _master_, use:
+"origin" numa _branch_ `master`, use:
 ```sh
 git pull origin master
 ```

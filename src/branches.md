@@ -5,8 +5,8 @@ Uma _branch_ é uma ramificação na linha do tempo do Git.
 # Criando E Trocando De Branch
 
 Existem várias formas de criar uma _branch_. Uma delas, usando o comando
-`git branch`, que simplesmente cria uma _branch_ e não faz mais nada. Para criar
-a _branch_ com o nome "_minha-branch_", use:
+`git branch`, simplesmente cria uma _branch_ e não faz mais nada. Para criar
+a _branch_ com o nome `minha-branch`, use:
 ```sh
 git branch minha-branch
 ```
@@ -52,7 +52,7 @@ ec49a96 <- HEAD
 3c97506
 ```
 
-Após fazermos uma nova _branch_ "teste" (`git checkout -b teste`), e produzirmos
+Após fazermos uma nova _branch_ `teste` (`git checkout -b teste`), e produzirmos
 um novo _commit_ `4b12d0a` nela, temos a seguinte:
 
 ```
@@ -65,7 +65,7 @@ ec49a96
 3c97506
 ```
 
-Se voltarmos para a _master_ (`git checkout master`), e produzirmos um novo
+Se voltarmos para a `master` (`git checkout master`), e produzirmos um novo
 _commit_ `80ba4e4`, temos:
 
 ```

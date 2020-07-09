@@ -23,7 +23,7 @@ você vê no diretório do projeto (_working tree_), basta executar:
 git diff e544ad4
 ```
 
-Para comparar duas _branches_ "_master_" e "desenvolvimento", basta executar:
+Para comparar duas _branches_ `master` e "desenvolvimento", basta executar:
 ```sh
 git diff master desenvolvimento
 ```

@@ -57,7 +57,7 @@ int op_exec(enum operation op, struct stack **stack);
 
 Atente para as linhas: `<<<<<<< HEAD`, `=======` e `>>>>>>> exp`. Tudo que está
 entre `<<<<<<< HEAD` e `=======` é aquilo que nossa _HEAD_ introduziu (ou seja,
-o que foi passado da _branch_ "_trig_" para a _branch_ "_master_"). Tudo entre
+o que foi passado da _branch_ `trig` para a _branch_ `master`). Tudo entre
 `=======` e `>>>>>>> exp_` é o que a nossa _branch_ "_exp" tentou introduzir. O
 processo de resolução de _merge_ consiste em, manualmente, escolher o que vai
 ser usado no próximo _commit_. No nosso caso, ambos conteúdos serão escolhidos,
