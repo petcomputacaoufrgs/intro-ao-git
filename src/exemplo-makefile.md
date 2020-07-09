@@ -3,13 +3,15 @@
 Para finalizar, vamos melhorar nosso sistema de _build_ com um `Makefile`. Vamos
 fazer uns testes também.
 
+AVISO: este `Makefile` foi pensado para o Linux.
+
 ## Makefile
 
 O programa `make` é um programa que visa automatizar (até um certo ponto) o
 _build_ de um _software_, isto é, como ele é construído. Para isso,
-especificamos em um arquivo `Makefile`. Não está no escopo deste tutorial
-ensinar `Makefile`, no entanto. Vou pedir para que aceite o arquivo sem
-entendê-lo bem.
+especificamos o _build_ em um arquivo `Makefile`. Não está no escopo deste
+tutorial ensinar `Makefile`, no entanto. Vou pedir para que aceite o arquivo
+sem entendê-lo bem.
 
 Arquivo `Makefile`:
 

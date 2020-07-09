@@ -99,7 +99,7 @@ gcc -o parser.o -c parser.c
 ```
 Perfeito, não ocorre.
 
-Vamos testar também (precisamos de `-lm``  para usar funções `math`):
+Vamos testar também (precisamos de `-lm`  para usar funções `math`):
 ```sh
 gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 ```
