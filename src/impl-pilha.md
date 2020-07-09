@@ -68,14 +68,14 @@ git pull github master
 
 ![erro de git pull](./exemplo-pull-erro2.png)
 
-Oopsss de novo...Esse erro aconteceu porque as histórias dos repositórios não
+Oopsssss... Esse erro aconteceu porque as histórias dos repositórios não
 têm conexão. Basta usar a _flag_ `--allow-unrelated-histories`.
 
 ```sh
 git pull github master --allow-unrelated-histories
 ```
 
-Então, abrir-se-á um escritor de texto perguntando por uma mensagem de
+Então, abrir-se-á um editor de texto perguntando por uma mensagem de
 _commit_. Basta editar, salvar, e sair.
 
 ![merge de git pull](./exemplo-pull-merge.png)

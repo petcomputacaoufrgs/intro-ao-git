@@ -2,7 +2,7 @@
 
 Um _parser_ é em essência um componente que analisa e transforma dados em uma
 representação mais estruturada de tais dados. No nosso caso: vamos converter
-texto em uma pilha, e executar operações que aparecerem. Nosso _parser_ vai
+texto em uma pilha e executar operações que aparecerem. Nosso _parser_ vai
 ler a entrada, _token_ por _token_. Um _token_ para nós, será ou um número
 fracionário, ou uma operação. Vamos definir a interface do nosso _parser_.
 Para representar o _token_, vamos definir uma união rotulada (ou união disjunta,
