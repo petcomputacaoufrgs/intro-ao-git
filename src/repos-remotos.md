@@ -1,10 +1,11 @@
 # Repositórios Remotos
 
 Como mencionado anteriormente, o Git é uma ferramenta distribuída. O repositório
-que você tem salvo na sua máquina local, é um repositório independente. No
-entanto, você pode hospedar um repositório em uma máquina remota. Trabalhando
-em um time, todos os integrantes poderão ter sua cópia do projeto, local e
-independente, mas vão publicar suas mudanças em um servidor remoto.
+que você tem salvo na sua máquina local é um repositório independente. No
+entanto, você pode hospedar um repositório em uma máquina remota, principalmente
+para compartilhar seus trabalhos. Trabalhando em um time, todos os integrantes
+poderão ter sua cópia do projeto, local e independente, mas vão publicar suas
+mudanças em um servidor remoto.
 
 O [GitHub](https://github.com/) é um serviço que hospeda repositórios de Git e
 projetos de _software_, principalmente projetos
