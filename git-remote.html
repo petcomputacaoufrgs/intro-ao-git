@@ -150,24 +150,28 @@
                         <h1><a class="header" href="#git-remote" id="git-remote"><code>git remote</code></a></h1>
 <p>Para gerenciar comunicação repositórios remotos, você precisa salvar no seu
 repositório local referências para os repositórios remotos. Para fazer isso,
-existe o comando <code>git remote</code>. Para adicionar um remoto, com nome &quot;origin&quot; e URL
+existe o comando <code>git remote</code>. Para adicionar um remoto, com nome <code>origin</code> e URL
 <a href="https://github.com/petcomputacaoufrgs/intro-ao-git.git">https://github.com/petcomputacaoufrgs/intro-ao-git.git</a>:</p>
 <pre><code class="language-sh">git remote add origin https://github.com/petcomputacaoufrgs/intro-ao-git.git
 </code></pre>
-<p>Por padrão, quando você usa <code>git clone</code>, ele cria um remoto chamado &quot;origin&quot;.</p>
+<p>Por padrão, quando você usa <code>git clone</code>, ele salva um remoto chamado <code>origin</code>.</p>
 <p>Para visualizar os remotos salvos, basta executar:</p>
 <pre><code class="language-sh">git remote
 </code></pre>
-<p>Para visualizar a URL de um remoto chamado &quot;origin&quot;, basta executar:</p>
+<p>Para visualizar a URL de um remoto chamado <code>origin</code>, basta executar:</p>
 <pre><code class="language-sh">git remote get-url origin
 </code></pre>
-<p>Para remover um remoto chamado &quot;origin&quot;, basta executar:</p>
+<p>Para remover um remoto chamado <code>origin</code>, basta executar:</p>
 <pre><code class="language-sh">git remote remove origin
 </code></pre>
-<p>Para redefinir a URL de um remoto chamado &quot;origin&quot; com a URL
+<p>Para redefinir a URL de um remoto chamado <code>origin</code> com a URL
 <a href="https://github.com/fulanodasilva/intro-ao-git.git">https://github.com/fulanodasilva/intro-ao-git.git</a>, basta executar:</p>
 <pre><code class="language-sh">git remote set-url origin https://github.com/fulanodasilva/intro-ao-git.git
 </code></pre>
+<h2><a class="header" href="#nota" id="nota">Nota</a></h2>
+<p>Às vezes, trabalhando com múltiplos remotos, nomear o remoto de <code>origin</code> pode
+ser ambíguo. Portanto, é uma prática comum dar nomes mais significativos, como
+<code>github</code> ou <code>gitlab</code>.</p>
 
                     </main>
 

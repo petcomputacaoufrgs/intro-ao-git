@@ -726,29 +726,33 @@ o destino. Para clonar o repositório acima em <code>./esta/pasta</code>, basta 
 <h1><a class="header" href="#git-remote" id="git-remote"><code>git remote</code></a></h1>
 <p>Para gerenciar comunicação repositórios remotos, você precisa salvar no seu
 repositório local referências para os repositórios remotos. Para fazer isso,
-existe o comando <code>git remote</code>. Para adicionar um remoto, com nome &quot;origin&quot; e URL
+existe o comando <code>git remote</code>. Para adicionar um remoto, com nome <code>origin</code> e URL
 <a href="https://github.com/petcomputacaoufrgs/intro-ao-git.git">https://github.com/petcomputacaoufrgs/intro-ao-git.git</a>:</p>
 <pre><code class="language-sh">git remote add origin https://github.com/petcomputacaoufrgs/intro-ao-git.git
 </code></pre>
-<p>Por padrão, quando você usa <code>git clone</code>, ele cria um remoto chamado &quot;origin&quot;.</p>
+<p>Por padrão, quando você usa <code>git clone</code>, ele salva um remoto chamado <code>origin</code>.</p>
 <p>Para visualizar os remotos salvos, basta executar:</p>
 <pre><code class="language-sh">git remote
 </code></pre>
-<p>Para visualizar a URL de um remoto chamado &quot;origin&quot;, basta executar:</p>
+<p>Para visualizar a URL de um remoto chamado <code>origin</code>, basta executar:</p>
 <pre><code class="language-sh">git remote get-url origin
 </code></pre>
-<p>Para remover um remoto chamado &quot;origin&quot;, basta executar:</p>
+<p>Para remover um remoto chamado <code>origin</code>, basta executar:</p>
 <pre><code class="language-sh">git remote remove origin
 </code></pre>
-<p>Para redefinir a URL de um remoto chamado &quot;origin&quot; com a URL
+<p>Para redefinir a URL de um remoto chamado <code>origin</code> com a URL
 <a href="https://github.com/fulanodasilva/intro-ao-git.git">https://github.com/fulanodasilva/intro-ao-git.git</a>, basta executar:</p>
 <pre><code class="language-sh">git remote set-url origin https://github.com/fulanodasilva/intro-ao-git.git
 </code></pre>
+<h2><a class="header" href="#nota" id="nota">Nota</a></h2>
+<p>Às vezes, trabalhando com múltiplos remotos, nomear o remoto de <code>origin</code> pode
+ser ambíguo. Portanto, é uma prática comum dar nomes mais significativos, como
+<code>github</code> ou <code>gitlab</code>.</p>
 <h1><a class="header" href="#git-pull-e-git-push" id="git-pull-e-git-push"><code>git pull</code> E <code>git push</code></a></h1>
 <p>Para &quot;puxar&quot; mudanças de um repositório remoto, existe o <code>git pull</code>, e para
 &quot;empurar&quot; mudanças a um repositório remoto, existe o <code>git push</code>.</p>
 <h1><a class="header" href="#git-push" id="git-push"><code>git push</code></a></h1>
-<p>Para mandar suas mudanças a um remoto salvo como &quot;origin&quot; numa <em>branch</em>
+<p>Para mandar suas mudanças a um remoto salvo como <code>origin</code> numa <em>branch</em>
 <code>master</code>, use:</p>
 <pre><code class="language-sh">git push origin master
 </code></pre>
@@ -758,7 +762,7 @@ o comando <code>git pull</code> antes, resolver um <em>merge</em>, e só então 
 <code>git push</code>. Veja abaixo como executar <code>git pull</code>.</p>
 <h1><a class="header" href="#git-pull" id="git-pull"><code>git pull</code></a></h1>
 <p>Semelhantemente, para receber mudanças de um repositório remoto salvo como
-&quot;origin&quot; numa <em>branch</em> <code>master</code>, use:</p>
+<code>origin</code> numa <em>branch</em> <code>master</code>, use:</p>
 <pre><code class="language-sh">git pull origin master
 </code></pre>
 <p>Tome cuidado para que a <em>HEAD</em> esteja apontando para a mesma <em>branch</em>.</p>
@@ -769,7 +773,7 @@ você terá de resolver um <em>merge</em>.</p>
 <p>Suponha que você tenha executado:</p>
 <pre><code class="language-sh">git tag v0.3.5
 </code></pre>
-<p>Para mandar essa <em>tag</em> para o remoto &quot;origin&quot;, execute:</p>
+<p>Para mandar essa <em>tag</em> para o remoto <code>origin</code>, execute:</p>
 <pre><code>git push origin v0.3.5
 </code></pre>
 <h1><a class="header" href="#exemplo-2" id="exemplo-2">Exemplo</a></h1>
