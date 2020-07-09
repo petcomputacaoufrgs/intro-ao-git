@@ -910,11 +910,11 @@ ter que executar <code>git pull</code>.</p>
 <pre><code class="language-sh">git pull github master
 </code></pre>
 <p><img src="./exemplo-pull-erro2.png" alt="erro de git pull" /></p>
-<p>Oopsss de novo...Esse erro aconteceu porque as histórias dos repositórios não
+<p>Oopsssss... Esse erro aconteceu porque as histórias dos repositórios não
 têm conexão. Basta usar a <em>flag</em> <code>--allow-unrelated-histories</code>.</p>
 <pre><code class="language-sh">git pull github master --allow-unrelated-histories
 </code></pre>
-<p>Então, abrir-se-á um escritor de texto perguntando por uma mensagem de
+<p>Então, abrir-se-á um editor de texto perguntando por uma mensagem de
 <em>commit</em>. Basta editar, salvar, e sair.</p>
 <p><img src="./exemplo-pull-merge.png" alt="merge de git pull" /></p>
 <p>Pronto, agora podemos executar <code>git push</code> tranquilamente.</p>
@@ -1054,7 +1054,7 @@ git push github master
 <h1><a class="header" href="#implementando-o-parser" id="implementando-o-parser">Implementando O <em>Parser</em></a></h1>
 <p>Um <em>parser</em> é em essência um componente que analisa e transforma dados em uma
 representação mais estruturada de tais dados. No nosso caso: vamos converter
-texto em uma pilha, e executar operações que aparecerem. Nosso <em>parser</em> vai
+texto em uma pilha e executar operações que aparecerem. Nosso <em>parser</em> vai
 ler a entrada, <em>token</em> por <em>token</em>. Um <em>token</em> para nós, será ou um número
 fracionário, ou uma operação. Vamos definir a interface do nosso <em>parser</em>.
 Para representar o <em>token</em>, vamos definir uma união rotulada (ou união disjunta,
