@@ -151,8 +151,8 @@
 <p>Uma <em>branch</em> é uma ramificação na linha do tempo do Git.</p>
 <h1><a class="header" href="#criando-e-trocando-de-branch" id="criando-e-trocando-de-branch">Criando E Trocando De Branch</a></h1>
 <p>Existem várias formas de criar uma <em>branch</em>. Uma delas, usando o comando
-<code>git branch</code>, que simplesmente cria uma <em>branch</em> e não faz mais nada. Para criar
-a <em>branch</em> com o nome &quot;<em>minha-branch</em>&quot;, use:</p>
+<code>git branch</code>, simplesmente cria uma <em>branch</em> e não faz mais nada. Para criar
+a <em>branch</em> com o nome <code>minha-branch</code>, use:</p>
 <pre><code class="language-sh">git branch minha-branch
 </code></pre>
 <p>Por padrão, você não vai estar na <em>branch</em> que criou.  Para trocar de <em>branch</em> use
@@ -182,7 +182,7 @@ ec49a96 &lt;- HEAD
    |
 3c97506
 </code></pre>
-<p>Após fazermos uma nova <em>branch</em> &quot;teste&quot; (<code>git checkout -b teste</code>), e produzirmos
+<p>Após fazermos uma nova <em>branch</em> <code>teste</code> (<code>git checkout -b teste</code>), e produzirmos
 um novo <em>commit</em> <code>4b12d0a</code> nela, temos a seguinte:</p>
 <pre><code>         teste
          4b12d0a &lt;- HEAD
@@ -192,7 +192,7 @@ ec49a96
    |
 3c97506
 </code></pre>
-<p>Se voltarmos para a <em>master</em> (<code>git checkout master</code>), e produzirmos um novo
+<p>Se voltarmos para a <code>master</code> (<code>git checkout master</code>), e produzirmos um novo
 <em>commit</em> <code>80ba4e4</code>, temos:</p>
 <pre><code>        master   teste
 HEAD -&gt; 80ba4e4  4b12d0a

@@ -396,17 +396,17 @@ git init
 linha do tempo é linear, mas o Git também permite expressar bifurcações na linha
 do tempo. Para isso, existe o conceito de &quot;<em>branch</em>&quot; (literalmente &quot;galho&quot;,
 &quot;ramo&quot;).</p>
-<p>Por padrão, a primeira branch do repositório se chama &quot;<em>master</em>&quot;. Ao fazer o
+<p>Por padrão, a primeira branch do repositório se chama <code>master</code>. Ao fazer o
 primeiro <em>commit</em>, essa <em>branch</em> é criada. Esses diferentes &quot;galhos&quot; na linha do
 tempo, podem eventualmente juntar-se novamente, no que chamamos de <em>merge</em>
 (literalmente &quot;união&quot; ou &quot;mescla&quot;). É uma estratégia comum fazer-se várias
-<em>branches</em> com o objetivo de uní-las com a <em>master</em> eventualmente.</p>
+<em>branches</em> com o objetivo de uní-las com a <code>master</code> eventualmente.</p>
 <h1><a class="header" href="#branches" id="branches">Branches</a></h1>
 <p>Uma <em>branch</em> é uma ramificação na linha do tempo do Git.</p>
 <h1><a class="header" href="#criando-e-trocando-de-branch" id="criando-e-trocando-de-branch">Criando E Trocando De Branch</a></h1>
 <p>Existem várias formas de criar uma <em>branch</em>. Uma delas, usando o comando
-<code>git branch</code>, que simplesmente cria uma <em>branch</em> e não faz mais nada. Para criar
-a <em>branch</em> com o nome &quot;<em>minha-branch</em>&quot;, use:</p>
+<code>git branch</code>, simplesmente cria uma <em>branch</em> e não faz mais nada. Para criar
+a <em>branch</em> com o nome <code>minha-branch</code>, use:</p>
 <pre><code class="language-sh">git branch minha-branch
 </code></pre>
 <p>Por padrão, você não vai estar na <em>branch</em> que criou.  Para trocar de <em>branch</em> use
@@ -436,7 +436,7 @@ ec49a96 &lt;- HEAD
    |
 3c97506
 </code></pre>
-<p>Após fazermos uma nova <em>branch</em> &quot;teste&quot; (<code>git checkout -b teste</code>), e produzirmos
+<p>Após fazermos uma nova <em>branch</em> <code>teste</code> (<code>git checkout -b teste</code>), e produzirmos
 um novo <em>commit</em> <code>4b12d0a</code> nela, temos a seguinte:</p>
 <pre><code>         teste
          4b12d0a &lt;- HEAD
@@ -446,7 +446,7 @@ ec49a96
    |
 3c97506
 </code></pre>
-<p>Se voltarmos para a <em>master</em> (<code>git checkout master</code>), e produzirmos um novo
+<p>Se voltarmos para a <code>master</code> (<code>git checkout master</code>), e produzirmos um novo
 <em>commit</em> <code>80ba4e4</code>, temos:</p>
 <pre><code>        master   teste
 HEAD -&gt; 80ba4e4  4b12d0a
@@ -520,7 +520,7 @@ fazer um novo <em>commit</em> contendo os arquivos corrigidos.</p>
 <p>Existem, no entanto, ferramentas para auxiliar na resolução dos conflitos, como
 o <code>kdiff</code>.</p>
 <h1><a class="header" href="#exemplo-1" id="exemplo-1">Exemplo</a></h1>
-<p>Suponha o seguinte cenário, uma <em>branch</em> &quot;<em>master</em>&quot; e uma &quot;teste&quot;:</p>
+<p>Suponha o seguinte cenário, uma <em>branch</em> <code>master</code> e uma <code>teste</code>:</p>
 <pre><code>        master    teste
 HEAD -&gt; 80ba4e4  b49a7ed
            |        |
@@ -532,7 +532,7 @@ HEAD -&gt; 80ba4e4  b49a7ed
         3c97506
 </code></pre>
 <p>Suponha que queiramos aplicar as os dois <em>commits</em> <code>4b12d0a</code> e <code>b49a7ed</code> à
-<em>branch</em> &quot;<em>master</em>&quot;. Façamos o seguinte:</p>
+<em>branch</em> <code>master</code>. Façamos o seguinte:</p>
 <pre><code class="language-sh">git merge teste
 </code></pre>
 <p>O resultado será o seguinte:</p>
@@ -549,7 +549,7 @@ HEAD -&gt; 47d7959
            |
         3c97506
 </code></pre>
-<p>Note que a <em>branch</em> &quot;teste&quot; continuará existindo. Podemos fazer um novo <em>commit</em>
+<p>Note que a <em>branch</em> <code>teste</code> continuará existindo. Podemos fazer um novo <em>commit</em>
 nela:</p>
 <pre><code>master    teste
 47d7959  0935946 &lt;- HEAD
@@ -665,7 +665,7 @@ a esses mesmos <em>commits</em>, basta executar:</p>
 você vê no diretório do projeto (<em>working tree</em>), basta executar:</p>
 <pre><code class="language-sh">git diff e544ad4
 </code></pre>
-<p>Para comparar duas <em>branches</em> &quot;<em>master</em>&quot; e &quot;desenvolvimento&quot;, basta executar:</p>
+<p>Para comparar duas <em>branches</em> <code>master</code> e &quot;desenvolvimento&quot;, basta executar:</p>
 <pre><code class="language-sh">git diff master desenvolvimento
 </code></pre>
 <h1><a class="header" href="#git-show" id="git-show"><code>git show</code></a></h1>
@@ -746,7 +746,7 @@ existe o comando <code>git remote</code>. Para adicionar um remoto, com nome &qu
 &quot;empurar&quot; mudanças a um repositório remoto, existe o <code>git push</code>.</p>
 <h1><a class="header" href="#git-push" id="git-push"><code>git push</code></a></h1>
 <p>Para mandar suas mudanças a um remoto salvo como &quot;origin&quot; numa <em>branch</em>
-&quot;<em>master</em>&quot;, use:</p>
+<code>master</code>, use:</p>
 <pre><code class="language-sh">git push origin master
 </code></pre>
 <p>O comando, no entanto, pode falhar pelo fato de você não ter seu repositório
@@ -755,7 +755,7 @@ o comando <code>git pull</code> antes, resolver um <em>merge</em>, e só então 
 <code>git push</code>. Veja abaixo como executar <code>git pull</code>.</p>
 <h1><a class="header" href="#git-pull" id="git-pull"><code>git pull</code></a></h1>
 <p>Semelhantemente, para receber mudanças de um repositório remoto salvo como
-&quot;origin&quot; numa <em>branch</em> <em>master</em>, use:</p>
+&quot;origin&quot; numa <em>branch</em> <code>master</code>, use:</p>
 <pre><code class="language-sh">git pull origin master
 </code></pre>
 <p>Tome cuidado para que a <em>HEAD</em> esteja apontando para a mesma <em>branch</em>.</p>
@@ -1312,7 +1312,7 @@ git push github master
 <p>Suponha que temos mais um colega no time. Suponha que ele decidiu
 adicionar trigonometria. Suponha que nós decidimos adicionar exponenciação
 e logaritmo. Para fazer tais tarefas, vamos criar mais duas <em>branches</em>, uma
-chamada &quot;<em>trig</em>&quot;, a outra chamada &quot;<em>exp</em>&quot;.</p>
+chamada <code>trig</code>, a outra chamada <code>exp</code>.</p>
 <h2><a class="header" href="#nossa-branch" id="nossa-branch">Nossa <em>Branch</em></a></h2>
 <p>Para criá-la, e ao mesmo tempo mudar para ela:</p>
 <pre><code class="language-sh">git checkout -b exp
@@ -1405,7 +1405,7 @@ git push github exp
 </code></pre>
 <h2><a class="header" href="#a-branch-do-colega" id="a-branch-do-colega">A <em>Branch</em> Do Colega</a></h2>
 <p>Agora suponha que trocamos de computador, que somos o colega no computador
-dele. A <em>HEAD</em> deve estar na &quot;<em>master</em>&quot; a partir de agora (<code>git checkout master</code>).</p>
+dele. A <em>HEAD</em> deve estar na <code>master</code> a partir de agora (<code>git checkout master</code>).</p>
 <p>Para criar a nova <em>branch</em>, e ao mesmo tempo mudar para ela:</p>
 <pre><code class="language-sh">git checkout -b trig
 </code></pre>
@@ -1602,7 +1602,7 @@ git status
 git commit -m 'implementada trigonometria inversa'
 git push github trig
 </code></pre>
-<p>O colega está pronto, e vai mandar as mudanças pra <em>branch</em> &quot;<em>master</em>&quot;. Primeiro,
+<p>O colega está pronto, e vai mandar as mudanças pra <em>branch</em> <code>master</code>. Primeiro,
 ele vai trocar para ela.</p>
 <pre><code class="language-sh">git checkout master
 </code></pre>
@@ -1618,7 +1618,7 @@ ele vai trocar para ela.</p>
 <pre><code class="language-sh">git push github master
 </code></pre>
 <h2><a class="header" href="#voltando-para-nosso-computador" id="voltando-para-nosso-computador">Voltando Para Nosso Computador</a></h2>
-<p>Temos que estar na <em>branch</em> &quot;<em>exp</em>&quot;. Vamos fazer mais uma mudança, vamos
+<p>Temos que estar na <em>branch</em> <code>exp</code>. Vamos fazer mais uma mudança, vamos
 adicionar logaritmos.</p>
 <p>Arquivo <code>ops.h</code>:</p>
 <pre><code class="language-C"> #define OP_POW_SYM &quot;^&quot;
@@ -1771,7 +1771,7 @@ int op_exec(enum operation op, struct stack **stack);
 </code></pre>
 <p>Atente para as linhas: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>. Tudo que está
 entre <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e <code>=======</code> é aquilo que nossa <em>HEAD</em> introduziu (ou seja,
-o que foi passado da <em>branch</em> &quot;<em>trig</em>&quot; para a <em>branch</em> &quot;<em>master</em>&quot;). Tudo entre
+o que foi passado da <em>branch</em> <code>trig</code> para a <em>branch</em> <code>master</code>). Tudo entre
 <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp_</code> é o que a nossa <em>branch</em> &quot;_exp&quot; tentou introduzir. O
 processo de resolução de <em>merge</em> consiste em, manualmente, escolher o que vai
 ser usado no próximo <em>commit</em>. No nosso caso, ambos conteúdos serão escolhidos,

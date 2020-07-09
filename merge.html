@@ -181,7 +181,7 @@ fazer um novo <em>commit</em> contendo os arquivos corrigidos.</p>
 <p>Existem, no entanto, ferramentas para auxiliar na resolução dos conflitos, como
 o <code>kdiff</code>.</p>
 <h1><a class="header" href="#exemplo" id="exemplo">Exemplo</a></h1>
-<p>Suponha o seguinte cenário, uma <em>branch</em> &quot;<em>master</em>&quot; e uma &quot;teste&quot;:</p>
+<p>Suponha o seguinte cenário, uma <em>branch</em> <code>master</code> e uma <code>teste</code>:</p>
 <pre><code>        master    teste
 HEAD -&gt; 80ba4e4  b49a7ed
            |        |
@@ -193,7 +193,7 @@ HEAD -&gt; 80ba4e4  b49a7ed
         3c97506
 </code></pre>
 <p>Suponha que queiramos aplicar as os dois <em>commits</em> <code>4b12d0a</code> e <code>b49a7ed</code> à
-<em>branch</em> &quot;<em>master</em>&quot;. Façamos o seguinte:</p>
+<em>branch</em> <code>master</code>. Façamos o seguinte:</p>
 <pre><code class="language-sh">git merge teste
 </code></pre>
 <p>O resultado será o seguinte:</p>
@@ -210,7 +210,7 @@ HEAD -&gt; 47d7959
            |
         3c97506
 </code></pre>
-<p>Note que a <em>branch</em> &quot;teste&quot; continuará existindo. Podemos fazer um novo <em>commit</em>
+<p>Note que a <em>branch</em> <code>teste</code> continuará existindo. Podemos fazer um novo <em>commit</em>
 nela:</p>
 <pre><code>master    teste
 47d7959  0935946 &lt;- HEAD
