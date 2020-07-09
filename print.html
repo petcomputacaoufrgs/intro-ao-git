@@ -1398,7 +1398,7 @@ marcadas com <code>-</code> no início serão excluídas, e as marcadas com <cod
 <pre><code class="language-sh">gcc -o parser.o -c parser.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
-<p>Vamos testar também (precisamos de <code>-lm``  para usar funções </code>math`):</p>
+<p>Vamos testar também (precisamos de <code>-lm</code>  para usar funções <code>math</code>):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
 <p>Vamos fazer dois testes: <code>3 4 ^</code>, e <code>1 exp</code>, que devem resultar em <code>81</code> e
@@ -1779,7 +1779,7 @@ int op_exec(enum operation op, struct stack **stack);
 <p>Atente para as linhas: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>. Tudo que está
 entre <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e <code>=======</code> é aquilo que nossa <em>HEAD</em> introduziu (ou seja,
 o que foi passado da <em>branch</em> <code>trig</code> para a <em>branch</em> <code>master</code>). Tudo entre
-<code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp_</code> é o que a nossa <em>branch</em> &quot;_exp&quot; tentou introduzir. O
+<code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code> é o que a nossa <em>branch</em> <code>exp</code> tentou introduzir. O
 processo de resolução de <em>merge</em> consiste em, manualmente, escolher o que vai
 ser usado no próximo <em>commit</em>. No nosso caso, ambos conteúdos serão escolhidos,
 logo, basta deletar as linhas com <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>.</p>
@@ -1851,12 +1851,13 @@ git push github master
 <h1><a class="header" href="#finalizando-com-um-makefile" id="finalizando-com-um-makefile">Finalizando Com Um <code>Makefile</code></a></h1>
 <p>Para finalizar, vamos melhorar nosso sistema de <em>build</em> com um <code>Makefile</code>. Vamos
 fazer uns testes também.</p>
+<p>AVISO: este <code>Makefile</code> foi pensado para o Linux.</p>
 <h2><a class="header" href="#makefile" id="makefile">Makefile</a></h2>
 <p>O programa <code>make</code> é um programa que visa automatizar (até um certo ponto) o
 <em>build</em> de um <em>software</em>, isto é, como ele é construído. Para isso,
-especificamos em um arquivo <code>Makefile</code>. Não está no escopo deste tutorial
-ensinar <code>Makefile</code>, no entanto. Vou pedir para que aceite o arquivo sem
-entendê-lo bem.</p>
+especificamos o <em>build</em> em um arquivo <code>Makefile</code>. Não está no escopo deste
+tutorial ensinar <code>Makefile</code>, no entanto. Vou pedir para que aceite o arquivo
+sem entendê-lo bem.</p>
 <p>Arquivo <code>Makefile</code>:</p>
 <pre><code class="language-make">HEADERS = stack.h ops.h parser.h
 CFLAGS = -g

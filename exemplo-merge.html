@@ -201,7 +201,7 @@ int op_exec(enum operation op, struct stack **stack);
 <p>Atente para as linhas: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>. Tudo que está
 entre <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e <code>=======</code> é aquilo que nossa <em>HEAD</em> introduziu (ou seja,
 o que foi passado da <em>branch</em> <code>trig</code> para a <em>branch</em> <code>master</code>). Tudo entre
-<code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp_</code> é o que a nossa <em>branch</em> &quot;_exp&quot; tentou introduzir. O
+<code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code> é o que a nossa <em>branch</em> <code>exp</code> tentou introduzir. O
 processo de resolução de <em>merge</em> consiste em, manualmente, escolher o que vai
 ser usado no próximo <em>commit</em>. No nosso caso, ambos conteúdos serão escolhidos,
 logo, basta deletar as linhas com <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</code>.</p>

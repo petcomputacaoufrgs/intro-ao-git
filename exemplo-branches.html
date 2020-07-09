@@ -230,7 +230,7 @@ marcadas com <code>-</code> no início serão excluídas, e as marcadas com <cod
 <pre><code class="language-sh">gcc -o parser.o -c parser.c
 </code></pre>
 <p>Perfeito, não ocorre.</p>
-<p>Vamos testar também (precisamos de <code>-lm``  para usar funções </code>math`):</p>
+<p>Vamos testar também (precisamos de <code>-lm</code>  para usar funções <code>math</code>):</p>
 <pre><code class="language-sh">gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
 </code></pre>
 <p>Vamos fazer dois testes: <code>3 4 ^</code>, e <code>1 exp</code>, que devem resultar em <code>81</code> e
