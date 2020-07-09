@@ -1,7 +1,7 @@
 # Exemplo
 
 Como um exemplo de projeto que use Git, vamos desenvolver uma calculadora
-RPN, e usaremos Git para versionar o projeto. O projeto desenvolvido pode
+RPN e usaremos Git para versionar o projeto. O projeto desenvolvido pode
 ser encontrado no endereço <https://github.com/petcomputacaoufrgs/rpn-calc>.
 
 Uma calculadora RPN usa notação polonesa reversa, uma notação pósfixa. Por
