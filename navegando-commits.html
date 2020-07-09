@@ -148,7 +148,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#navegando-entre-commits" id="navegando-entre-commits">Navegando Entre <em>Commits</em></a></h1>
-<p>É possível, no Git, mudar o <em>commit</em> o <em>HEAD</em> para um <em>commit</em> passado. Esse é mais um
+<p>É possível, no Git, mudar o <em>HEAD</em> para um <em>commit</em> passado. Esse é mais um
 uso do comando <code>git checkout</code>.</p>
 <p>Pàra navegar até o <em>commit</em> <code>fae6c2e</code>, use:</p>
 <pre><code class="language-sh">git checkout fae6c2e
@@ -164,7 +164,9 @@ arquivos de um <em>commit</em> antigo.</p>
 <pre><code class="language-sh">git reset fae6c2e
 </code></pre>
 <p>Mas isso também entra no &quot;<em>detached HEAD state</em>&quot;.</p>
-<p>Para sair do &quot;<em>detached HEAD state</em>&quot;, faça <em>checkout</em> para uma <em>branch</em>.</p>
+<p>Para sair do &quot;<em>detached HEAD state</em>&quot;, faça <em>checkout</em> para uma <em>branch</em>.
+Por exemplo, para retornar o <em>HEAD</em> ao <em>commit</em> mais recente da <em>branch</em>
+<em>master</em>:</p>
 <pre><code class="language-sh">git checkout master
 </code></pre>
 
