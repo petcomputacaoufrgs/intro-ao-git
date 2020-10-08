@@ -4,6 +4,9 @@ Como um exemplo de projeto que use Git, vamos desenvolver uma calculadora
 RPN e usaremos Git para versionar o projeto. O projeto desenvolvido pode
 ser encontrado no endereço <https://github.com/petcomputacaoufrgs/rpn-calc>.
 
+NOTA: neste exemplo, não usaremos `--set-upstream`, e escreveremos sempre
+o nome das _branches_ em _pushes_ e _pulls_ por questões de clareza.
+
 Uma calculadora RPN usa notação polonesa reversa, uma notação pósfixa. Por
 exemplo, `3 + 2` em RPN é escrito `3 2 +`, enquanto `(5 + 4/3 - 1) * 2` é
 escrito `5 4 3 / + 1 - 2 *`. Parentesis normalmente não são usados, mas a
