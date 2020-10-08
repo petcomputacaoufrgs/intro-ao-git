@@ -155,6 +155,16 @@
 <code>master</code>, use:</p>
 <pre><code class="language-sh">git push origin master
 </code></pre>
+<p>Você pode omitir a <em>branch</em> se na primeira vez você utilizar a flag
+<code>--set-upstream</code> ou `-u'. Assim:</p>
+<pre><code>git push origin --set-upstream master
+</code></pre>
+<p>ou</p>
+<pre><code class="language-sh">git push origin -u master
+</code></pre>
+<p>Nos <em>pushes</em> subsequentes, basta executar:</p>
+<pre><code class="language-sh">git push origin
+</code></pre>
 <p>O comando, no entanto, pode falhar pelo fato de você não ter seu repositório
 local atualizado com novas mudanças do remoto. Nesse caso, você terá de executar
 o comando <code>git pull</code> antes, resolver um <em>merge</em>, e só então poderá executar
@@ -168,6 +178,13 @@ o comando <code>git pull</code> antes, resolver um <em>merge</em>, e só então 
 <p>Além disso, note que, se seu repositório local tiver novos <em>commits</em>, e o remoto
 também tiver novos <em>commits</em>, divergindo a respeito da história da <em>branch</em>,
 você terá de resolver um <em>merge</em>.</p>
+<p>Você pode omitir a <em>branch</em> se na primeira vez você utilizar a flag
+<code>--set-upstream</code>, tal como no comando <code>git push</code> (mas sem <code>-u</code>). Assim:</p>
+<pre><code>git pull origin --set-upstream master
+</code></pre>
+<p>Nos <em>pulls</em> subsequentes, basta executar:</p>
+<pre><code class="language-sh">git pull origin
+</code></pre>
 <h1><a class="header" href="#tags-também-podem-ser-movimentadas" id="tags-também-podem-ser-movimentadas"><em>Tags</em> Também Podem Ser Movimentadas</a></h1>
 <p>Suponha que você tenha executado:</p>
 <pre><code class="language-sh">git tag v0.3.5
