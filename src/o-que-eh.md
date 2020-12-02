@@ -1,3 +1,10 @@
+# Sobre O Material
+
+Este material foi produzido pelo grupo PET Computação da UFRGS. O material
+é versionado com Git e o código fonte encontra-se 
+[hospedado no GitHub](https://github.com/petcomputacaoufrgs/intro-ao-git).
+Estamos abertos para _feedbacks_ e sugestões.
+
 # O Que É O Git?
 
 Se eu fosse resumir a resposta, ela seria: git é uma ferramenta distribuída de controle de versionamento de _software_. As alterações de uma versão do _software_ são
