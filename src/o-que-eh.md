@@ -3,7 +3,8 @@
 Este material foi produzido pelo grupo PET Computação da UFRGS. O material
 é versionado com Git e o código fonte encontra-se 
 [hospedado no GitHub](https://github.com/petcomputacaoufrgs/intro-ao-git).
-Estamos abertos para _feedbacks_ e sugestões.
+Estamos abertos para _feedbacks_ e sugestões. O curso é publicado através de
+Github Pages e Github Actions.
 
 # O Que É O Git?
 
