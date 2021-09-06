@@ -4,8 +4,10 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Uma Introdução Ao Git</title>
-        
-        <meta name="robots" content="noindex" />
+                <meta name="robots" content="noindex" />
+                
+
+        <!-- Custom HTML head -->
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -13,17 +15,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
-
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
-
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
@@ -31,14 +33,12 @@
 
         <!-- Custom theme stylesheets -->
         
-
-        
-    </head>
+            </head>
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -83,8 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="gitignore.html"><strong aria-hidden="true">5.6.</strong> .gitignore</a></li><li class="chapter-item expanded "><a href="staging-juntando-tudo.html"><strong aria-hidden="true">5.7.</strong> Juntando Tudo</a></li></ol></li><li class="chapter-item expanded "><a href="linhas-e-branches.html"><strong aria-hidden="true">6.</strong> Linhas do Tempo E Branches</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="branches.html"><strong aria-hidden="true">6.1.</strong> Branches</a></li><li class="chapter-item expanded "><a href="navegando-commits.html"><strong aria-hidden="true">6.2.</strong> Navegando Entre Commits</a></li><li class="chapter-item expanded "><a href="merge.html"><strong aria-hidden="true">6.3.</strong> Merge</a></li><li class="chapter-item expanded "><a href="git-rebase.html"><strong aria-hidden="true">6.4.</strong> git rebase</a></li><li class="chapter-item expanded "><a href="git-log.html"><strong aria-hidden="true">6.5.</strong> git log</a></li><li class="chapter-item expanded "><a href="git-diff.html"><strong aria-hidden="true">6.6.</strong> git diff</a></li><li class="chapter-item expanded "><a href="git-show.html"><strong aria-hidden="true">6.7.</strong> git show</a></li><li class="chapter-item expanded "><a href="git-tag.html"><strong aria-hidden="true">6.8.</strong> git tag</a></li></ol></li><li class="chapter-item expanded "><a href="repos-remotos.html"><strong aria-hidden="true">7.</strong> Repositórios Remotos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-clone.html"><strong aria-hidden="true">7.1.</strong> git clone</a></li><li class="chapter-item expanded "><a href="git-remote.html"><strong aria-hidden="true">7.2.</strong> git remote</a></li><li class="chapter-item expanded "><a href="git-pull-e-git-push.html"><strong aria-hidden="true">7.3.</strong> git pull E git push</a></li></ol></li><li class="chapter-item expanded "><a href="exemplo.html"><strong aria-hidden="true">8.</strong> Exemplo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="exemplo-inicio.html"><strong aria-hidden="true">8.1.</strong> Inicializando (E Com .gitignore)</a></li><li class="chapter-item expanded "><a href="impl-pilha.html"><strong aria-hidden="true">8.2.</strong> Implementando Uma Pilha</a></li><li class="chapter-item expanded "><a href="impl-operacoes.html"><strong aria-hidden="true">8.3.</strong> Implementando As Operações</a></li><li class="chapter-item expanded "><a href="impl-parser.html"><strong aria-hidden="true">8.4.</strong> Implementando O Parser</a></li><li class="chapter-item expanded "><a href="impl-main.html"><strong aria-hidden="true">8.5.</strong> Função Main</a></li><li class="chapter-item expanded "><a href="exemplo-branches.html"><strong aria-hidden="true">8.6.</strong> Trabalhando Com Branches (1)</a></li><li class="chapter-item expanded "><a href="exemplo-branches-2.html"><strong aria-hidden="true">8.7.</strong> Trabalhando Com Branches (2)</a></li><li class="chapter-item expanded "><a href="exemplo-merge.html"><strong aria-hidden="true">8.8.</strong> Conflitos De Um Merge</a></li><li class="chapter-item expanded "><a href="exemplo-makefile.html"><strong aria-hidden="true">8.9.</strong> Finalizando Com Um Makefile</a></li></ol></li></ol>
-            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="o-que-eh.html"><strong aria-hidden="true">1.</strong> O Que É O Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli-ou-gui.html"><strong aria-hidden="true">1.1.</strong> Terminal Ou Interface Gráfica?</a></li></ol></li><li class="chapter-item expanded "><a href="instalacao-config.html"><strong aria-hidden="true">2.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="git-help.html"><strong aria-hidden="true">3.</strong> git help</a></li><li class="chapter-item expanded "><a href="git-init.html"><strong aria-hidden="true">4.</strong> git init</a></li><li class="chapter-item expanded "><a href="staging-area.html"><strong aria-hidden="true">5.</strong> Staging Area</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-add.html"><strong aria-hidden="true">5.1.</strong> git add</a></li><li class="chapter-item expanded "><a href="git-status.html"><strong aria-hidden="true">5.2.</strong> git status</a></li><li class="chapter-item expanded "><a href="git-commit.html"><strong aria-hidden="true">5.3.</strong> git commit</a></li><li class="chapter-item expanded "><a href="git-rm-git-mv.html"><strong aria-hidden="true">5.4.</strong> git rm E git mv</a></li><li class="chapter-item expanded "><a href="git-reset-git-restore.html"><strong aria-hidden="true">5.5.</strong> git reset E git restore</a></li><li class="chapter-item expanded "><a href="gitignore.html"><strong aria-hidden="true">5.6.</strong> .gitignore</a></li><li class="chapter-item expanded "><a href="staging-juntando-tudo.html"><strong aria-hidden="true">5.7.</strong> Juntando Tudo</a></li></ol></li><li class="chapter-item expanded "><a href="linhas-e-branches.html"><strong aria-hidden="true">6.</strong> Linhas do Tempo E Branches</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="branches.html"><strong aria-hidden="true">6.1.</strong> Branches</a></li><li class="chapter-item expanded "><a href="navegando-commits.html"><strong aria-hidden="true">6.2.</strong> Navegando Entre Commits</a></li><li class="chapter-item expanded "><a href="merge.html"><strong aria-hidden="true">6.3.</strong> Merge</a></li><li class="chapter-item expanded "><a href="git-rebase.html"><strong aria-hidden="true">6.4.</strong> git rebase</a></li><li class="chapter-item expanded "><a href="git-log.html"><strong aria-hidden="true">6.5.</strong> git log</a></li><li class="chapter-item expanded "><a href="git-diff.html"><strong aria-hidden="true">6.6.</strong> git diff</a></li><li class="chapter-item expanded "><a href="git-show.html"><strong aria-hidden="true">6.7.</strong> git show</a></li><li class="chapter-item expanded "><a href="git-tag.html"><strong aria-hidden="true">6.8.</strong> git tag</a></li></ol></li><li class="chapter-item expanded "><a href="repos-remotos.html"><strong aria-hidden="true">7.</strong> Repositórios Remotos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git-clone.html"><strong aria-hidden="true">7.1.</strong> git clone</a></li><li class="chapter-item expanded "><a href="git-remote.html"><strong aria-hidden="true">7.2.</strong> git remote</a></li><li class="chapter-item expanded "><a href="git-pull-e-git-push.html"><strong aria-hidden="true">7.3.</strong> git pull E git push</a></li></ol></li><li class="chapter-item expanded "><a href="exemplo.html"><strong aria-hidden="true">8.</strong> Exemplo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="exemplo-inicio.html"><strong aria-hidden="true">8.1.</strong> Inicializando (E Com .gitignore)</a></li><li class="chapter-item expanded "><a href="impl-pilha.html"><strong aria-hidden="true">8.2.</strong> Implementando Uma Pilha</a></li><li class="chapter-item expanded "><a href="impl-operacoes.html"><strong aria-hidden="true">8.3.</strong> Implementando As Operações</a></li><li class="chapter-item expanded "><a href="impl-parser.html"><strong aria-hidden="true">8.4.</strong> Implementando O Parser</a></li><li class="chapter-item expanded "><a href="impl-main.html"><strong aria-hidden="true">8.5.</strong> Função Main</a></li><li class="chapter-item expanded "><a href="exemplo-branches.html"><strong aria-hidden="true">8.6.</strong> Trabalhando Com Branches (1)</a></li><li class="chapter-item expanded "><a href="exemplo-branches-2.html"><strong aria-hidden="true">8.7.</strong> Trabalhando Com Branches (2)</a></li><li class="chapter-item expanded "><a href="exemplo-merge.html"><strong aria-hidden="true">8.8.</strong> Conflitos De Um Merge</a></li><li class="chapter-item expanded "><a href="exemplo-makefile.html"><strong aria-hidden="true">8.9.</strong> Finalizando Com Um Makefile</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -108,27 +107,24 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
-                        
-                    </div>
+                                            </div>
 
                     <h1 class="menu-title">Uma Introdução Ao Git</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        
+                                                                        
                     </div>
                 </div>
 
-                
-                <div id="search-wrapper" class="hidden">
+                                <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -137,7 +133,6 @@
                     </div>
                 </div>
                 
-
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -149,23 +144,23 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#sobre-o-material" id="sobre-o-material">Sobre O Material</a></h1>
+                        <h1 id="sobre-o-material"><a class="header" href="#sobre-o-material">Sobre O Material</a></h1>
 <p>Este material foi produzido pelo grupo PET Computação da UFRGS. O material
 é versionado com Git e o código fonte encontra-se 
 <a href="https://github.com/petcomputacaoufrgs/intro-ao-git">hospedado no GitHub</a>.
 Estamos abertos para <em>feedbacks</em> e sugestões.</p>
-<h1><a class="header" href="#o-que-É-o-git" id="o-que-É-o-git">O Que É O Git?</a></h1>
+<h1 id="o-que-É-o-git"><a class="header" href="#o-que-É-o-git">O Que É O Git?</a></h1>
 <p>Se eu fosse resumir a resposta, ela seria: git é uma ferramenta distribuída de controle de versionamento de <em>software</em>. As alterações de uma versão do <em>software</em> são
 chamadas &quot;<em>commit</em>&quot;. Os arquivos que contêm as versões são chamados
 &quot;repositório&quot;.</p>
-<h1><a class="header" href="#o-que-É-controle-de-versionamento" id="o-que-É-controle-de-versionamento">O Que É Controle De Versionamento?</a></h1>
+<h1 id="o-que-É-controle-de-versionamento"><a class="header" href="#o-que-É-controle-de-versionamento">O Que É Controle De Versionamento?</a></h1>
 <p>Controle de versionamento de um <em>software</em> é o registro das alterações dos
 arquivos de um <em>software</em> ao longo do seu desenvolvimento; é o registro da
 história de um <em>software</em>. No entanto, é bom notar que versionamento normalmente
 não envolve grandes saltos entre versões. Ao invés disso, registram-se novas
 versões em pequenas mudanças, pequenos saltos, como adicionar um arquivo ou
 reescrever uma função.</p>
-<h1><a class="header" href="#o-que-significa-ser-distribuído" id="o-que-significa-ser-distribuído">O Que Significa Ser Distribuído?</a></h1>
+<h1 id="o-que-significa-ser-distribuído"><a class="header" href="#o-que-significa-ser-distribuído">O Que Significa Ser Distribuído?</a></h1>
 <p>Versionadores costumam trabalhar com o conceito de &quot;repositórios&quot;. Um
 repositório contém o <em>software</em> em questão e sua história. Alguns
 versionadores, como o SVN, centralizam um <em>software</em> em um repositório
@@ -174,38 +169,38 @@ servidor. Este <strong>não</strong> é o caso do Git. O Git possibilita reposit
 locais. Isto é, você pode ter toda história do <em>software</em> na sua máquina,
 fazer suas próprias mudanças, compartilhar com vários repositórios remotos,
 etc.</p>
-<h1><a class="header" href="#git-vs-github" id="git-vs-github">Git vs. GitHub</a></h1>
+<h1 id="git-vs-github"><a class="header" href="#git-vs-github">Git vs. GitHub</a></h1>
 <p>Às vezes a distinção entre Git e GitHub é confusa, mas é a seguinte: Git é o
 programa que faz o versionamento em si e administra repositórios; GitHub é um
 serviço que hospeda repositórios Git em um servidor. Existem outros serviços
 semelhantes, como o GitLab e o BitBucket.</p>
-<h1><a class="header" href="#usar-git-no-terminal-ou-na-interface-gráfica" id="usar-git-no-terminal-ou-na-interface-gráfica">Usar Git No Terminal Ou Na Interface Gráfica?</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="usar-git-no-terminal-ou-na-interface-gráfica"><a class="header" href="#usar-git-no-terminal-ou-na-interface-gráfica">Usar Git No Terminal Ou Na Interface Gráfica?</a></h1>
 <p>A implementação padrão do Git é um programa CLI (Command Line Interface), ou
 seja, é usada no terminal. Se você não se sentir confortável com o terminal,
 você pode usar alguma interface gráfica como GitKraken, Github Desktop ou
 Smart Git.</p>
 <p>Este tutorial focará no programa CLI, uma vez que a interface é mais rápida
 de aprender. No entanto, <strong>os conceitos são os mesmos</strong>.</p>
-<h1><a class="header" href="#instalação-e-configuração" id="instalação-e-configuração">Instalação E Configuração</a></h1>
-<h1><a class="header" href="#windows" id="windows">Windows</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="instalação-e-configuração"><a class="header" href="#instalação-e-configuração">Instalação E Configuração</a></h1>
+<h1 id="windows"><a class="header" href="#windows">Windows</a></h1>
 <p>Acesse o link <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>.</p>
-<h1><a class="header" href="#linux" id="linux">Linux</a></h1>
+<h1 id="linux"><a class="header" href="#linux">Linux</a></h1>
 <p>Você já tenha o Git instalado. Você pode verificar com o seguinte comando:</p>
 <pre><code class="language-sh">git --version
 </code></pre>
 <p>Se o git tiver instalado, o comando te dirá a versão do Git. Se não tiver, o
 recomendado é instalar pelo gerenciador de pacotes do seu sistema.</p>
-<h2><a class="header" href="#arch-linux-manjaro-etc" id="arch-linux-manjaro-etc">Arch Linux, Manjaro, etc</a></h2>
+<h2 id="arch-linux-manjaro-etc"><a class="header" href="#arch-linux-manjaro-etc">Arch Linux, Manjaro, etc</a></h2>
 <pre><code class="language-sh">sudo pacman -S git
 </code></pre>
-<h2><a class="header" href="#debian-ubuntu-etc" id="debian-ubuntu-etc">Debian, Ubuntu, etc</a></h2>
+<h2 id="debian-ubuntu-etc"><a class="header" href="#debian-ubuntu-etc">Debian, Ubuntu, etc</a></h2>
 <pre><code class="language-sh">sudo apt-get install git
 </code></pre>
-<h2><a class="header" href="#fedora-redhat-linux-etc" id="fedora-redhat-linux-etc">Fedora, RedHat Linux, etc</a></h2>
+<h2 id="fedora-redhat-linux-etc"><a class="header" href="#fedora-redhat-linux-etc">Fedora, RedHat Linux, etc</a></h2>
 <pre><code class="language-sh">sudo dnf install git
 </code></pre>
 <p>Etc...</p>
-<h1><a class="header" href="#configuração" id="configuração">Configuração</a></h1>
+<h1 id="configuração"><a class="header" href="#configuração">Configuração</a></h1>
 <p>A configuração obrigatória do Git é simples: basta dar nome e email.</p>
 <p>Para definir seu nome como &quot;João da Silva&quot;, basta executar:</p>
 <pre><code class="language-sh">git config user.name 'João da Silva'
@@ -225,7 +220,7 @@ git config user.email
 também:</p>
 <pre><code class="language-sh">git config --global pull.rebase false
 </code></pre>
-<h1><a class="header" href="#git-help" id="git-help"><code>git help</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-help"><a class="header" href="#git-help"><code>git help</code></a></h1>
 <p>Se você instalou o <code>git</code>, você deve ter a documentação instalada também. Para
 acessar a documentação de qualquer comando, basta executar o seguinte:</p>
 <pre><code class="language-sh">git comando --help
@@ -238,7 +233,7 @@ git help comando
 git help init
 </code></pre>
 <p>Para sair do manual, aperte <code>q</code>.</p>
-<h1><a class="header" href="#git-init" id="git-init"><code>git init</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-init"><a class="header" href="#git-init"><code>git init</code></a></h1>
 <p>O Git gerencia os repositórios no mesmo diretório/pasta da aplicação. Para
 inicializar o repositório, vá até o diretório do projeto e execute <code>git init</code>.</p>
 <pre><code class="language-sh">cd meu/projeto
@@ -247,7 +242,7 @@ git init
 <p>Você verá que o diretório conterá uma pasta oculta chamada <code>.git</code>.
 <strong>Jamais edite</strong> o conteúdo dessa pasta diretamente. O Git gerencia ela por
 você.</p>
-<h1><a class="header" href="#staging-area" id="staging-area"><em>Staging Area</em></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="staging-area"><a class="header" href="#staging-area"><em>Staging Area</em></a></h1>
 <p>Quando se deseja começar uma nova versão, não se edita um arquivo e
 imediatamente ele é registrado. É possível, inclusive, registrar somente certos
 arquivos na nova versão, deixando de lado outros arquivos modificados. A
@@ -261,17 +256,17 @@ estados. Estes são:</p>
 <li>Não-rastreado (<em>untracked</em>)</li>
 <li><em>Staged</em></li>
 </ul>
-<h1><a class="header" href="#estado-não-modificado" id="estado-não-modificado">Estado Não-Modificado</a></h1>
+<h1 id="estado-não-modificado"><a class="header" href="#estado-não-modificado">Estado Não-Modificado</a></h1>
 <p>Arquivos neste estado estão na versão atual (<em>HEAD</em>) e não foram alterados.</p>
-<h1><a class="header" href="#estado-modificado" id="estado-modificado">Estado Modificado</a></h1>
+<h1 id="estado-modificado"><a class="header" href="#estado-modificado">Estado Modificado</a></h1>
 <p>Arquivos neste estado estão na versão atual (<em>HEAD</em>), foram alterados, mas não
 constarão na próxima versão.</p>
-<h1><a class="header" href="#estado-não-rastreado" id="estado-não-rastreado">Estado Não-Rastreado</a></h1>
+<h1 id="estado-não-rastreado"><a class="header" href="#estado-não-rastreado">Estado Não-Rastreado</a></h1>
 <p>Arquivos neste estado não estão presentes na versão atual (<em>HEAD</em>) e não
 constarão na próxima versão.</p>
-<h1><a class="header" href="#estado-staged" id="estado-staged">Estado <em>Staged</em></a></h1>
+<h1 id="estado-staged"><a class="header" href="#estado-staged">Estado <em>Staged</em></a></h1>
 <p>Arquivos neste estado trazem alguma mudança e constarão na nova versão.</p>
-<h1><a class="header" href="#git-add" id="git-add"><code>git add</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-add"><a class="header" href="#git-add"><code>git add</code></a></h1>
 <p>Para adicionar arquivos modificados ou não-rastreados à <em>staging area</em>, existe
 o comando <code>git add</code>. A sintaxe do commando é:</p>
 <p>Adicionando um arquivo:</p>
@@ -293,14 +288,14 @@ significa &quot;o diretório atual&quot;).</p>
 <p>Na prática, <code>git add .</code> e <code>git add -a</code> se comportam da mesma forma. Os dois só
 diferem quando o diretório atual não é a raiz do projeto, como por exemplo, o
 diretório <code>./src/</code>.</p>
-<h1><a class="header" href="#git-status" id="git-status"><code>git status</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-status"><a class="header" href="#git-status"><code>git status</code></a></h1>
 <p>O comando <code>git status</code> mostra o estado relativo à <em>staging area</em>. A sintaxe é
 simples:</p>
 <pre><code class="language-sh">git status
 </code></pre>
 <p>Um exemplo de saída:</p>
 <p><img src="./status.png" alt="exemplo de git status" /></p>
-<h1><a class="header" href="#git-commit" id="git-commit">git commit</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-commit"><a class="header" href="#git-commit">git commit</a></h1>
 <p>Para registrar uma nova versão, utiliza-se o comando <code>git commit</code>. Somente as
 mudanças com estado &quot;<em>staged</em>&quot; farão parte do <em>commit</em>. Sintaxe do comando:</p>
 <pre><code class="language-sh">git commit -m 'mensagem do commit'
@@ -314,7 +309,7 @@ padrão, no Linux, é o <code>vi</code>), basta ocultar a opção <code>-m</code
 <p>A todo <em>commit</em>, o Git associa um número chamado de <em>hash</em>. O número sempre é
 apresentado na sua forma hexadecimal, como por exemplo:
 <code>80ba4e49ee1fc346ee4934bdd2b4581e61b5c5fa</code>.</p>
-<h1><a class="header" href="#git-rm-e-git-mv" id="git-rm-e-git-mv"><code>git rm</code> E <code>git mv</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-rm-e-git-mv"><a class="header" href="#git-rm-e-git-mv"><code>git rm</code> E <code>git mv</code></a></h1>
 <p>Às vezes o Git não é tão inteligente e não sabe diferenciar o caso de:</p>
 <ul>
 <li>Você reescreveu um arquivo vs. você removeu o arquivo e criou um novo com
@@ -322,23 +317,23 @@ mesmo nome;</li>
 <li>Você renomeou um arquivo vs. você removeu o arquivo e criou outro parecido.</li>
 </ul>
 <p>Para resolver isso, existem os comandos <code>git rm</code> e <code>git mv</code>.</p>
-<h1><a class="header" href="#git-rm" id="git-rm"><code>git rm</code></a></h1>
+<h1 id="git-rm"><a class="header" href="#git-rm"><code>git rm</code></a></h1>
 <p>O comando <code>git rm</code> registra no repositório que você removeu o arquivo, de tal
 forma que o Git não considerará que você reescreveu o arquivo ou renomeou.
 Exemplo, para remover o arquivo <code>main.c</code>:</p>
 <pre><code class="language-sh">git rm main.c
 </code></pre>
-<h1><a class="header" href="#git-mv" id="git-mv"><code>git mv</code></a></h1>
+<h1 id="git-mv"><a class="header" href="#git-mv"><code>git mv</code></a></h1>
 <p>O comando <code>git mv</code> registra no repositório que você renomeou o arquivo, de tal
 forma que o Git não considerará que você removeu arquivo. Exemplo, para renomear
 o arquivo <code>main.c</code> de tal forma que o nome seja <code>main.py</code>:</p>
 <pre><code class="language-sh">git mv main.c main.py
 </code></pre>
-<h1><a class="header" href="#git-reset-e-git-restore" id="git-reset-e-git-restore"><code>git reset</code> E <code>git restore</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-reset-e-git-restore"><a class="header" href="#git-reset-e-git-restore"><code>git reset</code> E <code>git restore</code></a></h1>
 <p>Para o caso de ser necessário tirar uma mudança do estado <em>staged</em>, ou até mesmo
 voltar ao estado do <em>commit</em> atual (<em>HEAD</em>), é possível usar os comandos <code>git reset</code>
 e <code>git restore</code>.</p>
-<h1><a class="header" href="#git-restore" id="git-restore"><code>git restore</code></a></h1>
+<h1 id="git-restore"><a class="header" href="#git-restore"><code>git restore</code></a></h1>
 <p>O comando <code>git restore</code> restaura os arquivos que estão visiveis (<em>working tree</em>)
 para serem idênticos aos do <em>commit</em> atual (<em>HEAD</em>). Para restaurar os arquivos
 <code>main.c</code> e <code>vetor.c</code>, por exemplo:</p>
@@ -346,7 +341,7 @@ para serem idênticos aos do <em>commit</em> atual (<em>HEAD</em>). Para restaur
 </code></pre>
 <p>O comando <code>git restore</code>, no entanto, não está presente em versões desatualizadas
 do Git, por isso, você pode precisar usar o comando <code>git reset</code>.</p>
-<h1><a class="header" href="#git-reset" id="git-reset"><code>git reset</code></a></h1>
+<h1 id="git-reset"><a class="header" href="#git-reset"><code>git reset</code></a></h1>
 <p>O comando <code>git reset</code> é semelhante ao <code>git restore</code>, mas tem mais variações
 além de ser mais fácil de fazer algo errado. Se não for usada nenhuma <em>flag</em>, ou
 a <em>flag</em> <code>--mixed</code> for usada, os arquivos que estavam <em>staged</em> vão deixar de ser
@@ -362,7 +357,7 @@ que arquivos novos não serão deletados.</p>
 </code></pre>
 <p>Há ainda a <em>flag</em> <code>--soft</code>, que será explicado mais a frente, pois envolve um uso
 do comando ainda não explicado.</p>
-<h1><a class="header" href="#gitignore" id="gitignore"><code>.gitignore</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gitignore"><a class="header" href="#gitignore"><code>.gitignore</code></a></h1>
 <p>No Git, é possível especificar arquivos para serem ignorados. Isto é, estes
 arquivos não são incluídos em futuras versões do <em>software</em>, por mais que você
 use <code>git add</code> neles. A especificação ocorre num arquivo chamado de <code>.gitignore</code>.
@@ -373,7 +368,7 @@ basta usar um asterisco seguido da extensão (<code>*.mp3</code>).</p>
 <pre><code>/senha-secreta.txt
 *.mp3
 </code></pre>
-<h1><a class="header" href="#juntando-tudo" id="juntando-tudo">Juntando tudo</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="juntando-tudo"><a class="header" href="#juntando-tudo">Juntando tudo</a></h1>
 <p>Então, como usar estes comandos em conjunto? O fluxo normal é <code>git add</code> =&gt;
 <code>git status</code> =&gt; <code>git commit</code>. Eis um exemplo. Primeiro criaremos o projeto:</p>
 <pre><code class="language-sh">mkdir projeto
@@ -396,7 +391,7 @@ git init
 <p>Pronto! Podemos fazer o nosso primeiro <em>commit</em>.</p>
 <pre><code class="language-sh">git commit -m 'adicionada a função principal'
 </code></pre>
-<h1><a class="header" href="#linhas-do-tempo-e-branches" id="linhas-do-tempo-e-branches">Linhas do Tempo E <em>Branches</em></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linhas-do-tempo-e-branches"><a class="header" href="#linhas-do-tempo-e-branches">Linhas do Tempo E <em>Branches</em></a></h1>
 <p>No Git, os <em>commits</em> são arranjados em uma linha do tempo. Por padrão, essa
 linha do tempo é linear, mas o Git também permite expressar bifurcações na linha
 do tempo. Para isso, existe o conceito de &quot;<em>branch</em>&quot; (literalmente &quot;galho&quot;,
@@ -406,9 +401,9 @@ primeiro <em>commit</em>, essa <em>branch</em> é criada. Esses diferentes &quot
 tempo, podem eventualmente juntar-se novamente, no que chamamos de <em>merge</em>
 (literalmente &quot;união&quot; ou &quot;mescla&quot;). É uma estratégia comum fazer-se várias
 <em>branches</em> com o objetivo de uní-las com a <code>master</code> eventualmente.</p>
-<h1><a class="header" href="#branches" id="branches">Branches</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="branches"><a class="header" href="#branches">Branches</a></h1>
 <p>Uma <em>branch</em> é uma ramificação na linha do tempo do Git.</p>
-<h1><a class="header" href="#criando-e-trocando-de-branch" id="criando-e-trocando-de-branch">Criando E Trocando De Branch</a></h1>
+<h1 id="criando-e-trocando-de-branch"><a class="header" href="#criando-e-trocando-de-branch">Criando E Trocando De Branch</a></h1>
 <p>Existem várias formas de criar uma <em>branch</em>. Uma delas, usando o comando
 <code>git branch</code>, simplesmente cria uma <em>branch</em> e não faz mais nada. Para criar
 a <em>branch</em> com o nome <code>minha-branch</code>, use:</p>
@@ -433,7 +428,7 @@ entraram no <em>commit</em>:</p>
 uma branch a partir de um <em>commit</em>, digamos, <code>0935946</code>.</p>
 <pre><code class="language-sh">git branch minha-branch 0935946
 </code></pre>
-<h1><a class="header" href="#exemplo" id="exemplo">Exemplo</a></h1>
+<h1 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h1>
 <p>Suponhamos um <em>commit</em> <code>3c97506</code> seguido de um <em>commit</em> <code>ec49a96</code>, ambos dentro
 da branch <code>master</code>. A <em>HEAD</em> aponta para este último. Temos uma árvore assim:</p>
 <pre><code>master
@@ -461,7 +456,7 @@ HEAD -&gt; 80ba4e4  4b12d0a
            |
         3c97506
 </code></pre>
-<h1><a class="header" href="#deletando-branches" id="deletando-branches">Deletando Branches</a></h1>
+<h1 id="deletando-branches"><a class="header" href="#deletando-branches">Deletando Branches</a></h1>
 <p>Para deletar branches, existem duas formas. A primeira, a forma segura, requer
 que você tenha feito <em>merge</em> dessa <em>branch</em> em outra antes (será explicado nos
 próximos dois capítulos). Basta passar a <em>flag</em> <code>-d</code> para o comando <code>git branch</code>,
@@ -471,7 +466,7 @@ junto ao nome da branch:</p>
 <p>Para forçar a deleção sem ter salvo a <code>branch</code> em outra, use <code>-D</code>:</p>
 <pre><code>git branch -D minha-branch
 </code></pre>
-<h1><a class="header" href="#navegando-entre-commits" id="navegando-entre-commits">Navegando Entre <em>Commits</em></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="navegando-entre-commits"><a class="header" href="#navegando-entre-commits">Navegando Entre <em>Commits</em></a></h1>
 <p>É possível, no Git, mudar o <em>HEAD</em> para um <em>commit</em> passado. Esse é mais um
 uso do comando <code>git checkout</code>.</p>
 <p>Pàra navegar até o <em>commit</em> <code>fae6c2e</code>, use:</p>
@@ -493,7 +488,7 @@ Por exemplo, para retornar o <em>HEAD</em> ao <em>commit</em> mais recente da <e
 <em>master</em>:</p>
 <pre><code class="language-sh">git checkout master
 </code></pre>
-<h1><a class="header" href="#merge" id="merge"><em>Merge</em></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="merge"><a class="header" href="#merge"><em>Merge</em></a></h1>
 <p>É possível aplicar as mudanças de uma <em>branch</em>  à outra, num processo chamado de
 <em>merge</em>.  Usa-se o comando <code>git merge</code>. Por exemplo, suponha que estejamos em
 uma <em>branch</em> <code>minha-branch</code>, e queiramos aplicar os <em>commits</em> de <code>outra-branch</code>
@@ -501,7 +496,7 @@ em <code>minha-branch</code>:</p>
 <pre><code class="language-sh">git merge outra-branch
 </code></pre>
 <p>Um <em>merge</em> aplica somente os <em>commits</em> que as <em>branches</em> não têm em comum.</p>
-<h1><a class="header" href="#conflitos" id="conflitos">Conflitos</a></h1>
+<h1 id="conflitos"><a class="header" href="#conflitos">Conflitos</a></h1>
 <p>Por padrão, sempre que houver um conflito em um arquivo, o Git tenta resolver
 mesclando as versões dos arquivos. No entanto, nem sempre é válida essa
 mesclagem. Nesses casos, o Git falha em resolver o conflito, e intervenção
@@ -526,7 +521,7 @@ executar o comando <code>git status</code>. Após a resolução dos conflitos, e
 fazer um novo <em>commit</em> contendo os arquivos corrigidos.</p>
 <p>Existem, no entanto, ferramentas para auxiliar na resolução dos conflitos, como
 o <code>kdiff</code>.</p>
-<h1><a class="header" href="#exemplo-1" id="exemplo-1">Exemplo</a></h1>
+<h1 id="exemplo-1"><a class="header" href="#exemplo-1">Exemplo</a></h1>
 <p>Suponha o seguinte cenário, uma <em>branch</em> <code>master</code> e uma <code>teste</code>:</p>
 <pre><code>        master    teste
 HEAD -&gt; 80ba4e4  b49a7ed
@@ -571,10 +566,10 @@ ec49a96
    |
 3c97506
 </code></pre>
-<h1><a class="header" href="#git-rebase" id="git-rebase"><code>git rebase</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-rebase"><a class="header" href="#git-rebase"><code>git rebase</code></a></h1>
 <p>Além do <em>merge</em>, é possível mover ou editar seus commits. O comando <code>git rebase</code>
 permite isso. Há dois tipos de <code>rebase</code>: o interativo e o não-interativo.</p>
-<h1><a class="header" href="#rebase-não-interativo" id="rebase-não-interativo"><em>Rebase</em> Não-Interativo</a></h1>
+<h1 id="rebase-não-interativo"><a class="header" href="#rebase-não-interativo"><em>Rebase</em> Não-Interativo</a></h1>
 <p>Um <em>rebase</em> não-interativo &quot;desloca&quot; os <em>commits</em> de uma <em>branch</em> para de tal
 forma que os <em>commits</em> de outra branch façam parte da história desta <em>branch</em>,
 preservando o conteúdo dos arquivos da primeira <em>branch</em>. Por exemplo, imagine o
@@ -606,7 +601,7 @@ ec49a96
    |
 3c97506
 </code></pre>
-<h1><a class="header" href="#rebase-interativo" id="rebase-interativo"><em>Rebase</em> Interativo</a></h1>
+<h1 id="rebase-interativo"><a class="header" href="#rebase-interativo"><em>Rebase</em> Interativo</a></h1>
 <p>Para iniciar um <em>rebase</em> interativo desde 3 <em>commits</em> atrás, basta executar:</p>
 <pre><code class="language-sh">git rebase -i HEAD~3
 </code></pre>
@@ -637,7 +632,7 @@ antiga, mas basta editar o texto de forma semelhante ao <em>squash</em>.</p>
 <p>Se em algum momento você quiser abortar o <em>rebase</em>, execute:</p>
 <pre><code class="language-sh">git rebase --abort
 </code></pre>
-<h1><a class="header" href="#git-log" id="git-log"><code>git log</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-log"><a class="header" href="#git-log"><code>git log</code></a></h1>
 <p>O comando <code>git log</code> permite visualizar o histórico do repositório. Sua forma
 mais básica é:</p>
 <pre><code class="language-sh">git log
@@ -654,7 +649,7 @@ grafo das <em>branches</em> neste caso, com a <em>flag</em> <code>--graph</code>
 <pre><code class="language-sh">git log --all --graph
 </code></pre>
 <p><img src="./git-log-3.png" alt="saída do git log em grafo" /></p>
-<h1><a class="header" href="#git-diff" id="git-diff"><code>git diff</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-diff"><a class="header" href="#git-diff"><code>git diff</code></a></h1>
 <p>Para visualizar diferenças entre versões do projeto, é possível utilizar o
 comando <code>git diff</code>. O comando exibe diferenças no seguinte formato: uma versão
 é dada como versão mais antiga, a outra como mais nova, as linhas que a versão
@@ -675,13 +670,13 @@ você vê no diretório do projeto (<em>working tree</em>), basta executar:</p>
 <p>Para comparar duas <em>branches</em> <code>master</code> e &quot;desenvolvimento&quot;, basta executar:</p>
 <pre><code class="language-sh">git diff master desenvolvimento
 </code></pre>
-<h1><a class="header" href="#git-show" id="git-show"><code>git show</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-show"><a class="header" href="#git-show"><code>git show</code></a></h1>
 <p>É possível visualizar arquivos de outras versões com o comando <code>git show</code>. Por
 exemplo, para visualizar o arquivo <code>main.c</code> do <em>commit</em> <code>650bb48</code>, execute:</p>
 <pre><code class="language-sh">git show 650bb48:main.c
 </code></pre>
 <p>Para sair do comando, basta digitar <code>q</code>.</p>
-<h1><a class="header" href="#git-tag" id="git-tag"><code>git tag</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-tag"><a class="header" href="#git-tag"><code>git tag</code></a></h1>
 <p>É possível rotular <em>commits</em> usando aqueles rótulos bem conhecidos para se
 referir a versões de <em>software</em> como <code>v0.1.3</code>, <code>v1.0</code>, <code>v2.5.3</code>, etc. O comando
 usado para tal é o <code>git tag</code>. Para marcar o <em>commit</em> atual como <code>v1.0</code>, basta
@@ -700,7 +695,7 @@ executar:</p>
 <p>É importante notar que <em>tags</em> em geral marcam pontos do <em>software</em> onde ele está
 &quot;pronto&quot; para ser usado. Normalmente, são <em>commits</em> específicos que são
 marcados, não todos.</p>
-<h1><a class="header" href="#repositórios-remotos" id="repositórios-remotos">Repositórios Remotos</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="repositórios-remotos"><a class="header" href="#repositórios-remotos">Repositórios Remotos</a></h1>
 <p>Como mencionado anteriormente, o Git é uma ferramenta distribuída. O repositório
 que você tem salvo na sua máquina local é um repositório independente. No
 entanto, você pode hospedar um repositório em uma máquina remota, principalmente
@@ -718,7 +713,7 @@ uso, apesar de ser um serviço gratuito para projetos livres ou abertos.</p>
 versão gratuita do GitLab é livre</a>.</p>
 <p>O <a href="https://bitbucket.org/">BitBucket</a> é mais um serviço de hospedagem de
 repositórios.</p>
-<h1><a class="header" href="#git-clone" id="git-clone"><code>git clone</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-clone"><a class="header" href="#git-clone"><code>git clone</code></a></h1>
 <p>Para clonar repositórios remotos, é possível usar o comando <code>git clone</code>. Para
 clonar um repositório remoto através do link
 <a href="https://github.com/petcomputacaoufrgs/intro-ao-git.git">https://github.com/petcomputacaoufrgs/intro-ao-git.git</a>, basta executar:</p>
@@ -728,7 +723,7 @@ clonar um repositório remoto através do link
 o destino. Para clonar o repositório acima em <code>./esta/pasta</code>, basta executar:</p>
 <pre><code class="language-sh">git clone https://github.com/petcomputacaoufrgs/intro-ao-git.git ./esta/pasta
 </code></pre>
-<h1><a class="header" href="#git-remote" id="git-remote"><code>git remote</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-remote"><a class="header" href="#git-remote"><code>git remote</code></a></h1>
 <p>Para gerenciar comunicação repositórios remotos, você precisa salvar no seu
 repositório local referências para os repositórios remotos. Para fazer isso,
 existe o comando <code>git remote</code>. Para adicionar um remoto, com nome <code>origin</code> e URL
@@ -749,14 +744,14 @@ existe o comando <code>git remote</code>. Para adicionar um remoto, com nome <co
 <a href="https://github.com/fulanodasilva/intro-ao-git.git">https://github.com/fulanodasilva/intro-ao-git.git</a>, basta executar:</p>
 <pre><code class="language-sh">git remote set-url origin https://github.com/fulanodasilva/intro-ao-git.git
 </code></pre>
-<h2><a class="header" href="#nota" id="nota">Nota</a></h2>
+<h2 id="nota"><a class="header" href="#nota">Nota</a></h2>
 <p>Às vezes, trabalhando com múltiplos remotos, nomear o remoto de <code>origin</code> pode
 ser ambíguo. Portanto, é uma prática comum dar nomes mais significativos, como
 <code>github</code> ou <code>gitlab</code>.</p>
-<h1><a class="header" href="#git-pull-e-git-push" id="git-pull-e-git-push"><code>git pull</code> E <code>git push</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-pull-e-git-push"><a class="header" href="#git-pull-e-git-push"><code>git pull</code> E <code>git push</code></a></h1>
 <p>Para &quot;puxar&quot; mudanças de um repositório remoto, existe o <code>git pull</code>, e para
 &quot;empurar&quot; mudanças a um repositório remoto, existe o <code>git push</code>.</p>
-<h1><a class="header" href="#git-push" id="git-push"><code>git push</code></a></h1>
+<h1 id="git-push"><a class="header" href="#git-push"><code>git push</code></a></h1>
 <p>Para mandar suas mudanças a um remoto salvo como <code>origin</code> numa <em>branch</em>
 <code>master</code>, use:</p>
 <pre><code class="language-sh">git push origin master
@@ -775,7 +770,7 @@ ser ambíguo. Portanto, é uma prática comum dar nomes mais significativos, com
 local atualizado com novas mudanças do remoto. Nesse caso, você terá de executar
 o comando <code>git pull</code> antes, resolver um <em>merge</em>, e só então poderá executar
 <code>git push</code>. Veja abaixo como executar <code>git pull</code>.</p>
-<h1><a class="header" href="#git-pull" id="git-pull"><code>git pull</code></a></h1>
+<h1 id="git-pull"><a class="header" href="#git-pull"><code>git pull</code></a></h1>
 <p>Semelhantemente, para receber mudanças de um repositório remoto salvo como
 <code>origin</code> numa <em>branch</em> <code>master</code>, use:</p>
 <pre><code class="language-sh">git pull origin master
@@ -791,14 +786,14 @@ você terá de resolver um <em>merge</em>.</p>
 <p>Nos <em>pulls</em> subsequentes, basta executar:</p>
 <pre><code class="language-sh">git pull origin
 </code></pre>
-<h1><a class="header" href="#tags-também-podem-ser-movimentadas" id="tags-também-podem-ser-movimentadas"><em>Tags</em> Também Podem Ser Movimentadas</a></h1>
+<h1 id="tags-também-podem-ser-movimentadas"><a class="header" href="#tags-também-podem-ser-movimentadas"><em>Tags</em> Também Podem Ser Movimentadas</a></h1>
 <p>Suponha que você tenha executado:</p>
 <pre><code class="language-sh">git tag v0.3.5
 </code></pre>
 <p>Para mandar essa <em>tag</em> para o remoto <code>origin</code>, execute:</p>
 <pre><code>git push origin v0.3.5
 </code></pre>
-<h1><a class="header" href="#exemplo-2" id="exemplo-2">Exemplo</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exemplo-2"><a class="header" href="#exemplo-2">Exemplo</a></h1>
 <p>Como um exemplo de projeto que use Git, vamos desenvolver uma calculadora
 RPN e usaremos Git para versionar o projeto. O projeto desenvolvido pode
 ser encontrado no endereço <a href="https://github.com/petcomputacaoufrgs/rpn-calc">https://github.com/petcomputacaoufrgs/rpn-calc</a>.</p>
@@ -870,7 +865,7 @@ Pilha: fundo = 5.3333..., 2 = topo
 Pilha: fundo = 10.6666... = topo
 </code></pre>
 <p>Resultado: <code>10.6666...</code>.</p>
-<h1><a class="header" href="#inicializando-e-com-gitignore" id="inicializando-e-com-gitignore">Inicializando (E Com <code>.gitignore</code>)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inicializando-e-com-gitignore"><a class="header" href="#inicializando-e-com-gitignore">Inicializando (E Com <code>.gitignore</code>)</a></h1>
 <p>Primeiro, criaremos o projeto:</p>
 <pre><code class="language-sh">mkdir rpn-calc
 cd rpn-calc
@@ -884,10 +879,10 @@ ignorar arquivos binários.</p>
 </code></pre>
 <p>Dessa forma, todos arquivos objetos (<code>.o</code>) e o executável que nomearemos
 <code>rpn-calc</code> serão ignorados.</p>
-<h1><a class="header" href="#implementando-uma-pilha" id="implementando-uma-pilha">Implementando Uma Pilha</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="implementando-uma-pilha"><a class="header" href="#implementando-uma-pilha">Implementando Uma Pilha</a></h1>
 <p>Como o nosso avaliador de expressões precisa de uma pilha para avaliar as
 expressões, vamos primeiro implementar uma pilha.</p>
-<h1><a class="header" href="#cabeçalho-c" id="cabeçalho-c">Cabeçalho C</a></h1>
+<h1 id="cabeçalho-c"><a class="header" href="#cabeçalho-c">Cabeçalho C</a></h1>
 <p>Agora vamos fazer um cabeçalho da linguagem C. Nossa pilha vai guardar <code>double</code>,
 já que é o que a calculadora precisa. Vamos declarar duas funções básicas de
 pilhas: <code>push</code> e <code>pop</code>, além de uma função para liberar memória. Elas vão
@@ -944,7 +939,7 @@ têm conexão. Basta usar a <em>flag</em> <code>--allow-unrelated-histories</cod
 <p>Pronto, agora podemos executar <code>git push</code> tranquilamente.</p>
 <pre><code class="language-sh">git push github master
 </code></pre>
-<h1><a class="header" href="#arquivo-de-implementação-c" id="arquivo-de-implementação-c">Arquivo de Implementação C</a></h1>
+<h1 id="arquivo-de-implementação-c"><a class="header" href="#arquivo-de-implementação-c">Arquivo de Implementação C</a></h1>
 <p>Agora, vamos implementar a pilha.</p>
 <p>Arquivo <code>stack.c</code>:</p>
 <pre><code class="language-C">#include &quot;stack.h&quot;
@@ -999,7 +994,7 @@ git commit -m 'implementação da stack'
 <p>E publicar a mudança:</p>
 <pre><code class="language-sh">git push github master
 </code></pre>
-<h1><a class="header" href="#implementando-as-operações" id="implementando-as-operações">Implementando As Operações</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="implementando-as-operações"><a class="header" href="#implementando-as-operações">Implementando As Operações</a></h1>
 <p>Vamos definir as operações da nossa calculadora. No momento, vamos manter apenas
 as quatro operações básicas da matemática (<code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>). Vamos definir,
 também, como executá-las, além do símbolo correspondente a cada operação. A
@@ -1075,7 +1070,7 @@ git status
 git commit -m 'implementadas operações básicas'
 git push github master
 </code></pre>
-<h1><a class="header" href="#implementando-o-parser" id="implementando-o-parser">Implementando O <em>Parser</em></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="implementando-o-parser"><a class="header" href="#implementando-o-parser">Implementando O <em>Parser</em></a></h1>
 <p>Um <em>parser</em> é em essência um componente que analisa e transforma dados em uma
 representação mais estruturada de tais dados. No nosso caso: vamos converter
 texto em uma pilha e executar operações que aparecerem. Nosso <em>parser</em> vai
@@ -1227,7 +1222,7 @@ git status
 git commit -m 'implementado o parser para operações básicas'
 git push github master
 </code></pre>
-<h1><a class="header" href="#função-main" id="função-main">Função <em>Main</em></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="função-main"><a class="header" href="#função-main">Função <em>Main</em></a></h1>
 <p>Vamos fazer uma função <em>main</em> e juntar tudo! Vamos decompor a função <em>main</em> em um
 <code>switch-case</code> e uma outra função.</p>
 <p>Arquivo <code>main.c</code>:</p>
@@ -1339,12 +1334,12 @@ git push github master
 <p>Vamos avaliar a expressão <code>0 4 3 + 2 * -</code>, que deve resultar em <code>-14</code>.</p>
 <p><img src="./exemplo-teste.png" alt="teste funcionando" /></p>
 <p>Funciona!</p>
-<h1><a class="header" href="#trabalhando-com-branches-1" id="trabalhando-com-branches-1">Trabalhando Com <em>Branches</em> (1)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="trabalhando-com-branches-1"><a class="header" href="#trabalhando-com-branches-1">Trabalhando Com <em>Branches</em> (1)</a></h1>
 <p>Suponha que temos mais um colega no time. Suponha que ele decidiu
 adicionar trigonometria. Suponha que nós decidimos adicionar exponenciação
 e logaritmo. Para fazer tais tarefas, vamos criar mais duas <em>branches</em>, uma
 chamada <code>trig</code>, a outra chamada <code>exp</code>.</p>
-<h2><a class="header" href="#nossa-branch" id="nossa-branch">Nossa <em>Branch</em></a></h2>
+<h2 id="nossa-branch"><a class="header" href="#nossa-branch">Nossa <em>Branch</em></a></h2>
 <p>Para criá-la, e ao mesmo tempo mudar para ela:</p>
 <pre><code class="language-sh">git checkout -b exp
 </code></pre>
@@ -1434,7 +1429,7 @@ git status
 git commit -m 'implementada exponenciação'
 git push github exp
 </code></pre>
-<h2><a class="header" href="#a-branch-do-colega" id="a-branch-do-colega">A <em>Branch</em> Do Colega</a></h2>
+<h2 id="a-branch-do-colega"><a class="header" href="#a-branch-do-colega">A <em>Branch</em> Do Colega</a></h2>
 <p>Agora suponha que trocamos de computador, que somos o colega no computador
 dele. A <em>HEAD</em> deve estar na <code>master</code> a partir de agora (<code>git checkout master</code>).</p>
 <p>Para criar a nova <em>branch</em>, e ao mesmo tempo mudar para ela:</p>
@@ -1534,9 +1529,9 @@ git status
 git commit -m 'implementada trigonometria básica'
 git push github trig
 </code></pre>
-<h1><a class="header" href="#trabalhando-com-branches-2" id="trabalhando-com-branches-2">Trabalhando Com <em>Branches</em> (2)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="trabalhando-com-branches-2"><a class="header" href="#trabalhando-com-branches-2">Trabalhando Com <em>Branches</em> (2)</a></h1>
 <p>Esse capítulo é a parte dois do exemplo de <em>branches</em>.</p>
-<h2><a class="header" href="#ainda-no-computador-do-colega" id="ainda-no-computador-do-colega">Ainda No Computador Do Colega</a></h2>
+<h2 id="ainda-no-computador-do-colega"><a class="header" href="#ainda-no-computador-do-colega">Ainda No Computador Do Colega</a></h2>
 <p>O colega vai adicionar trigonometria inversa também:</p>
 <p>Arquivo <code>ops.h</code>:</p>
 <pre><code class="language-C"> #define OP_COS_SYM &quot;cos&quot;
@@ -1648,7 +1643,7 @@ ele vai trocar para ela.</p>
 <p>Não é necessário resolver conflitos. O colega vai publicar as mudanças.</p>
 <pre><code class="language-sh">git push github master
 </code></pre>
-<h2><a class="header" href="#voltando-para-nosso-computador" id="voltando-para-nosso-computador">Voltando Para Nosso Computador</a></h2>
+<h2 id="voltando-para-nosso-computador"><a class="header" href="#voltando-para-nosso-computador">Voltando Para Nosso Computador</a></h2>
 <p>Temos que estar na <em>branch</em> <code>exp</code>. Vamos fazer mais uma mudança, vamos
 adicionar logaritmos.</p>
 <p>Arquivo <code>ops.h</code>:</p>
@@ -1749,7 +1744,7 @@ que resolver algum conflito. Vamos ver:</p>
 </code></pre>
 <p><img src="./exemplo-merge-conflito.png" alt="merge teve conflitos" /></p>
 <p>E... deu conflito. Resolveremos no próximo capítulo.</p>
-<h1><a class="header" href="#conflitos-de-um-merge" id="conflitos-de-um-merge">Conflitos De Um <em>Merge</em></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="conflitos-de-um-merge"><a class="header" href="#conflitos-de-um-merge">Conflitos De Um <em>Merge</em></a></h1>
 <p>Na nessa tentativa de <em>merge</em>, houve conflitos. Veja a mensagem:</p>
 <p><img src="./exemplo-merge-conflito.png" alt="merge teve conflitos" /></p>
 <p>Vamos olhar para os arquivos com os conflitos. Começaremos com <code>ops.h</code>:</p>
@@ -1872,11 +1867,11 @@ git status
 git commit -m 'resolvido merge da branch exp na branch master'
 git push github master
 </code></pre>
-<h1><a class="header" href="#finalizando-com-um-makefile" id="finalizando-com-um-makefile">Finalizando Com Um <code>Makefile</code></a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="finalizando-com-um-makefile"><a class="header" href="#finalizando-com-um-makefile">Finalizando Com Um <code>Makefile</code></a></h1>
 <p>Para finalizar, vamos melhorar nosso sistema de <em>build</em> com um <code>Makefile</code>. Vamos
 fazer uns testes também.</p>
 <p>AVISO: este <code>Makefile</code> foi pensado para o Linux.</p>
-<h2><a class="header" href="#makefile" id="makefile">Makefile</a></h2>
+<h2 id="makefile"><a class="header" href="#makefile">Makefile</a></h2>
 <p>O programa <code>make</code> é um programa que visa automatizar (até um certo ponto) o
 <em>build</em> de um <em>software</em>, isto é, como ele é construído. Para isso,
 especificamos o <em>build</em> em um arquivo <code>Makefile</code>. Não está no escopo deste
@@ -1905,7 +1900,7 @@ git status
 git commit -m 'automatização do build'
 git push github master
 </code></pre>
-<h2><a class="header" href="#testes-mais-complexos" id="testes-mais-complexos">Testes Mais Complexos</a></h2>
+<h2 id="testes-mais-complexos"><a class="header" href="#testes-mais-complexos">Testes Mais Complexos</a></h2>
 <p>Vamos tentar:</p>
 <ul>
 <li><code>3 3 + sin exp</code> = <code>exp (sin (3 + 3))</code>.</li>
@@ -1920,9 +1915,7 @@ git push github master
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-
                         
-
                         <div style="clear: both"></div>
                     </nav>
                 </div>
@@ -1930,48 +1923,33 @@ git push github master
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-
-                
-            </nav>
+                            </nav>
 
         </div>
 
         
-
-        
-
         
         
-        
-        <script type="text/javascript">
-            window.playpen_copyable = true;
+                <script type="text/javascript">
+            window.playground_copyable = true;
         </script>
         
-
         
-
-        
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
         
-
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
-
-        
-        
-        <script type="text/javascript">
+                        <script type="text/javascript">
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
-        
-        
-
+                
     </body>
 </html>
