@@ -78,9 +78,28 @@ HEAD -> 80ba4e4  4b12d0a
         3c97506
 ```
 
-# Deletando Branches
+# Renomeando _Branches_
 
-Para deletar branches, existem duas formas. A primeira, a forma segura, requer
+Para renomear _branches_, basta usar a _flag_ `-m`, passando em seguida o nome
+da _branch_ a ser renomeada, e depois o novo nome da _branch_.
+```
+git branch -m nome-antigo nome-novo
+```
+
+Se a _branch_ alvo for a _branch_ atual, o nome dela pode ser omitida, e
+somente o novo nome da _branch_ atual precisa ser informado:
+```
+git branch -m nome-novo
+```
+
+Portanto, podemos renomear a `master` para `main` da seguinte forma:
+```
+git branch -m master main
+```
+
+# Deletando _Branches_
+
+Para deletar _branches_, existem duas formas. A primeira, a forma segura, requer
 que você tenha feito _merge_ dessa _branch_ em outra antes (será explicado nos
 próximos dois capítulos). Basta passar a _flag_ `-d` para o comando `git branch`,
 junto ao nome da branch:

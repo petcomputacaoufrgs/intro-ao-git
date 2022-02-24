@@ -10,3 +10,11 @@ primeiro _commit_, essa _branch_ é criada. Esses diferentes "galhos" na linha d
 tempo, podem eventualmente juntar-se novamente, no que chamamos de _merge_
 (literalmente "união" ou "mescla"). É uma estratégia comum fazer-se várias
 _branches_ com o objetivo de uní-las com a `master` eventualmente.
+
+Note que apesar da _branch_ se chamar `master` pelo Git, no GitHub (serviço de
+hospedagem de repositórios Git), normalmente se usa `main` como _branch_ padrão.
+Você verá mais adiante qe pode renomear sua `master` para `main` com o seguinte
+comando:
+```shell
+git branch -m master main
+```
