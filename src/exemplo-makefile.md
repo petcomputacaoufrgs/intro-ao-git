@@ -40,7 +40,7 @@ Compilou. Vamos publicar.
 git add .
 git status
 git commit -m 'automatização do build'
-git push github master
+git push
 ```
 
 

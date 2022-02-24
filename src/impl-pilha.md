@@ -48,22 +48,33 @@ tem uma licença e um arquivo de `README`. Se você utilizar um remoto, lembre d
 substituir a URL por uma adequada. Vamos salvar esse remoto:
 
 ```sh
-git remote add github https://github.com/petcomputacaoufrgs/rpn-calc
+git remote add github git@github.com:petcomputacaoufrgs/rpn-calc.git
 ```
 
-Agora vamos executar um `push`.
+Note que eu estou usando um endereço SSH, mas você poderia usar um endereço
+HTTPS como `https://github.com/petcomputacaoufrgs/rpn-calc.git`.
+
+Como o GitHub usa `main` como _branch_ principal, precisamos renomear `master`:
+```
+git branch -m main
+```
+
+Agora vamos executar um `push`, passando a _flag_ `-u`, e assim só vamos
+precisar especificar o repositório remoto e a _branch_ uma vez para essa
+_branch_:
 
 ```sh
-git push github master
+git push -u github main
 ```
 
 ![erro de git pull](./exemplo-pull-erro.png)
 
 Oopsss... Eu criei o repositório remoto com licença e `README`. Primeiro vamos
-ter que executar `git pull`.
+ter que executar `git pull`. Precisamos usar a _flag_ `--set-upstream` para
+porque o `push -u` falhou (`-u` e `--set-upstream` são equivalentes).
 
 ```sh
-git pull github master
+git pull --set-upstream github main
 ```
 
 ![erro de git pull](./exemplo-pull-erro2.png)
@@ -72,7 +83,7 @@ Oopsssss... Esse erro aconteceu porque as histórias dos repositórios não
 têm conexão. Basta usar a _flag_ `--allow-unrelated-histories`.
 
 ```sh
-git pull github master --allow-unrelated-histories
+git pull --allow-unrelated-histories
 ```
 
 Então, abrir-se-á um editor de texto perguntando por uma mensagem de
@@ -82,7 +93,7 @@ _commit_. Basta editar, salvar, e sair.
 
 Pronto, agora podemos executar `git push` tranquilamente.
 ```sh
-git push github master
+git push
 ```
 
 # Arquivo de Implementação C
@@ -148,5 +159,5 @@ git commit -m 'implementação da stack'
 
 E publicar a mudança:
 ```sh
-git push github master
+git push
 ```

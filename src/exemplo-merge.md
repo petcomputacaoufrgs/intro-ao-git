@@ -129,9 +129,21 @@ reintroduzi-las:
          break;
 ```
 
+Vamos compilar e testar:
+```sh
+gcc -o stack.o -c stack.c
+gcc -o ops.o -c ops.c
+gcc -o parser.o -c parser.c
+gcc main.o parser.o stack.o ops.o -lm -o rpn-calc
+```
+
+Deu certo:
+
+![oeração com sucesso](./exemplo-dps-merge.png)
+
 ```sh
 git add .
 git status
-git commit -m 'resolvido merge da branch exp na branch master'
-git push github master
+git commit -m 'resolvido merge da branch exp na branch main'
+git push
 ```

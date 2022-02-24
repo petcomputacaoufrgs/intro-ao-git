@@ -115,13 +115,17 @@ Funciona! Agora podemos subir as modificações:
 git add .
 git status
 git commit -m 'implementada exponenciação'
-git push github exp
+git push -u github exp
 ```
+
+Como essa é a primeira vez em que a _branch_ vai para o GitHub, precisamos da
+_flag_ `-u`.
 
 ## A _Branch_ Do Colega
 
 Agora suponha que trocamos de computador, que somos o colega no computador
-dele. A _HEAD_ deve estar na `master` a partir de agora (`git checkout master`).
+dele. A _HEAD_ deve estar na `main` a partir de agora (execute
+`git checkout main`).
 
 Para criar a nova _branch_, e ao mesmo tempo mudar para ela:
 ```sh
@@ -232,11 +236,11 @@ Vamos fazer três testes: `0 cos`, `0 sin`, e `0 tan`, que devem resultar em `1`
 
 ![teste funcionando](./exemplo-teste-trig.png)
 
-Funciona! Agora ele pode subir as modificações:
+Funciona! Agora ele pode subir as modificações (com _flag_ `-u`):
 
 ```sh
 git add .
 git status
 git commit -m 'implementada trigonometria básica'
-git push github trig
+git push -u github trig
 ```

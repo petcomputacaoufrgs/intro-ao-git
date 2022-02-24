@@ -32,7 +32,6 @@ Arquivo `ops.h`:
 Arquivo `ops.c`:
 ```C
  #include "ops.h"
-+#include <math.h>
 
  int op_exec(enum operation op, struct stack **stack)
  {
@@ -116,18 +115,18 @@ Funciona! Agora ele pode subir as modificações:
 git add .
 git status
 git commit -m 'implementada trigonometria inversa'
-git push github trig
+git push
 ```
 
-O colega está pronto, e vai mandar as mudanças pra _branch_ `master`. Primeiro,
+O colega está pronto, e vai mandar as mudanças pra _branch_ `main`. Primeiro,
 ele vai trocar para ela.
 ```sh
-git checkout master
+git checkout main
 ```
 
 Após isso, ele vai checar se o repositório local está atualizado.
 ```sh
-git pull github master
+git pull
 ```
 ![pull atualizado](./exemplo-pull-already.png)
 
@@ -142,13 +141,13 @@ git merge trig
 Não é necessário resolver conflitos. O colega vai publicar as mudanças.
 
 ```sh
-git push github master
+git push
 ```
 
 ## Voltando Para Nosso Computador
 
-Temos que estar na _branch_ `exp`. Vamos fazer mais uma mudança, vamos
-adicionar logaritmos.
+Temos que estar na _branch_ `exp` (`git checkout exp`). Vamos fazer mais uma
+mudança, vamos adicionar logaritmos.
 
 Arquivo `ops.h`:
 ```C
@@ -175,7 +174,6 @@ Depois, vamos implementar a execução dessas operações:
 Arquivo `ops.c`:
 ```C
  #include "ops.h"
-+#include <math.h>
 
  int op_exec(enum operation op, struct stack **stack)
  {
@@ -253,14 +251,20 @@ git status
 git commit -m 'implementado logaritmo'
 git push github exp
 ```
+
+Vamos dar um `push`:
+```sh
+git push
+```
+
 Já podemos fazer `merge`.
 ```sh
-git checkout master
+git checkout main
 ```
 
 Agora, vamos ver se não estamos desatualizados:
 ```sh
-git pull github master
+git pull
 ```
 
 ![pull teve mudanças](./exemplo-pull-mudanca.png)

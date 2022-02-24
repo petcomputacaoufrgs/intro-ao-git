@@ -109,8 +109,8 @@ Agora, vamos ao _commit_:
 ```sh
 git add .
 git status
-git commit -m 'implementado a função main'
-git push github master
+git commit -m 'implementada a função main'
+git push
 ```
 
 Vamos testar (no Linux):

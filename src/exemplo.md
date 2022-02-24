@@ -74,3 +74,6 @@ Pilha: fundo = 10.6666... = topo
 ```
 
 Resultado: `10.6666...`.
+
+**NOTA**: Boa parte dos _commits_ aqui não têm o melhor exemplode mensagem,
+mas são o suficiente para terem significado, e são só exemplos de mensagens.
