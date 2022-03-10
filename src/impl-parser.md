@@ -159,5 +159,5 @@ Agora, vamos ao _commit_:
 git add .
 git status
 git commit -m 'implementado o parser para operações básicas'
-git push github master
+git push
 ```

@@ -83,5 +83,5 @@ Agora, vamos ao _commit_:
 git add .
 git status
 git commit -m 'implementadas operações básicas'
-git push github master
+git push
 ```
